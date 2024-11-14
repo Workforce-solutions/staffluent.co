@@ -55,7 +55,7 @@
 
 .primaryButton {
   padding: 16px 35px;
-  background-color: #1A64B7;
+  background-color: var(--primary);
   color: white;
   border-radius: 60px;
   font-weight: 500;
@@ -63,14 +63,14 @@
 }
 
 .primaryButton:hover {
-  background-color: #1A64B7;
+  background-color: var(--primary);
 }
 
 .secondaryButton {
   padding: 16px 32px;
   background-color: transparent;
-  color: #1A64B7;
-  border: 1px solid #1A64B7;
+  color: var(--primary);
+  border: 1px solid var(--primary);
   border-radius: 60px;
   font-weight: 500;
   display: flex;

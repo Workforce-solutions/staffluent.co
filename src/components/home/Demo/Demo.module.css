@@ -47,7 +47,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: #1A64B7;
+    background: var(--primary);
     border: none;
     cursor: pointer;
     display: flex;
@@ -58,7 +58,7 @@
 }
 
 .playButton:hover {
-    background: #1A64B7;
+    background: var(--primary);
     transform: translate(-50%, -50%) scale(1.1);
 }
 
@@ -76,9 +76,7 @@
 
 .label {
     font-size: 20px;
-    /* font-weight: 500; */
-    /* color: var(--primary); */
-    color: #6B7280;
+    color: #666666;
 }
 
 .title {
