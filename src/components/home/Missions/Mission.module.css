@@ -1,8 +1,8 @@
 /* src/components/home/Mission/Mission.module.css */
 .missionSection {
   padding: 100px 0;
-  background-color: var(--neutral-white);
   text-align: center;
+  background-color: #F6F9FF;
 }
 
 .container {
@@ -23,11 +23,16 @@
   margin: 0 auto;
 }
 
+.subtitle{
+  padding-top: 30px;
+  color: var(--text-primary);
+  font-size: x-large;
+}
+
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  margin-top: 20px;
 }
 
 .statCard {
