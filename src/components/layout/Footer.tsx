@@ -1,96 +1,134 @@
 // src/components/layout/Footer/index.tsx
-import Link from 'next/link';
-import Image from 'next/image';
-import { MapPin, Mail, Phone } from 'lucide-react';
-import styles from './Footer.module.css';
+import Link from "next/link";
+import Image from "next/image";
+import { MapPin, Mail, Phone } from "lucide-react";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
-    const sections = {
-        "Section Page": ["Header", "Advantage", "Features", "Pricing"],
-        "Useful Link": ["Services", "Product", "Features", "Contact US"],
-        "Social Media": ["Instagram", "Twitter", "Facebook"]
-    };
+  const sections = {
+    "Section Page": ["Header", "Advantage", "Features", "Pricing"],
+    "Useful Link": ["Services", "Product", "Features", "Contact US"],
+    "Social Media": ["Instagram", "Twitter", "Facebook"],
+  };
 
-    return (
-        <footer className={styles.footer}>
-            <div className={styles.container}>
-                {/* Main Footer Content */}
-                <div className={styles.footerContent}>
-                    {/* Company Info */}
-                    <div className={styles.companyInfo}>
-                        <Link href="/" className={styles.logoContainer}>
-                            <Image
-                                src="/logo.png"
-                                alt="Staffluent Logo"
-                                width={40}
-                                height={40}
-                                className={styles.logo}
-                            />
-                            <span className={styles.companyName}>Staffluent</span>
-                        </Link>
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        {/* Main Footer Content */}
+        <div className={styles.footerContent}>
+          {/* Company Info */}
+          <div className={styles.companyInfo}>
+            <Link href="/" className={styles.logoContainer}>
+              <Image
+                src="/logo.png"
+                alt="Staffluent Logo"
+                width={40}
+                height={40}
+                className={styles.logo}
+              />
+              <span className={styles.companyName}>Staffluent</span>
+            </Link>
 
-                        <div className={styles.contactInfo}>
-                            <div className={styles.contactItem}>
-                                <MapPin size={20} className={styles.icon} />
-                                <p>Street wasington ave number A2901 Manchester, Kentuky (42882)</p>
-                            </div>
-                            <div className={styles.contactItem}>
-                                <Mail size={20} className={styles.icon} />
-                                <a href="mailto:Contactmail@mailcu.com">Contactmail@mailcu.com</a>
-                            </div>
-                            <div className={styles.contactItem}>
-                                <Phone size={20} className={styles.icon} />
-                                <a href="tel:+62123456789">+62 123 456 789</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='grid grid-cols-2 sm:grid-cols-3 gap-8 col-span-3'>
-                        {/* Navigation Sections */}
-                        {Object.entries(sections).map(([title, links]) => (
-                            <div key={title} className={styles.section}>
-                                <h3 className={styles.sectionTitle}>{title}</h3>
-                                <ul className={styles.linksList}>
-                                    {links.map((link) => (
-                                        <li key={link}>
-                                            <Link href={`/${link.toLowerCase()}`} className={styles.link}>
-                                                {link}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Footer Bottom */}
-                <div className={styles.footerBottom}>
-                    <p className={styles.copyright}>
-                        {currentYear} Organizez. All rights reserved
-                    </p>
-                    <div className={styles.legalLinks}>
-                        <Link href="/terms" className={styles.legalLink}>Terms of service</Link>
-                        <Link href="/privacy" className={styles.legalLink}>Privacy policy</Link>
-                        <Link href="/cookies" className={styles.legalLink}>Cookies</Link>
-                    </div>
-                    <div className={styles.socialIcons}>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                            <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
-                        </a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                            <Image src="/facebook.svg" alt="Facebook" width={24} height={24} />
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                            <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} />
-                        </a>
-                    </div>
-                </div>
+            <div className={styles.contactInfo}>
+              <div className={styles.contactItem}>
+                <MapPin size={20} className={styles.icon} />
+                <p>
+                  Street wasington ave number A2901 Manchester, Kentuky (42882)
+                </p>
+              </div>
+              <div className={styles.contactItem}>
+                <Mail size={20} className={styles.icon} />
+                <a href="mailto:Contactmail@mailcu.com">
+                  Contactmail@mailcu.com
+                </a>
+              </div>
+              <div className={styles.contactItem}>
+                <Phone size={20} className={styles.icon} />
+                <a href="tel:+62123456789">+62 123 456 789</a>
+              </div>
             </div>
-        </footer>
-    );
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 col-span-3 text-center">
+            {/* Navigation Sections */}
+            {Object.entries(sections).map(([title, links]) => (
+              <div key={title} className={styles.section}>
+                <h3 className={styles.sectionTitle}>{title}</h3>
+                <ul className={styles.linksList}>
+                  {links.map((link) => (
+                    <li key={link}>
+                      <Link
+                        href={`/${link.toLowerCase()}`}
+                        className={styles.link}
+                      >
+                        {link}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className={styles.footerBottom}>
+          <p className={styles.copyright}>
+            {currentYear} Organizez. All rights reserved
+          </p>
+          <div className={styles.legalLinks}>
+            <Link href="/terms" className={styles.legalLink}>
+              Terms of service
+            </Link>
+            <Link href="/privacy" className={styles.legalLink}>
+              Privacy policy
+            </Link>
+            <Link href="/cookies" className={styles.legalLink}>
+              Cookies
+            </Link>
+          </div>
+          <div className={styles.socialIcons}>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+            >
+              <Image src="/twitter.svg" alt="Twitter" width={24} height={24} />
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+            >
+              <Image
+                src="/facebook.svg"
+                alt="Facebook"
+                width={24}
+                height={24}
+              />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+            >
+              <Image
+                src="/linkedin.svg"
+                alt="LinkedIn"
+                width={24}
+                height={24}
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
