@@ -115,11 +115,22 @@
 
 @media (max-width: 768px) {
     .footerContent {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 40px;
     }
 
     .socialLinks {
         justify-content: center;
     }
+
+    .linksList, .sectionTitle {
+        text-align: center;
+    }
+
+    .contactItem, .contactInfo, .logoContainer {
+        justify-content: center;
+
+    }
+
 }
