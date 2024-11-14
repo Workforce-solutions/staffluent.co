@@ -1,0 +1,20 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main_title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 900px;
+    color: var(--text-primary);
+}
+
+.main_subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666666;
+    max-width: 1000px;
+}

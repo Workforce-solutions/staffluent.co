@@ -10,6 +10,9 @@ import Missions from "@/components/home/Missions";
 import React, { useState } from "react";
 import Link from "next/link";
 import AboutPageComponent from "@/components/about";
+import StatsSection from "@/components/about/Statistics";
+import FAQSection from "@/components/about/FAQSection";
+import HeroSection from "@/components/about/HeroSection";
 
 const AboutPage = () => {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
@@ -27,9 +30,13 @@ const AboutPage = () => {
         navLinks={navLinks}
       />
       {!isHamburgerMenuOpen ? (
-        <>
+        <div>
           <AboutPageComponent />
-        </>
+          <StatsSection />
+          <FAQSection />
+          <HeroSection />
+          <Footer />
+        </div>
       ) : (
         <div className="absolute top-0 left-0 w-full h-[calc(100vh-100px)] bg-white flex flex-col items-end gap-4 pr-6 mt-24">
           {navLinks.map((link) => (
