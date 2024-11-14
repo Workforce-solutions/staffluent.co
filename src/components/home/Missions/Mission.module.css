@@ -1,0 +1,99 @@
+/* src/components/home/Mission/Mission.module.css */
+.missionSection {
+  padding: 100px 0;
+  background-color: var(--neutral-white);
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+}
+
+.statNumber {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .missionSection {
+    padding: 60px 0;
+  }
+
+  .container {
+    gap: 40px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .statCard {
+    padding: 16px;
+  }
+
+  .statNumber {
+    font-size: 32px;
+  }
+
+  .statLabel {
+    font-size: 16px;
+  }
+}

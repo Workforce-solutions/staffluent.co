@@ -19,3 +19,15 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+:root {
+  /* Colors */
+  --neutral-white: #fff;
+  --secondary-dark-500: #1a202c;
+  --neutral-background: #f6f9ff;
+  --neutral-border-devider: #d3d2d2;
+
+  /* Paddings */
+  --padding-101xl: 120px;
+}

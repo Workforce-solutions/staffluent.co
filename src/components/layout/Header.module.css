@@ -1,0 +1,106 @@
+/* src/components/layout/Header/Header.module.css */
+.header {
+    height: 80px;
+    background-color: var(--neutral-white);
+    border-bottom: 1px solid #E5E7EB;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoLink {
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logoIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.logoText {
+    font-size: 24px;
+    font-weight: 600;
+    color: #7C3AED;
+}
+
+.nav {
+    display: flex;
+    gap: 32px;
+}
+
+.navLink {
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.navLink:hover {
+    color: #7C3AED;
+}
+
+.authButtons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.loginButton {
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.loginButton:hover {
+    color: #7C3AED;
+}
+
+.signupButton {
+    padding: 10px 24px;
+    background-color: #7C3AED;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.signupButton:hover {
+    background-color: #6D28D9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav {
+        display: none; /* You might want to add a mobile menu here */
+    }
+
+    .authButtons {
+        gap: 8px;
+    }
+
+    .signupButton {
+        padding: 8px 16px;
+    }
+}
