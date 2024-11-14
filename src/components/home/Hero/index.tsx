@@ -10,26 +10,26 @@ const Hero = () => {
             <div className={styles.container}>
                 {/* Top Tag */}
                 <div className={`${styles.topTag} text-2xl font-semibold`}>
-                    <span>Recruit - Onboard - Manage</span>
+                    <span>Coordinate - Schedule - Empower</span>
                 </div>
 
                 {/* Main Heading */}
                 <h1 className={`${styles.mainHeading} text-7xl`}>
-                    Revolutionize Your HR Management with Cloud-Based Solutions
+                    Elevate Your Staff Management with Cloud-Based Solutions
                 </h1>
 
                 {/* Subheading */}
                 <p className={styles.subHeading}>
-                    The best HR software for SMB companies and startup to manage employee,
-                    payroll assistance, time off, attendance tracking with single software
+                    The ultimate staff management software for small businesses and startups to streamline employee tracking,
+                    shift scheduling, time-off requests, and attendance—all in one unified platform.
                 </p>
 
                 {/* CTA Buttons */}
                 <div className={styles.ctaButtons}>
-                    <Link href="/get-started" className={styles.primaryButton}>
+                    <Link href="/contact" className={styles.primaryButton}>
                         Get started
                     </Link>
-                    <Link href="/how-it-works" className={styles.secondaryButton}>
+                    <Link href="#" className={styles.secondaryButton}>
                         <span className={styles.playIcon}>▶</span>
                         How it works
                     </Link>
