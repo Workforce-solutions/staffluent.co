@@ -1,10 +1,4 @@
 .homeDesktop {
-    box-shadow:
-            0 4081px 1143px transparent,
-            0 2612px 1045px rgba(0, 0, 0, 0.01),
-            0 1469px 881px rgba(0, 0, 0, 0.02),
-            0 653px 653px rgba(0, 0, 0, 0.04),
-            0 163px 359px rgba(0, 0, 0, 0.05);
     background-color: var(--neutral-white);
     max-width: 1440px;
     margin: 0 auto;
