@@ -1,6 +1,6 @@
 /* src/components/home/Demo/Demo.module.css */
 .demoSection {
-    padding: 100px 0;
+    padding: 50px 0;
     background-color: #F6F9FF;
     overflow: hidden;
 }
@@ -26,7 +26,6 @@
 
 .dashboardWrapper {
     position: relative;
-    aspect-ratio: 16/10;
     background: var(--neutral-white);
     border-radius: 12px;
     overflow: hidden;
