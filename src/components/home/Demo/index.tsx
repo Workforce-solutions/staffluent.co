@@ -20,7 +20,7 @@ const Demo = () => {
                     <div className={styles.dashboardPreview}>
                         <div className={styles.dashboardWrapper}>
                             <Image
-                                src="/dashboard-preview.png"
+                                src="/img-1.png"
                                 alt="HR Dashboard Preview"
                                 width={720}
                                 height={480}
@@ -42,7 +42,7 @@ const Demo = () => {
 
                     {/* Right Side - Content */}
                     <div className={styles.textContent}>
-                        <span className={styles.label}>Product</span>
+                        <span className={`${styles.label} font-medium`}>Product</span>
                         <h2 className={styles.title}>
                             See Our Cloud HR Solution In Action
                         </h2>

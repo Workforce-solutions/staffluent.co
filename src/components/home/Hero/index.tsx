@@ -9,12 +9,12 @@ const Hero = () => {
         <section className={styles.heroSection}>
             <div className={styles.container}>
                 {/* Top Tag */}
-                <div className={styles.topTag}>
+                <div className={`${styles.topTag} text-2xl font-semibold`}>
                     <span>Recruit - Onboard - Manage</span>
                 </div>
 
                 {/* Main Heading */}
-                <h1 className={styles.mainHeading}>
+                <h1 className={`${styles.mainHeading} text-7xl`}>
                     Revolutionize Your HR Management with Cloud-Based Solutions
                 </h1>
 
@@ -37,12 +37,9 @@ const Hero = () => {
 
                 {/* Dashboard Image */}
                 <div className={styles.dashboardImage}>
-                    <Image
-                        src="/dashboard.png"
+                    <img
+                        src="/img-1.png"
                         alt="HR Management Dashboard"
-                        width={1080}
-                        height={600}
-                        priority
                         className={styles.image}
                     />
                 </div>

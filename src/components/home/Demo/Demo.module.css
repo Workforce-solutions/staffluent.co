@@ -1,7 +1,7 @@
 /* src/components/home/Demo/Demo.module.css */
 .demoSection {
     padding: 100px 0;
-    background-color: var(--neutral-background);
+    background-color: #F6F9FF;
     overflow: hidden;
 }
 
@@ -75,9 +75,10 @@
 }
 
 .label {
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--primary);
+    font-size: 20px;
+    /* font-weight: 500; */
+    /* color: var(--primary); */
+    color: #6B7280;
 }
 
 .title {

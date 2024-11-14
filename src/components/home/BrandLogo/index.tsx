@@ -9,9 +9,9 @@ interface BrandLogoProps {
 }
 
 const BrandLogo: React.FC<BrandLogoProps> = ({
-                                                 className = "",
-                                                 variant = 1,
-                                             }) => {
+    className = "",
+    variant = 1,
+}) => {
     return (
         <section
             className={`${styles.brandLogoDesktop} ${className}`}

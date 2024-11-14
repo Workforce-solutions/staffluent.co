@@ -8,10 +8,12 @@
             0 163px 359px rgba(0, 0, 0, 0.05);
     background-color: var(--neutral-white);
     max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 120px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    /* align-items: flex-start; */
+    /* justify-content: flex-start; */
     min-width: 1066px;
 }
