@@ -39,7 +39,7 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: any) 
 
                 {/* Auth Buttons */}
                 <div className={styles.authButtons}>
-                    <Link href="https://app.staffluent.xyx" className={styles.signupButton}>
+                    <Link href="https://app.staffluent.xyz" className={styles.signupButton}>
                        Access Platform
                     </Link>
                 </div>
