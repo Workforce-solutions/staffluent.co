@@ -55,27 +55,28 @@
 
 .primaryButton {
   padding: 16px 35px;
+  background-color: #1A64B7;
   color: white;
   border-radius: 60px;
   font-weight: 500;
-  transition:   0.3s;
+  transition: background-color 0.3s;
 }
 
-/* .primaryButton:hover {
-  background-color: #6D28D9;
-} */
+.primaryButton:hover {
+  background-color: #1A64B7;
+}
 
 .secondaryButton {
   padding: 16px 32px;
   background-color: transparent;
-  color: #7C3AED;
-  border: 1px solid #7C3AED;
+  color: #1A64B7;
+  border: 1px solid #1A64B7;
   border-radius: 60px;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
 
 .secondaryButton:hover {
@@ -97,11 +98,7 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
-  /* .content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  } */
+/* @media (max-width: 1024px) {
 
   .textContent {
     text-align: center;
@@ -114,28 +111,35 @@
   .title {
     font-size: 40px;
   }
-}
+} */
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .ctaSection {
-    padding: 60px 0;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .textContent {
+    gap: 16px;
   }
 
   .title {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .description {
     font-size: 16px;
   }
 
-  .buttonGroup {
-    flex-direction: column;
+  .primaryButton {
+    padding: 12px 24px;
   }
 
-  .primaryButton,
   .secondaryButton {
-    width: 100%;
-    text-align: center;
+    padding: 12px 24px;
+  }
+
+  .ctaButtons {
+    margin-bottom: 0;
   }
 }

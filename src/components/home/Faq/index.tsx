@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
-import styles from './FAQ.module.css';
+import styles from './Faq.module.css';
 
 interface FAQItem {
     question: string;

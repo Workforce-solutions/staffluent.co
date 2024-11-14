@@ -1,5 +1,4 @@
 .homeDesktop {
-    width: 1440px;
     box-shadow:
             0 4081px 1143px transparent,
             0 2612px 1045px rgba(0, 0, 0, 0.01),
@@ -15,5 +14,5 @@
     flex-direction: column;
     /* align-items: flex-start; */
     /* justify-content: flex-start; */
-    min-width: 1066px;
+    /* min-width: 1066px; */
 }

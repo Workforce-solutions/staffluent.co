@@ -64,7 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
+    /* color: var(--primary); */
 }
 
 .icon {
@@ -115,6 +115,9 @@
 }
 
 @media (max-width: 768px) {
+    .title {
+        color: black;
+    }
     .featuresSection {
         padding: 60px 0;
     }
@@ -127,5 +130,14 @@
     .featureCard {
         text-align: center;
         align-items: center;
+    }
+
+    .featureTitle {
+        color: black;
+    }
+
+    .iconWrapper {
+        background-color: #EEF2FF;
+        color: black;
     }
 }

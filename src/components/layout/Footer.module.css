@@ -34,7 +34,7 @@
 .companyName {
     font-size: 24px;
     font-weight: 600;
-    color: var(--text-primary);
+    color: #1A64B7;
 }
 
 .contactInfo {
@@ -152,12 +152,14 @@
 
 @media (max-width: 768px) {
     .footer {
-        padding: 60px 0 30px;
+        padding: 30px 0 30px;
+        color: black;
     }
 
     .footerContent {
         grid-template-columns: 1fr;
         gap: 40px;
+        margin-bottom: 10px;
     }
 
     .footerBottom {
@@ -167,7 +169,6 @@
     }
 
     .legalLinks {
-        flex-direction: column;
-        gap: 12px;
+        gap: 24px;
     }
 }

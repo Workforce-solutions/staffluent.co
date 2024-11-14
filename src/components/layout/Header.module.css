@@ -38,12 +38,12 @@
 .logoText {
     font-size: 24px;
     font-weight: 600;
-    color: #7C3AED;
+    color: #1A64B7;
 }
 
 .nav {
-    display: flex;
-    gap: 32px;
+    /* display: flex; */
+    /* gap: 32px; */
 }
 
 .navLink {
@@ -55,7 +55,7 @@
 }
 
 .navLink:hover {
-    color: #7C3AED;
+    color: #1A64B7;
 }
 
 .authButtons {
@@ -73,12 +73,12 @@
 }
 
 .loginButton:hover {
-    color: #7C3AED;
+    color: #1A64B7;
 }
 
 .signupButton {
     padding: 10px 24px;
-    background-color: #7C3AED;
+    background-color: #1A64B7;
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -87,14 +87,11 @@
 }
 
 .signupButton:hover {
-    background-color: #6D28D9;
+    background-color: #1A64B7;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .nav {
-        display: none; /* You might want to add a mobile menu here */
-    }
 
     .authButtons {
         gap: 8px;
