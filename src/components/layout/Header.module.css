@@ -38,7 +38,7 @@
 .logoText {
     font-size: 24px;
     font-weight: 600;
-    color: #1A64B7;
+    color: var(--primary);
 }
 
 .nav {
@@ -55,7 +55,7 @@
 }
 
 .navLink:hover {
-    color: #1A64B7;
+    color: var(--primary);
 }
 
 .authButtons {
@@ -73,12 +73,12 @@
 }
 
 .loginButton:hover {
-    color: #1A64B7;
+    color: var(--primary);
 }
 
 .signupButton {
     padding: 10px 24px;
-    background-color: #1A64B7;
+    background-color: var(--primary);
     color: white;
     font-size: 16px;
     font-weight: 500;
@@ -87,7 +87,7 @@
 }
 
 .signupButton:hover {
-    background-color: #1A64B7;
+    background-color: var(--primary);
 }
 
 /* Responsive Styles */
