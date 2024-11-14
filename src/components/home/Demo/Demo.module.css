@@ -47,7 +47,7 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: rgba(124, 58, 237, 0.9);
+    background: #1A64B7;
     border: none;
     cursor: pointer;
     display: flex;
@@ -58,7 +58,7 @@
 }
 
 .playButton:hover {
-    background: rgba(124, 58, 237, 1);
+    background: #1A64B7;
     transform: translate(-50%, -50%) scale(1.1);
 }
 
@@ -124,5 +124,13 @@
     .playIcon {
         width: 20px;
         height: 20px;
+    }
+
+    .title {
+        color: black;
+    }
+
+    .description {
+        color: black;
     }
 }

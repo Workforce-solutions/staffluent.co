@@ -33,8 +33,7 @@ const Mission = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    Our Mission Is To Help Easy<br />
-                    Organize Your Employee
+                    Our Mission Is To Help Easy Organize Your Employee
                 </motion.h2>
 
                 {/* Stats Grid */}

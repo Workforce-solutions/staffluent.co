@@ -3,15 +3,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import styles from './CTA.module.css';
+import styles from './Cta.module.css';
 
 const CTA = () => {
     return (
         <section className={styles.ctaSection}>
             <div className={styles.container}>
-                <div className={`flex`}>
+                <div className={`flex flex-col lg:flex-row`}>
                     {/* Left side - Text and Buttons */}
-                    <div className={`${styles.textContent} w-3/5`}>
+                    <div className={`${styles.textContent} lg:w-3/5 mb-4 lg:mb-0`}>
                         <motion.h2
                             className={styles.title}
                             initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ const CTA = () => {
                         </motion.h2>
 
                         <motion.p
-                            className={`tracking-wider text-slate-200 text-lg`}
+                            className={`tracking-wider text-slate-200 text-sm lg:text-lg`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.1 }}
@@ -49,16 +49,16 @@ const CTA = () => {
 
                     {/* Right side - Dashboard Image */}
                     <div
-                        className={`w-2/5 flex justify-center items-center`}
-                        // initial={{ opacity: 0, x: 20 }}
-                        // whileInView={{ opacity: 1, x: 0 }}
-                        // transition={{ duration: 0.8 }}
+                        className={`lg:w-2/5 flex justify-center items-center h-auto`}
+                    // initial={{ opacity: 0, x: 20 }}
+                    // whileInView={{ opacity: 1, x: 0 }}
+                    // transition={{ duration: 0.8 }}
                     >
-                        <div className={`${styles.ctaButtons} flex gap-5`}>
-                            <Link href="/get-started" className={`${styles.primaryButton} bg-[#7C3AED!important] rounded-[60px!important]`}>
+                        <div className={`${styles.ctaButtons}`}>
+                            <Link href="/get-started" className={`${styles.primaryButton} `}>
                                 Get started
                             </Link>
-                            <Link href="/how-it-works" className={`${styles.secondaryButton} bg-[white!important] text-[#7C3AED!important] border border-[#7C3AED!important] rounded-[60px!important]`}>
+                            <Link href="/how-it-works" className={`${styles.secondaryButton}`}>
                                 Request Demo
                             </Link>
                         </div>

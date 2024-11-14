@@ -22,7 +22,7 @@ const Footer = () => {
                     <div className={styles.companyInfo}>
                         <Link href="/" className={styles.logoContainer}>
                             <Image
-                                src="/logo.svg"
+                                src="/logo.png"
                                 alt="Orginaziz Logo"
                                 width={40}
                                 height={40}
@@ -47,21 +47,23 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Navigation Sections */}
-                    {Object.entries(sections).map(([title, links]) => (
-                        <div key={title} className={styles.section}>
-                            <h3 className={styles.sectionTitle}>{title}</h3>
-                            <ul className={styles.linksList}>
-                                {links.map((link) => (
-                                    <li key={link}>
-                                        <Link href={`/${link.toLowerCase()}`} className={styles.link}>
-                                            {link}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+                    <div className='grid grid-cols-2 sm:grid-cols-3 gap-8 col-span-3'>
+                        {/* Navigation Sections */}
+                        {Object.entries(sections).map(([title, links]) => (
+                            <div key={title} className={styles.section}>
+                                <h3 className={styles.sectionTitle}>{title}</h3>
+                                <ul className={styles.linksList}>
+                                    {links.map((link) => (
+                                        <li key={link}>
+                                            <Link href={`/${link.toLowerCase()}`} className={styles.link}>
+                                                {link}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Footer Bottom */}
