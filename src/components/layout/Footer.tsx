@@ -23,12 +23,12 @@ const Footer = () => {
                         <Link href="/" className={styles.logoContainer}>
                             <Image
                                 src="/logo.png"
-                                alt="Orginaziz Logo"
+                                alt="Staffluent Logo"
                                 width={40}
                                 height={40}
                                 className={styles.logo}
                             />
-                            <span className={styles.companyName}>Orginaziz</span>
+                            <span className={styles.companyName}>Staffluent</span>
                         </Link>
 
                         <div className={styles.contactInfo}>

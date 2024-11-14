@@ -20,7 +20,7 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: any) 
                             height={40}
                             className={styles.logoIcon}
                         />
-                        <span className={styles.logoText}>Orginaziz</span>
+                        <span className={styles.logoText}>Staffluent</span>
                     </div>
                 </Link>
 
@@ -39,11 +39,8 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: any) 
 
                 {/* Auth Buttons */}
                 <div className={styles.authButtons}>
-                    <Link href="/login" className={styles.loginButton}>
-                        Login
-                    </Link>
-                    <Link href="/signup" className={styles.signupButton}>
-                        Sign up
+                    <Link href="https://app.staffluent.xyx" className={styles.signupButton}>
+                       Access Platform
                     </Link>
                 </div>
 
