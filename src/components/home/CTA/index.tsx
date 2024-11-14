@@ -10,7 +10,7 @@ const CTA = () => {
         <section className={styles.ctaSection}>
             <div className={styles.container}>
                 <div className={`flex flex-col lg:flex-row`}>
-                    {/* Left side - Text and Buttons */}
+                    {/* Left side - Text and Value Proposition */}
                     <div className={`${styles.textContent} lg:w-3/5 mb-4 lg:mb-0`}>
                         <motion.h2
                             className={styles.title}
@@ -18,7 +18,7 @@ const CTA = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            Unlock The Power Of Cloud HR Solutions Today!
+                            Streamline Your Project and Team Management
                         </motion.h2>
 
                         <motion.p
@@ -27,38 +27,19 @@ const CTA = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.1 }}
                         >
-                            Sign up now for a free trial and discover how our cloud HR solutions
-                            can revolutionize the way you manage your workforce. Say goodbye
-                            to manual processes and hello to seamless efficiency!
+                            Join companies that have revolutionized their workflow with our comprehensive
+                            platform. From project tracking to team collaboration, performance analytics
+                            to client management - everything you need in one powerful solution.
                         </motion.p>
-
-                        {/* <motion.div
-                            className={styles.buttonGroup}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                        >
-                            <Link href="/get-started" className={styles.primaryButton}>
-                                Get started
-                            </Link>
-                            <Link href="/demo" className={styles.secondaryButton}>
-                                Request Demo
-                            </Link>
-                        </motion.div> */}
                     </div>
 
-                    {/* Right side - Dashboard Image */}
-                    <div
-                        className={`lg:w-2/5 flex justify-center items-center h-auto`}
-                    // initial={{ opacity: 0, x: 20 }}
-                    // whileInView={{ opacity: 1, x: 0 }}
-                    // transition={{ duration: 0.8 }}
-                    >
+                    {/* Right side - Action Buttons */}
+                    <div className={`lg:w-2/5 flex justify-center items-center h-auto`}>
                         <div className={`${styles.ctaButtons}`}>
-                            <Link href="/get-started" className={`${styles.primaryButton} `}>
-                                Get started
+                            <Link href="https://app.staffluent.xyz" className={`${styles.primaryButton}`}>
+                                Start Now
                             </Link>
-                            <Link href="/how-it-works" className={`${styles.secondaryButton}`}>
+                            <Link href="/contact" className={`${styles.secondaryButton}`}>
                                 Request Demo
                             </Link>
                         </div>

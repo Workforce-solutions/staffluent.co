@@ -8,25 +8,60 @@ import styles from './Faq.module.css';
 interface FAQItem {
     question: string;
     answer: string;
+    category?: string;
 }
 
 const faqData: FAQItem[] = [
     {
-        question: "What pricing plans do your SaaS product?",
-        answer: "We offer flexible pricing plans tailored to meet the need of different business. our pricing included monthly and annual subscription options. you can find detailed information about each plan on our pricing"
+        question: "What makes your platform different from other project management tools?",
+        answer: "Our platform uniquely combines project management, time tracking, and team collaboration in one integrated solution. We offer advanced features like real-time performance analytics, automated time tracking, and comprehensive client portal - all designed to work seamlessly together to enhance your team's productivity.",
+        category: "General"
     },
     {
-        question: "Does your SaaS product integrate with other tools we use?",
-        answer: "Yes, our platform integrates seamlessly with many popular business tools and software. We support integration with major CRM systems, accounting software, and productivity tools."
+        question: "How does the project tracking system work?",
+        answer: "Our project tracking system provides real-time visibility into project progress, task management, and team performance. You can easily assign tasks, monitor deadlines, track time spent, and generate detailed reports. Plus, our quality control tools and issue tracking ensure nothing falls through the cracks.",
+        category: "Features"
     },
     {
-        question: "Can I upgrade or downgrade my plan at any time?",
-        answer: "Yes, you can easily upgrade or downgrade your subscription plan at any time through your account settings. Changes will be reflected in your next billing cycle."
+        question: "What type of analytics and reporting features do you offer?",
+        answer: "We provide comprehensive analytics including real-time performance metrics, productivity trends, team performance tracking, and custom report generation. You can track project progress, monitor time utilization, analyze team productivity, and generate insights that help optimize your operations.",
+        category: "Features"
     },
     {
-        question: "Is there a free trial available?",
-        answer: "Yes, we offer a 14-day free trial that gives you full access to all features. No credit card required to start your trial."
-    }
+        question: "How do you handle data security and privacy?",
+        answer: "Security is our top priority. We implement industry-standard encryption, regular security audits, and strict access controls. Your data is backed up regularly, and we comply with major data protection regulations to ensure your information stays safe and confidential.",
+        category: "Security"
+    },
+    {
+        question: "What services can I manage through the platform?",
+        answer: "Our platform helps you manage a wide range of business services including app development, project management, quality assurance, and technical support. You can organize services by categories, handle service requests, manage approvals, and track delivery - all in one place."
+    },
+    {
+        question: "What kind of support do you provide?",
+        answer: "We offer comprehensive 24/7 customer support through multiple channels including live chat, email, and phone. Our support team is highly trained and can assist with technical issues, feature questions, and best practice recommendations. We also provide detailed documentation and video tutorials.",
+        category: "Support"
+    },
+    {
+        question: "What services can I manage through the platform?",
+        answer: "Our platform helps you manage a wide range of business services including app development, project management, quality assurance, and technical support. You can organize services by categories, handle service requests, manage approvals, and track delivery - all in one place."
+    },
+    {
+        question: "How does the client portal work?",
+        answer: "Clients get their own dedicated portal where they can submit service requests, track project progress, communicate with teams, and access project galleries. It provides full transparency and easy collaboration between your team and clients."
+    },
+    {
+        question: "What project management features are included?",
+        answer: "Our comprehensive project tracking includes task management, team collaboration, quality control, work orders, and real-time progress monitoring. Managers can oversee everything from task assignments to quality inspections in one unified system."
+    },
+    {
+        question: "How does the team collaboration system work?",
+        answer: "Teams can collaborate through internal chat, project comments, task discussions, and a smart notification system. Project managers can coordinate with team members and clients efficiently while maintaining clear communication channels."
+    },
+    {
+        question: "What kind of performance tracking do you offer?",
+        answer: "Track productivity, time utilization, department performance, and generate custom reports. Get insights into team efficiency, project progress, and operational metrics through detailed analytics dashboards."
+    },
+
 ];
 
 const FAQ = () => {
@@ -37,18 +72,21 @@ const FAQ = () => {
             <div className={styles.container}>
                 {/* Header */}
                 <div className={styles.header}>
-                    <h2 className={styles.title}>Frequently Asked Questions</h2>
+                    <h2 className={styles.title}>Common Questions About Our Platform</h2>
                     <p className={styles.subtitle}>
-                        we have put together same commonly asked question
+                        Get quick answers to your questions about features, pricing, and support
                     </p>
                 </div>
 
                 {/* FAQ Items */}
                 <div className={styles.faqContainer}>
                     {faqData.map((faq, index) => (
-                        <div
+                        <motion.div
                             key={index}
                             className={styles.faqItem}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
                             <button
                                 className={`${styles.questionButton} ${activeIndex === index ? styles.active : ''}`}
@@ -57,9 +95,9 @@ const FAQ = () => {
                                 <span>{faq.question}</span>
                                 <div className={styles.icon}>
                                     {activeIndex === index ? (
-                                        <Minus size={20} />
+                                        <Minus className={styles.iconInner} size={20} />
                                     ) : (
-                                        <Plus size={20} />
+                                        <Plus className={styles.iconInner} size={20} />
                                     )}
                                 </div>
                             </button>
@@ -77,7 +115,7 @@ const FAQ = () => {
                                     </motion.div>
                                 )}
                             </AnimatePresence>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

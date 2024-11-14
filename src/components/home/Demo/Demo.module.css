@@ -132,3 +132,18 @@
         color: black;
     }
 }
+
+.featureList {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.featureList li {
+    font-size: 16px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

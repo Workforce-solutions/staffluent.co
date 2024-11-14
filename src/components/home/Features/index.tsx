@@ -1,29 +1,39 @@
 // src/components/home/Features/index.tsx
 "use client";
 import Image from 'next/image';
-import { Archive, Shield, Layout, UserCheck } from 'lucide-react';
+import { Users, Clock, LayoutPanelTop, BarChart, UserCog, MessageSquare, FileSpreadsheet, Settings } from 'lucide-react';
 import styles from './Features.module.css';
 
 const features = [
     {
-        icon: <UserCheck className={styles.icon} />,
-        title: "Faster Recruitment",
-        description: "Automate recruitment and candidate screening to save your time and effort"
+        icon: <Users className={styles.icon} />,
+        title: "Workforce Management",
+        description: "Complete employee profiles, department management, and role-based permissions with performance tracking"
     },
     {
-        icon: <Archive className={styles.icon} />,
-        title: "Clean Archive",
-        description: "Plan and manage training programs to maximize your employees' potential."
+        icon: <Clock className={styles.icon} />,
+        title: "Time & Attendance",
+        description: "Real-time attendance tracking, break management, and automated time monitoring"
     },
     {
-        icon: <Layout className={styles.icon} />,
-        title: "Easy to manage",
-        description: "Track employee data, performance evaluations, and task assignments"
+        icon: <LayoutPanelTop className={styles.icon} />,
+        title: "Project Management",
+        description: "Comprehensive project tracking with tasks, quality inspections, and work order management"
     },
     {
-        icon: <Shield className={styles.icon} />,
-        title: "Data Security",
-        description: "Protect your sensitive employee data with advanced security"
+        icon: <BarChart className={styles.icon} />,
+        title: "Performance Analytics",
+        description: "Track productivity, analyze trends, and identify top performers with detailed metrics"
+    },
+    {
+        icon: <UserCog className={styles.icon} />,
+        title: "Client Portal",
+        description: "Service requests, invoicing, and real-time project tracking for clients"
+    },
+    {
+        icon: <MessageSquare className={styles.icon} />,
+        title: "Team Collaboration",
+        description: "Internal chat, team messaging, and integrated project communications"
     }
 ];
 
@@ -34,13 +44,13 @@ const Features = () => {
                 <div className={styles.content}>
                     {/* Left Side - Text and Features */}
                     <div className={styles.leftContent}>
-                        <span className={styles.label}>Our Core Features</span>
+                        <span className={styles.label}>Platform Features</span>
                         <h2 className={`${styles.title} text-5xl`}>
-                            We Make It Effortlessly To Track All Employee Performance
+                            Comprehensive Project & Team Management Platform
                         </h2>
                         <p className={`${styles.description} text-xl tracking-wider`}>
-                            Self service data analytic software that lets you create visually
-                            appealing data visualizations and insightful dashboard in minutes
+                            All-in-one solution for project tracking, team collaboration,
+                            and performance management with powerful analytics
                         </p>
 
                         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-24`}>
@@ -62,7 +72,7 @@ const Features = () => {
                     <div className={styles.imageWrapper}>
                         <Image
                             src="/img-1.png"
-                            alt="Employee Performance Tracking"
+                            alt="Platform Dashboard"
                             width={600}
                             height={800}
                             className={styles.image}

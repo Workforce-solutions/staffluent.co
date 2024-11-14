@@ -21,7 +21,7 @@ const Demo = () => {
                         <div className={styles.dashboardWrapper}>
                             <Image
                                 src="/img-1.png"
-                                alt="HR Dashboard Preview"
+                                alt="Platform Dashboard Preview"
                                 width={720}
                                 height={480}
                                 className={styles.dashboardImage}
@@ -42,14 +42,21 @@ const Demo = () => {
 
                     {/* Right Side - Content */}
                     <div className={styles.textContent}>
-                        <span className={`${styles.label} font-medium`}>Product</span>
+                        <span className={`${styles.label} font-medium`}>Platform Overview</span>
                         <h2 className={styles.title}>
-                            See Our Cloud HR Solution In Action
+                            See Our Project Management Platform In Action
                         </h2>
                         <p className={styles.description}>
-                            The best HR software for SMB companies and startup to manage employee,
-                            payroll assistance, time off, attendance tracking with single software
+                            Experience how our platform streamlines project tracking, team collaboration,
+                            and performance monitoring. From real-time analytics to comprehensive project
+                            management, see how everything works together in one integrated solution.
                         </p>
+                        <ul className={styles.featureList}>
+                            <li>✓ Project & Task Management</li>
+                            <li>✓ Team Collaboration Tools</li>
+                            <li>✓ Real-time Performance Analytics</li>
+                            <li>✓ Client Portal Integration</li>
+                        </ul>
                     </div>
                 </div>
             </div>

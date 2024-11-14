@@ -5,20 +5,20 @@ import styles from './Mission.module.css';
 
 const stats = [
     {
-        number: "50M+",
-        label: "Global users"
+        number: "10+",
+        label: "Management Features"
     },
     {
-        number: "$100M+",
-        label: "Capital raised"
+        number: "100%",
+        label: "Real-time Tracking"
     },
     {
-        number: "40%",
-        label: "Fast work"
+        number: "24/7",
+        label: "Project Monitoring"
     },
     {
-        number: "100+",
-        label: "Support team"
+        number: "360°",
+        label: "Team Overview"
     }
 ];
 
@@ -33,8 +33,17 @@ const Mission = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    Our Mission Is To Help Easy Organize Your Employee
+                    Streamline Your Project and Team Management
                 </motion.h2>
+
+                <motion.p
+                    className={styles.subtitle}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                    Comprehensive platform for project tracking, team collaboration, and performance analytics
+                </motion.p>
 
                 {/* Stats Grid */}
                 <div className={styles.statsGrid}>
