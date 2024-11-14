@@ -13,8 +13,8 @@
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
   gap: 60px;
   align-items: center;
 }
@@ -35,7 +35,7 @@
 .description {
   font-size: 18px;
   line-height: 1.6;
-  color: #94A3B8;
+  color: white;
   margin-bottom: 8px;
 }
 
@@ -45,40 +45,48 @@
   margin-top: 8px;
 }
 
-.primaryButton {
-  padding: 16px 32px;
-  background-color: var(--primary);
-  color: white;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: background-color 0.3s;
-  text-decoration: none;
+
+.ctaButtons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 60px;
 }
 
-.primaryButton:hover {
-  background-color: #6D28D9;
+.primaryButton {
+  padding: 16px 35px;
+  color: white;
+  border-radius: 60px;
+  font-weight: 500;
+  transition:   0.3s;
 }
+
+/* .primaryButton:hover {
+  background-color: #6D28D9;
+} */
 
 .secondaryButton {
   padding: 16px 32px;
   background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  border-radius: 8px;
+  color: #7C3AED;
+  border: 1px solid #7C3AED;
+  border-radius: 60px;
   font-weight: 500;
-  transition: all 0.3s;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
 }
 
 .secondaryButton:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #F3F4F6;
 }
 
+
 .imageWrapper {
-  position: relative;
+  /* position: relative; */
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .dashboardImage {
@@ -90,10 +98,10 @@
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
-  .content {
+  /* .content {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
+  } */
 
   .textContent {
     text-align: center;

@@ -9,9 +9,9 @@ const CTA = () => {
     return (
         <section className={styles.ctaSection}>
             <div className={styles.container}>
-                <div className={styles.content}>
+                <div className={`flex`}>
                     {/* Left side - Text and Buttons */}
-                    <div className={styles.textContent}>
+                    <div className={`${styles.textContent} w-3/5`}>
                         <motion.h2
                             className={styles.title}
                             initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ const CTA = () => {
                         </motion.h2>
 
                         <motion.p
-                            className={styles.description}
+                            className={`tracking-wider text-slate-200 text-lg`}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.1 }}
@@ -32,7 +32,7 @@ const CTA = () => {
                             to manual processes and hello to seamless efficiency!
                         </motion.p>
 
-                        <motion.div
+                        {/* <motion.div
                             className={styles.buttonGroup}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -44,24 +44,25 @@ const CTA = () => {
                             <Link href="/demo" className={styles.secondaryButton}>
                                 Request Demo
                             </Link>
-                        </motion.div>
+                        </motion.div> */}
                     </div>
 
                     {/* Right side - Dashboard Image */}
-                    <motion.div
-                        className={styles.imageWrapper}
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
+                    <div
+                        className={`w-2/5 flex justify-center items-center`}
+                        // initial={{ opacity: 0, x: 20 }}
+                        // whileInView={{ opacity: 1, x: 0 }}
+                        // transition={{ duration: 0.8 }}
                     >
-                        <Image
-                            src="/dashboard-preview.png"
-                            alt="HR Dashboard Preview"
-                            width={600}
-                            height={400}
-                            className={styles.dashboardImage}
-                        />
-                    </motion.div>
+                        <div className={`${styles.ctaButtons} flex gap-5`}>
+                            <Link href="/get-started" className={`${styles.primaryButton} bg-[#7C3AED!important] rounded-[60px!important]`}>
+                                Get started
+                            </Link>
+                            <Link href="/how-it-works" className={`${styles.secondaryButton} bg-[white!important] text-[#7C3AED!important] border border-[#7C3AED!important] rounded-[60px!important]`}>
+                                Request Demo
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

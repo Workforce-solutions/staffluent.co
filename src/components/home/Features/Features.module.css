@@ -24,22 +24,22 @@
 }
 
 .label {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     color: #6B7280;
 }
 
 .title {
-    font-size: 40px;
+    /* font-size: 40px; */
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-primary);
 }
 
 .description {
-    font-size: 18px;
+    /* font-size: 18px; */
     line-height: 1.6;
-    color: var(--text-secondary);
+    color: #6B7280;
     margin-bottom: 16px;
 }
 
@@ -82,7 +82,7 @@
 .featureDescription {
     font-size: 16px;
     line-height: 1.5;
-    color: var(--text-secondary);
+    color: #6B7280; 
 }
 
 .imageWrapper {

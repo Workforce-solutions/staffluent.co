@@ -35,15 +35,15 @@ const Features = () => {
                     {/* Left Side - Text and Features */}
                     <div className={styles.leftContent}>
                         <span className={styles.label}>Our Core Features</span>
-                        <h2 className={styles.title}>
+                        <h2 className={`${styles.title} text-5xl`}>
                             We Make It Effortlessly To Track All Employee Performance
                         </h2>
-                        <p className={styles.description}>
+                        <p className={`${styles.description} text-xl tracking-wider`}>
                             Self service data analytic software that lets you create visually
                             appealing data visualizations and insightful dashboard in minutes
                         </p>
 
-                        <div className={styles.featuresGrid}>
+                        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-24`}>
                             {features.map((feature, index) => (
                                 <div key={index} className={styles.featureCard}>
                                     <div className={styles.iconWrapper}>
@@ -61,7 +61,7 @@ const Features = () => {
                     {/* Right Side - Image */}
                     <div className={styles.imageWrapper}>
                         <Image
-                            src="/features-image.jpg"
+                            src="/img-1.png"
                             alt="Employee Performance Tracking"
                             width={600}
                             height={800}
