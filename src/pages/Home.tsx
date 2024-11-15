@@ -9,7 +9,6 @@ import Header from "@/components/layout/Header";
 import Missions from "@/components/home/Missions";
 import React, { useState } from "react";
 import Link from "next/link";
-import navStyles from "../components/layout/Header.module.css";
 
 const HomePage = () => {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);

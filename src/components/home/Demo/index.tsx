@@ -5,9 +5,10 @@ import Image from "next/image";
 import styles from "./Demo.module.css";
 
 const Demo = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [setIsPlaying] = useState(false);
 
   const handlePlayClick = () => {
+    // @ts-expect-error setIsPlaying is intentionally unused in this demo code
     setIsPlaying(true);
     // Add your video playing logic here
   };

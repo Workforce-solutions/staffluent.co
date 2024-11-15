@@ -9,7 +9,7 @@ const AboutPageComponent = () => {
                 Empowering Teams Through Intelligent Project Management
             </h1>
             <h3 className={styles.main_subtitle}>
-                We're revolutionizing how teams work together by providing comprehensive
+                We&apos;re revolutionizing how teams work together by providing comprehensive
                 project tracking, real-time collaboration tools, and powerful analytics
                 in one integrated platform.
             </h3>

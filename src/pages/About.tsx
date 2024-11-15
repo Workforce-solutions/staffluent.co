@@ -1,12 +1,6 @@
 "use client";
-import CTA from "@/components/home/CTA";
-import Demo from "@/components/home/Demo";
-import FAQ from "@/components/home/Faq";
-import Features from "@/components/home/Features";
-import Hero from "@/components/home/Hero";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import Missions from "@/components/home/Missions";
 import React, { useState } from "react";
 import Link from "next/link";
 import AboutPageComponent from "@/components/about";

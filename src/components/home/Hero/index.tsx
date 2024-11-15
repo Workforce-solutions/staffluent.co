@@ -1,8 +1,7 @@
-// src/components/home/Hero/ContactForm.tsx
 "use client";
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from './Hero.module.css';
+import Link from "next/link";
+import Image from "next/image";
+import styles from "./Hero.module.css";
 
 const Hero = () => {
     return (
@@ -37,10 +36,13 @@ const Hero = () => {
 
                 {/* Dashboard Image */}
                 <div className={styles.dashboardImage}>
-                    <img
+                    <Image
                         src="/img-1.png"
                         alt="HR Management Dashboard"
+                        width={800} // Replace with your image's width
+                        height={500} // Replace with your image's height
                         className={styles.image}
+                        priority // Optionally, load this image with higher priority
                     />
                 </div>
             </div>

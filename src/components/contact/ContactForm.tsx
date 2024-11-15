@@ -1,7 +1,7 @@
 // src/components/contact/ContactForm.tsx
 "use client";
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Loader, CheckCircle, XCircle } from 'lucide-react';
+import { Mail, Loader, CheckCircle } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -100,7 +100,6 @@ const ContactForm = () => {
         try {
             // Simulating API call
             await new Promise(resolve => setTimeout(resolve, 2000));
-
             toast.success('Form submitted successfully!');
             setFormData({
                 companyName: '',
@@ -112,7 +111,7 @@ const ContactForm = () => {
                 interestedFeatures: [],
                 message: ''
             });
-        } catch (error) {
+        } catch {
             toast.error('Something went wrong. Please try again.');
         } finally {
             setIsSubmitting(false);

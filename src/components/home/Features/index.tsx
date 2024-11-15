@@ -8,8 +8,6 @@ import {
   BarChart,
   UserCog,
   MessageSquare,
-  FileSpreadsheet,
-  Settings,
 } from "lucide-react";
 import styles from "./Features.module.css";
 
