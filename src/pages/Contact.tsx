@@ -28,7 +28,7 @@ const ContactPage = () => {
                     <Footer />
                 </div>
             ) : (
-                <div className="absolute top-0 left-0 w-full h-[calc(100vh-100px)] bg-white flex flex-col items-end gap-4 pr-6 mt-24">
+                <div className="absolute top-0 left-0 w-full h-[calc(100vh-100px)] bg-white flex flex-col items-center gap-4 pr-6 mt-24">
                     {navLinks.map((link) => (
                         <Link key={link.href} href={link.href} className={"text-black"}>
                             {link.label}
