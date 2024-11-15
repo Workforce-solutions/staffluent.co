@@ -19,8 +19,8 @@ const Hero = () => {
 
                 {/* Subheading */}
                 <p className={styles.subHeading}>
-                    The ultimate staff management software for small businesses and startups to streamline employee tracking,
-                    shift scheduling, time-off requests, and attendance—all in one unified platform.
+                    The ultimate staff management platform that streamlines employee tracking, shift scheduling,
+                    time-off requests, and attendance—all in one unified solution.
                 </p>
 
                 {/* CTA Buttons */}

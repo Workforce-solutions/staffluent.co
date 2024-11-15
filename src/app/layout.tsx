@@ -1,16 +1,18 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = localFont({
-    src: '../../public/fonts/GeistVF.woff2',  // Updated path
+    src: '../../public/fonts/GeistVF.woff2',
     variable: '--font-geist-sans',
     weight: '100 900',
     display: 'swap',
 });
 
 const geistMono = localFont({
-    src: '../../public/fonts/GeistMonoVF.woff2',  // Updated path
+    src: '../../public/fonts/GeistMonoVF.woff2',
     variable: '--font-geist-mono',
     weight: '100 900',
     display: 'swap',
@@ -29,9 +31,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <GoogleAnalytics />
         {children}
         </body>
         </html>
