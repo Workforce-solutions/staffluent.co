@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        indigo: {
+          600: '#1A64B7',
+        },
       },
     },
   },

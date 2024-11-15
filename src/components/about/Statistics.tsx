@@ -3,28 +3,28 @@ import React from "react";
 const StatsSection = () => {
   const stats = [
     {
-      value: "50M+",
-      label: "Global users",
+      value: "10+",
+      label: "Core Features",
       description:
-        "We offer flexible pricing plans tailoned to meet the need of diffrent business. our pricing inculed mothly and annual",
+          "From project management to performance analytics, our platform offers comprehensive tools for modern team collaboration.",
     },
     {
-      value: "$100M+",
-      label: "Capital raised",
+      value: "24/7",
+      label: "Real-time Tracking",
       description:
-        "We offer flexible pricing plans tailoned to meet the need of diffrent business. our pricing inculed mothly and annual",
+          "Monitor project progress, team performance, and key metrics in real-time with our advanced tracking capabilities.",
     },
     {
-      value: "40%",
-      label: "Fast work",
+      value: "360°",
+      label: "Team Overview",
       description:
-        "We offer flexible pricing plans tailoned to meet the need of diffrent business. our pricing inculed mothly and annual",
+          "Get complete visibility of your team's activities, projects, and performance with our comprehensive dashboard.",
     },
     {
-      value: "100+",
-      label: "Support team",
+      value: "100%",
+      label: "Integration",
       description:
-        "We offer flexible pricing plans tailoned to meet the need of diffrent business. our pricing inculed mothly and annual",
+          "Seamlessly connect project management, time tracking, and client communication in one unified platform.",
     },
   ];
 

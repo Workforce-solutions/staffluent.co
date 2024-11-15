@@ -1,4 +1,4 @@
-// src/components/layout/Footer/index.tsx
+// src/components/layout/Footer/ContactForm.tsx
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Mail, Phone, Twitter, Facebook, Linkedin } from "lucide-react";

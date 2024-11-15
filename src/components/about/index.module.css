@@ -18,3 +18,41 @@
     color: #666666;
     max-width: 1000px;
 }
+
+.primaryButton {
+    padding: 16px 35px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 60px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.primaryButton:hover {
+    background-color: var(--primary);
+}
+
+.secondaryButton {
+    padding: 16px 32px;
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 60px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.secondaryButton:hover {
+    background-color: #F3F4F6;
+}
+
+
+.ctaButtons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 60px;
+}

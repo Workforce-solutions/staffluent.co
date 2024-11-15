@@ -1,4 +1,4 @@
-// src/components/home/Hero/index.tsx
+// src/components/home/Hero/ContactForm.tsx
 "use client";
 import Link from 'next/link';
 import Image from 'next/image';

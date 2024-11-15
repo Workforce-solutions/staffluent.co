@@ -1,4 +1,4 @@
-// src/components/home/BrandLogo/index.tsx
+// src/components/home/BrandLogo/ContactForm.tsx
 "use client";
 import Image from 'next/image';
 import styles from './BrandLogo.module.css';

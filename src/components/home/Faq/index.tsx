@@ -1,4 +1,4 @@
-// src/components/home/FAQ/index.tsx
+// src/components/home/FAQ/ContactForm.tsx
 "use client";
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';

@@ -8,30 +8,46 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "Who is communication Organizez for?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      question: "What makes Staffluent different from other platforms?",
+      answer: "Staffluent uniquely combines project management, team collaboration, and performance analytics in one integrated solution. Our platform offers real-time tracking, comprehensive reporting, and client portal features all working seamlessly together."
     },
     {
-      question: "What is the uptime guranted?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      question: "How does the project tracking system work?",
+      answer: "Our system provides real-time project monitoring, task management, and team performance tracking. You can easily manage work orders, conduct quality inspections, and maintain detailed project records all in one place."
     },
     {
-      question: "How do i get started with organizez?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      question: "How do you handle team collaboration?",
+      answer: "We provide internal chat systems, project comments, team messaging, and smart notifications to ensure seamless communication. Teams can collaborate effectively while maintaining clear communication channels."
     },
     {
-      question: "How can I add more email?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      question: "What kind of analytics do you provide?",
+      answer: "Our platform offers comprehensive analytics including productivity tracking, time utilization metrics, department performance analysis, and custom report generation to help optimize your operations."
     },
     {
-      question: "How we get trial and upgrade?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
+      question: "How does the client portal work?",
+      answer: "Clients get their own dedicated portal for managing service requests, tracking project progress, and communicating with teams. It provides full transparency and easy collaboration between your team and clients."
     },
+    // New additions
+    {
+      question: "How do you handle service management?",
+      answer: "Service management is streamlined through organized categories, automated request handling, and approval workflows. Teams can track service delivery, manage quality control, and maintain client satisfaction all through one integrated system."
+    },
+    {
+      question: "What time tracking features are available?",
+      answer: "Our platform includes automated time tracking, break management, attendance monitoring, and overtime tracking. Get real-time insights into time utilization and ensure efficient workforce management."
+    },
+    {
+      question: "How do you handle quality control?",
+      answer: "Quality control is integrated throughout with inspection tools, issue tracking, compliance monitoring, and performance metrics. Maintain high standards across all services while ensuring consistent delivery quality."
+    },
+    {
+      question: "What administrative controls are provided?",
+      answer: "Administrators have comprehensive controls including role management, department configuration, access permissions, and system settings. Customize the platform to match your organizational structure and security requirements."
+    },
+    {
+      question: "How does your reporting system work?",
+      answer: "Generate detailed reports on time tracking, productivity trends, department analytics, and performance metrics. Export capabilities ensure data portability while custom report generation meets specific analytical needs."
+    }
   ];
 
   return (

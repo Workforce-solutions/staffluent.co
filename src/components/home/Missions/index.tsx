@@ -1,4 +1,4 @@
-// src/components/home/Mission/index.tsx
+// src/components/home/Mission/ContactForm.tsx
 "use client";
 import { motion } from "framer-motion";
 import styles from "./Mission.module.css";
