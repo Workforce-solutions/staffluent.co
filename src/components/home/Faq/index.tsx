@@ -28,7 +28,7 @@ const faqData: FAQItem[] = [
         category: "Features"
     },
     {
-        question: "How do you handle data security and privacy?",
+        question: "How do you handle data security and privacy-policy?",
         answer: "Security is our top priority. We implement industry-standard encryption, regular security audits, and strict access controls. Your data is backed up regularly, and we comply with major data protection regulations to ensure your information stays safe and confidential.",
         category: "Security"
     },
