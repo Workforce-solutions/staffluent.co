@@ -24,7 +24,7 @@ const PrivacyPolicyPage = () => {
                     <p className="text-gray-700 leading-relaxed">
                         At Staffluent, we take your privacy seriously. This Privacy Policy explains how we collect, use,
                         disclose, and safeguard your information when you use our workforce management platform,
-                        including our website, mobile applications, and related services (collectively, the "Services").
+                        including our website, mobile applications, and related services (collectively, the &ldquo;Services&rdquo;).
                     </p>
                 </section>
 
@@ -129,7 +129,7 @@ const PrivacyPolicyPage = () => {
                             <div className="bg-yellow-50 p-4 rounded-lg space-y-4">
                                 <h3 className="text-xl font-medium">3.1 Internal Sharing</h3>
                                 <ul className="list-disc pl-6 space-y-2">
-                                    <li>Team leaders can access their team members' data</li>
+                                    <li>Team leaders can access their team members&apos; data</li>
                                     <li>Operations managers can view assigned project information</li>
                                     <li>Administrators have access based on their role permissions</li>
                                 </ul>

@@ -23,7 +23,7 @@ const TermsPage = () => {
                 <section className="mb-12">
                     <p className="text-gray-700 leading-relaxed">
                         Welcome to Staffluent. These Terms of Use govern your access to and use of the Staffluent platform,
-                        including our website, mobile applications, and services (collectively, the "Services").
+                        including our website, mobile applications, and services (collectively, the &ldquo;Services&rdquo;).
                         Please read these terms carefully before using our Services.
                     </p>
                 </section>
@@ -35,7 +35,7 @@ const TermsPage = () => {
                         <h2 className="text-2xl font-semibold mb-4 text-blue-800">1. Agreement to Terms</h2>
                         <div className="space-y-4 text-gray-700">
                             <p>
-                                By accessing or using Staffluent's Services, you agree to be bound by these Terms of Use
+                                By accessing or using Staffluent&apos;s Services, you agree to be bound by these Terms of Use
                                 and our Privacy Policy. If you are using the Services on behalf of an organization,
                                 you represent and warrant that you have the authority to bind that organization to
                                 these Terms.
@@ -163,7 +163,7 @@ const TermsPage = () => {
                                 <p>We may terminate or suspend your access to the Services:</p>
                                 <ul className="list-disc pl-6 space-y-2 mt-2">
                                     <li>For violations of these Terms</li>
-                                    <li>At your employer's request</li>
+                                    <li>At your employer&apos;s request</li>
                                     <li>For prolonged inactivity</li>
                                     <li>For any other reason with notice</li>
                                 </ul>
@@ -183,7 +183,7 @@ const TermsPage = () => {
                         <div className="bg-yellow-50 p-6 rounded-lg space-y-4 text-gray-700">
                             <h3 className="text-xl font-medium mb-2">8.1 Warranty Disclaimer</h3>
                             <p className="uppercase text-sm">
-                                THE SERVICES ARE PROVIDED "AS IS" WITHOUT ANY WARRANTY OF ANY KIND
+                                THE SERVICES ARE PROVIDED &ldquo;AS IS&rdquo; WITHOUT ANY WARRANTY OF ANY KIND
                             </p>
 
                             <h3 className="text-xl font-medium mb-2 mt-6">8.2 Limitation of Liability</h3>

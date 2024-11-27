@@ -1,14 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, FormEvent, ChangeEvent } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
 import { AlertCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
+interface FormData {
+    email: string;
+    userType: string;
+    reason: string;
+    confirmUnderstand: boolean;
+    verificationDoc: File | null;
+}
+
 const DataDeletionPage = () => {
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         email: '',
         userType: 'employee',
         reason: '',
@@ -16,17 +24,21 @@ const DataDeletionPage = () => {
         verificationDoc: null
     });
 
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        // Handle form submission
+    };
+
+    const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0] || null;
+        setFormData({...formData, verificationDoc: file});
+    };
+
     const navLinks = [
         { href: "/", label: "Home" },
         { href: "/about", label: "About" },
         { href: "/contact", label: "Contact" },
     ];
-
-    // @ts-ignore
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission
-    };
 
     const DataDeletionContent = () => (
         <div className="max-w-6xl mx-auto px-4 py-12">
@@ -171,8 +183,7 @@ const DataDeletionPage = () => {
                                         <input
                                             type="file"
                                             className="w-full"
-                                            // @ts-ignore
-                                            onChange={(e) => setFormData({...formData, verificationDoc: e.target.files[0]})}
+                                            onChange={handleFileChange}
                                         />
                                         <p className="text-sm text-gray-500 mt-1">
                                             Please provide ID or authorization documentation
