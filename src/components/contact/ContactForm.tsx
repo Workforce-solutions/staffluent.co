@@ -166,10 +166,10 @@ const ContactForm = () => {
 
                                 <div className="pt-6 border-t">
                                     <p className="font-medium">Contact Support:</p>
-                                    <a href="mailto:support@staffluent.xyz"
+                                    <a href="mailto:support@staffluent.co"
                                        className="text-indigo-600 hover:text-indigo-700 flex items-center gap-2 mt-2">
                                         <Mail size={20} />
-                                        support@staffluent.xyz
+                                        support@staffluent.co
                                     </a>
                                 </div>
                             </div>

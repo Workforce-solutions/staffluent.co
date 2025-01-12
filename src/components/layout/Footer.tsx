@@ -75,7 +75,7 @@ const Footer = () => {
                 </div>
                 <div className={styles.contactItem}>
                   <Mail size={20} className={styles.icon} />
-                  <a href="mailto:contact@staffluent.xyz">contact@staffluent.xyz</a>
+                  <a href="mailto:contact@staffluent.co">contact@staffluent.co</a>
                 </div>
                 <div className={styles.contactItem}>
                   <Phone size={20} className={styles.icon} />

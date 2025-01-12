@@ -226,7 +226,7 @@ const PrivacyPolicyPage = () => {
                         <div className="bg-gray-50 p-6 rounded-lg">
                             <p className="mb-4">For privacy-related inquiries, please contact our Data Protection Officer:</p>
                             <div className="space-y-2 text-gray-700">
-                                <p>Email: privacy@staffluent.xyz</p>
+                                <p>Email: privacy@staffluent.co</p>
                                 <p>Phone: +1 (844) 248-1465</p>
                                 <p>Address: 222 East 44th Street, New York, NY 10017</p>
                             </div>

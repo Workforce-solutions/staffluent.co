@@ -35,7 +35,7 @@ const CTA = () => {
                     {/* Right side - Action Buttons */}
                     <div className={`lg:w-2/5 flex justify-center items-center h-auto`}>
                         <div className={`${styles.ctaButtons}`}>
-                            <Link href="https://app.staffluent.xyz" className={`${styles.primaryButton}`}>
+                            <Link href="https://app.staffluent.co" className={`${styles.primaryButton}`}>
                                 Start Now
                             </Link>
                             <Link href="/contact" className={`${styles.secondaryButton}`}>
