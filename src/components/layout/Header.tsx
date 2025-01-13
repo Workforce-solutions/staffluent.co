@@ -51,7 +51,7 @@ const Header = ({
           {/* Auth Buttons */}
           <div className={styles.authButtons}>
             <Link
-                href="https://app.staffluent.xyz"
+                href="https://app.staffluent.co"
                 className={styles.signupButton}
             >
               Access Platform

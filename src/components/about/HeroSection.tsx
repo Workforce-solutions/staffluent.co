@@ -50,7 +50,7 @@ const HeroSection = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <div className={`${styles.ctaButtons}`}>
-              <Link href="https://app.staffluent.xyz" className={`${styles.primaryButton}`}>
+              <Link href="https://app.staffluent.co" className={`${styles.primaryButton}`}>
                 Start Now
               </Link>
               <Link href="/contact" className={`${styles.secondaryButton}`}>

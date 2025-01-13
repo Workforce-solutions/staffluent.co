@@ -118,7 +118,7 @@ const ContactForm = () => {
         }
     };
 
-    const inputStyles = "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white shadow-sm";
+    const inputStyles = "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white shadow-sm text-gray-900 placeholder-gray-500";
     const errorStyles = "text-red-500 text-sm mt-1";
 
     return (
@@ -127,49 +127,52 @@ const ContactForm = () => {
             <div className="max-w-[1200px] mx-auto px-4">
                 {/* Header Section */}
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold mb-4">Start Optimizing Your Business Today</h1>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                        Start Optimizing Your Business Today
+                    </h1>
+                    <p className="text-gray-700 text-lg max-w-2xl mx-auto">
                         Learn how Staffluent can help streamline your operations, boost team productivity,
                         and improve project management efficiency.
                     </p>
                 </div>
 
+
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     {/* Contact Information */}
                     <div className="lg:col-span-1">
                         <div className="bg-white p-8 rounded-lg shadow-sm">
-                            <h3 className="text-xl font-semibold mb-6">Why Choose Staffluent</h3>
+                            <h3 className="text-xl font-semibold mb-6 text-gray-900">Why Choose Staffluent</h3>
 
                             <div className="space-y-6">
                                 <div className="space-y-4">
-                                    <p className="font-medium flex items-center gap-2">
+                                    <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
                                         Comprehensive Management Suite
                                     </p>
-                                    <p className="font-medium flex items-center gap-2">
+                                    <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
                                         Real-time Analytics
                                     </p>
-                                    <p className="font-medium flex items-center gap-2">
+                                    <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
                                         Team Collaboration Tools
                                     </p>
-                                    <p className="font-medium flex items-center gap-2">
+                                    <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
                                         Custom Integration Options
                                     </p>
-                                    <p className="font-medium flex items-center gap-2">
+                                    <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
                                         24/7 Technical Support
                                     </p>
                                 </div>
 
                                 <div className="pt-6 border-t">
-                                    <p className="font-medium">Contact Support:</p>
-                                    <a href="mailto:support@staffluent.xyz"
+                                    <p className="font-medium text-gray-900">Contact Support:</p>
+                                    <a href="mailto:support@staffluent.co"
                                        className="text-indigo-600 hover:text-indigo-700 flex items-center gap-2 mt-2">
                                         <Mail size={20} />
-                                        support@staffluent.xyz
+                                        support@staffluent.co
                                     </a>
                                 </div>
                             </div>
