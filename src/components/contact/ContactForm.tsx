@@ -1,7 +1,7 @@
 // src/components/contact/ContactForm.tsx
 "use client";
 import { useState } from 'react';
-import { Mail, Loader, CheckCircle, CalendarCheck, CreditCard, Sparkles } from 'lucide-react';
+import { Mail, Loader, CheckCircle, CalendarCheck, Sparkles } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
