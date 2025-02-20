@@ -67,9 +67,9 @@ const Pricing = () => {
   const includedFeatures = [
     {
       title: "14-Day Free Trial",
-      icon: "/api/placeholder/20/20"
+      icon: "https://framerusercontent.com/images/uKcIDlgAZyRZYyVRxqM9O4CREf0.svg",
     }
-  ];
+  ]
 
   return (
       <section className="md:py-10 py-10" id="pricing">
@@ -213,10 +213,18 @@ const Pricing = () => {
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="max-w-[1200px] mx-auto relative mt-16">
-            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between md:gap-12 bg-[#F8FAFC] rounded-3xl">
+            <div className="absolute inset-0">
+              <Image
+                  src="https://framerusercontent.com/images/OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
+                  alt="Staffluent - Centered Intelligence"
+                  fill
+                  className="object-cover rounded-3xl"
+              />
+            </div>
+
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between md:gap-12">
               <div className="text-center lg:text-left px-14 py-16 rounded-xl lg:max-w-[45%]">
                 <h3 className="text-3xl font-semibold text-gray-500 mb-4">
                   Start your free trial today
@@ -234,14 +242,25 @@ const Pricing = () => {
                 </div>
               </div>
 
-              <div className="lg:flex-1 flex items-end justify-end relative p-8">
-                <Image
-                    src="/api/placeholder/480/260"
-                    alt="Dashboard Preview"
-                    width={480}
-                    height={260}
-                    className="rounded-xl shadow-lg"
-                />
+              <div className="lg:flex-1 flex items-end justify-end relative">
+                <div className="relative">
+                  <Image
+                      src="https://framerusercontent.com/images/6R7Itar4Nwn8lsiojWr72ZW1uKk.png?scale-down-to=1024"
+                      alt="Staffluent - Centered Intelligence"
+                      width={480}
+                      height={260}
+                      className="rounded-xl shadow-lg ml-auto"
+                  />
+                  <div className="absolute -bottom-[29%] -left-16 hidden md:block">
+                    <Image
+                        src="https://framerusercontent.com/images/6R7Itar4Nwn8lsiojWr72ZW1uKk.png?scale-down-to=1024"
+                        alt="Staffluent - Centered Intelligence"
+                        width={700}
+                        height={20}
+                        className="rounded-xl shadow-lg w-full"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
