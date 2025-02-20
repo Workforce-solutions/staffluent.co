@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Advantages = () => {
   const features = [
@@ -45,21 +46,48 @@ const Advantages = () => {
     },
   ];
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
       <>
         {/* First Advantage Section */}
         <section className="py-10 md:py-16" id="advantage">
           <div className="max-w-[1200px] mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 text-center md:text-left">
-              <h2 className="text-4xl md:text-6xl leading-tight font-bold">
+            <motion.div
+                className="space-y-8 text-center md:text-left"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={container}
+            >
+              <motion.h2
+                  className="text-4xl md:text-6xl leading-tight font-bold"
+                  variants={fadeInUp}
+              >
                 Why Choose Staffluent
-              </h2>
+              </motion.h2>
 
-              {/* Features Grid */}
-              <div className="flex flex-col md:flex-row flex-wrap gap-4 max-w-lg mx-auto md:mx-0">
-                {features.map((feature) => (
-                    <div
+              <motion.div
+                  className="flex flex-col md:flex-row flex-wrap gap-4 max-w-lg mx-auto md:mx-0"
+                  variants={container}
+              >
+                {features.map((feature, index) => (
+                    <motion.div
                         key={feature.title}
+                        variants={fadeInUp}
                         className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-xl p-2 flex items-center justify-center gap-3"
                     >
                       <div className="w-8 md:w-10 h-8 md:h-10 bg-[#0A0A0A] rounded-lg flex items-center justify-center">
@@ -72,35 +100,47 @@ const Advantages = () => {
                         />
                       </div>
                       <span className="text-[#333333] text-sm md:text-base">{feature.title}</span>
-                    </div>
+                    </motion.div>
                 ))}
-              </div>
+              </motion.div>
 
-              <Link
-                  href="/contact"
-                  className="inline-block bg-[#0A0A0A] text-white px-4 py-3 rounded-xl hover:bg-black/90 transition-colors text-center w-full md:w-auto"
-              >
-                Get Started
-              </Link>
-            </div>
+              <motion.div variants={fadeInUp}>
+                <Link
+                    href="/contact"
+                    className="inline-block bg-[#0A0A0A] text-white px-4 py-3 rounded-xl hover:bg-black/90 transition-colors text-center w-full md:w-auto"
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            </motion.div>
 
-            {/* Image Section */}
-            <div className="relative rounded-3xl border border-[#DEE5ED] overflow-hidden">
+            <motion.div
+                className="relative rounded-3xl border border-[#DEE5ED] overflow-hidden"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+            >
               <Image
                   src="https://framerusercontent.com/images/mSmtNMWqbIobNUiGm49hZpq614.svg"
                   alt="Staffluent - Centered Intelligence"
                   width={575}
                   height={530}
               />
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Second Advantage Section */}
         <section className="py-12 md:py-20 bg-[#F8FAFC]">
           <div className="max-w-[1200px] mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-            {/* Image Section with Arrow */}
-            <div className="relative">
+            <motion.div
+                className="relative"
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+            >
               <div className="relative rounded-3xl border border-[#DEE5ED] overflow-hidden">
                 <Image
                     src="https://framerusercontent.com/images/4tAswm4VmUUUuFeWv5aNzy3XNoI.svg"
@@ -116,24 +156,39 @@ const Advantages = () => {
                   height={80}
                   className="absolute -right-16 top-3/4 -translate-y-1/2 hidden md:block"
               />
-            </div>
+            </motion.div>
 
-            <div className="space-y-8 text-center md:text-left">
+            <motion.div
+                className="space-y-8 text-center md:text-left"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={container}
+            >
               <div className="space-y-4">
-                <h2 className="text-4xl md:text-6xl leading-tight font-bold">
+                <motion.h2
+                    className="text-4xl md:text-6xl leading-tight font-bold"
+                    variants={fadeInUp}
+                >
                   Explore Staffluent AI-Enhanced Features
-                </h2>
-                <p className="text-[#3d495b] text-base md:text-lg">
+                </motion.h2>
+                <motion.p
+                    className="text-[#3d495b] text-base md:text-lg"
+                    variants={fadeInUp}
+                >
                   Discover how AI streamlines tasks, predicts needs, and boosts
                   productivity effortlessly.
-                </p>
+                </motion.p>
               </div>
 
-              {/* Features Grid */}
-              <div className="flex flex-wrap justify-center md:justify-start gap-3">
+              <motion.div
+                  className="flex flex-wrap justify-center md:justify-start gap-3"
+                  variants={container}
+              >
                 {aiFeatures.map((feature) => (
-                    <div
+                    <motion.div
                         key={feature.title}
+                        variants={fadeInUp}
                         className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-full py-2 px-3 md:px-4 flex items-center gap-2"
                     >
                       <Image
@@ -144,10 +199,10 @@ const Advantages = () => {
                           className="md:w-5 md:h-5"
                       />
                       <span className="text-sm md:text-base">{feature.title}</span>
-                    </div>
+                    </motion.div>
                 ))}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
       </>
