@@ -16,7 +16,7 @@ const HeroSection = () => {
             >
               <div className="relative">
                 <Image
-                    src="/img-2.png"
+                    src="home-banner.png"
                     alt="Staffluent Web App Preview"
                     width={800}
                     height={400}
