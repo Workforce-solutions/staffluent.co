@@ -66,7 +66,11 @@ const FAQSection = () => {
                   <div className="bg-[#333333] rounded-full p-2 flex-shrink-0">
                     <div className="w-6 h-6 relative">
                       <Image
-                        src="/api/placeholder/24/24"
+                        src={
+                          openIndex === index
+                            ? "https://framerusercontent.com/images/ilTrUqtaRn3OV7UKGJjSNsQC1w.svg"
+                            : "https://framerusercontent.com/images/ROg7tkXh5h3JY9OVXT66zDJMFUw.svg"
+                        }
                         alt={openIndex === index ? "Minus" : "Plus"}
                         width={24}
                         height={24}
@@ -111,7 +115,11 @@ const FAQSection = () => {
                   <div className="bg-[#333333] rounded-full p-2 flex-shrink-0">
                     <div className="w-6 h-6 relative">
                       <Image
-                        src="/api/placeholder/24/24"
+                        src={
+                          openIndex === index + 3
+                            ? "https://framerusercontent.com/images/ilTrUqtaRn3OV7UKGJjSNsQC1w.svg"
+                            : "https://framerusercontent.com/images/ROg7tkXh5h3JY9OVXT66zDJMFUw.svg"
+                        }
                         alt={openIndex === index + 3 ? "Minus" : "Plus"}
                         width={24}
                         height={24}

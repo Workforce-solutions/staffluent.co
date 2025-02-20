@@ -11,24 +11,39 @@ const Advantages = () => {
     },
     {
       title: "Automated Scheduling",
-      icon: "https://framerusercontent.com/images/TFPLWOVt43fxJQ2k2LQqnAd3Obs.svg",
+      icon: "https://framerusercontent.com/images/6Hl73G12BPhpBSE40pGQMArkw.svg",
     },
     {
       title: "AI-Powered Reminders",
-      icon: "https://framerusercontent.com/images/484M7kHBnbIGJMAnW6e3OEVKI.svg",
+      icon: "https://framerusercontent.com/images/l8Yny4qzAGaJpmBlbw4y3IqqZw.svg",
     },
     {
       title: "Predictive Analytics",
-      icon: "https://framerusercontent.com/images/wpnZoP3QjADuGfntbYdd3adrVpg.svg",
+      icon: "https://framerusercontent.com/images/484M7kHBnbIGJMAnW6e3OEVKI.svg",
     },
   ];
 
   const aiFeatures = [
-    { title: "Task Management", icon: Crosshair },
-    { title: "Collaboration Tools", icon: Share2 },
-    { title: "Deadline Alerts", icon: Target },
-    { title: "Real-Time Sync", icon: Database },
-    { title: "Prioritization", icon: GitBranch },
+    {
+      title: "Task Management",
+      icon: "https://framerusercontent.com/images/STx7MhL1G8tv8zPZeZrABlyiHKk.svg",
+    },
+    {
+      title: "Collaboration Tools",
+      icon: "https://framerusercontent.com/images/2Fp6sHUU5gChe0qVJmJOhelkL9w.svg",
+    },
+    {
+      title: "Deadline Alerts",
+      icon: "https://framerusercontent.com/images/0Q35L936tMwlGlWJJjIfRZ5UQ.svg",
+    },
+    {
+      title: "Real-Time Sync",
+      icon: "https://framerusercontent.com/images/Ol4qxoj2cnkGeNq0wLZxMJYI.svg",
+    },
+    {
+      title: "Prioritization",
+      icon: "https://framerusercontent.com/images/wV6LymmM5xeoIkKwXvy92GrPtM.svg",
+    },
   ];
 
   return (
@@ -46,7 +61,7 @@ const Advantages = () => {
               {features.map((feature) => (
                 <div
                   key={feature.title}
-                  className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-xl p-2 flex items-center gap-3"
+                  className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-xl p-2 flex items-center justify-center gap-3"
                 >
                   <div className="w-10 h-10 bg-[#0A0A0A] rounded-lg flex items-center justify-center">
                     <Image
@@ -71,13 +86,12 @@ const Advantages = () => {
           </div>
 
           {/* Image Section */}
-          <div className="relative rounded-3xl border border-[#DEE5ED] overflow-hidden aspect-[4/3]">
+          <div className="relative rounded-3xl border border-[#DEE5ED] overflow-hidden">
             <Image
-              src="/api/placeholder/600/450"
+              src="https://framerusercontent.com/images/mSmtNMWqbIobNUiGm49hZpq614.svg"
               alt="Advantage illustration"
-              width={600}
-              height={450}
-              className="w-full h-full object-cover"
+              width={575}
+              height={530}
             />
           </div>
         </div>
@@ -86,14 +100,23 @@ const Advantages = () => {
       {/* Second Advantage Section */}
       <section className="py-20 bg-[#F8FAFC]">
         <div className="max-w-[1200px] mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          {/* Image Section */}
-          <div className="relative rounded-3xl border border-[#DEE5ED] overflow-hidden aspect-[4/3]">
+          {/* Image Section with Arrow */}
+          <div className="relative">
+            <div className="relative rounded-3xl border border-[#DEE5ED] overflow-hidden">
+              <Image
+                src="https://framerusercontent.com/images/4tAswm4VmUUUuFeWv5aNzy3XNoI.svg"
+                alt="AI Features illustration"
+                width={600}
+                height={450}
+              />
+            </div>
+            {/* Curved Arrow */}
             <Image
-              src="/api/placeholder/600/450"
-              alt="AI Features illustration"
-              width={600}
-              height={450}
-              className="w-full h-full object-cover"
+              src="https://framerusercontent.com/images/DJaenqiURD5xYuKBLs68FRtHMB4.svg"
+              alt="Curved Arrow"
+              width={120}
+              height={80}
+              className="absolute -right-16 top-3/4 -translate-y-1/2"
             />
           </div>
 
@@ -115,7 +138,12 @@ const Advantages = () => {
                   key={feature.title}
                   className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-full py-2 px-4 flex items-center gap-2"
                 >
-                  <feature.icon className="h-5 w-5" />
+                  <Image
+                    src={feature.icon}
+                    alt={feature.title}
+                    width={20}
+                    height={20}
+                  />
                   <span>{feature.title}</span>
                 </div>
               ))}

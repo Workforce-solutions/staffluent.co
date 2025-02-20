@@ -61,19 +61,19 @@ const Pricing = () => {
   const includedFeatures = [
     {
       title: "Task Management",
-      icon: Crosshair,
+      icon: "https://framerusercontent.com/images/uKcIDlgAZyRZYyVRxqM9O4CREf0.svg",
     },
     {
       title: "Real-time Collaboration",
-      icon: Share2,
+      icon: "https://framerusercontent.com/images/X9dLSrE97LggGEWbwCZN77cdSjU.svg",
     },
     {
       title: "Document Sharing",
-      icon: File,
+      icon: "https://framerusercontent.com/images/bvX5EBeBAMKczyExEfk9oNCsQ9A.svg",
     },
     {
       title: "Client Communication",
-      icon: BriefcaseBusiness,
+      icon: "https://framerusercontent.com/images/Z7J6959mSKIwttGnD0t9lDMpxA.svg",
     },
   ];
 
@@ -145,7 +145,7 @@ const Pricing = () => {
                 </svg>
 
                 {/* Discount Badge */}
-                <div className="absolute -top-8 -right-44 bg-white shadow-sm border border-[#DEE5ED] rounded-full py-1.5 px-4 text-sm whitespace-nowrap">
+                <div className="absolute -top-10 -right-24 md:-right-44 bg-white shadow-sm border border-[#DEE5ED] rounded-full py-1.5 px-4 text-sm whitespace-nowrap">
                   40% OFF on Yearly Plan
                 </div>
               </>
@@ -222,10 +222,74 @@ const Pricing = () => {
                 key={index}
                 className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-xl p-2 flex gap-2 items-center"
               >
-                <feature.icon className="h-5 w-5" />
+                <Image
+                  src={feature.icon}
+                  alt={feature.title}
+                  width={20}
+                  height={20}
+                />
                 <span>{feature.title}</span>
               </div>
             ))}
+          </div>
+          <div className="max-w-[1200px] mx-auto relative mt-16">
+            {/* Background Image */}
+            <div className="absolute inset-0">
+              <Image
+                src="https://framerusercontent.com/images/OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
+                alt="Background"
+                fill
+                className="object-cover rounded-3xl"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start md:gap-12">
+              {/* Text Content */}
+              <div className="text-center lg:text-left px-14 py-16 rounded-xl">
+                <h3 className="text-3xl font-semibold text-gray-500 mb-4">
+                  Start optimizing your workflow today.
+                </h3>
+                <p className="text-gray-500 text-lg text-left max-w-sm mb-8">
+                  Experience how our comprehensive platform streamlines project
+                  tracking, enhances team collaboration, and provides powerful
+                  analytics to drive your success.
+                </p>
+                <div>
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-white text-gray-900 px-6 py-3 rounded-xl hover:bg-gray-50 transition-colors text-lg font-medium"
+                  >
+                    Request Demo
+                  </Link>
+                </div>
+              </div>
+
+              {/* Arrow and Button */}
+              <div className="flex flex-col items-center justify-end my-auto gap-4 relative w-auto">
+                {/* Product List Image */}
+                <div className="relative">
+                  <Image
+                    src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
+                    alt="Product List"
+                    width={480}
+                    height={260}
+                    className="rounded-xl shadow-lg"
+                  />
+
+                  {/* Message UI Image - Positioned on top */}
+                  <div className="absolute -bottom-[29%] -left-16">
+                    <Image
+                      src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
+                      alt="Message UI"
+                      width={700}
+                      height={200}
+                      className="rounded-xl shadow-lg w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
