@@ -278,7 +278,7 @@ const Pricing = () => {
                   />
 
                   {/* Message UI Image - Positioned on top */}
-                  <div className="absolute -bottom-[29%] -left-16">
+                  <div className="absolute -bottom-[29%] -left-16 hidden md:block">
                     <Image
                       src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
                       alt="Message UI"
