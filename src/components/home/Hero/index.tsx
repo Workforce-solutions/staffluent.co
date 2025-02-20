@@ -13,6 +13,14 @@ const Hero = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 
+
+  const scrollToPricing = (e) => {
+    e.preventDefault();
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
       <section className="pt-10 w-full overflow-x-hidden">
         <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col items-center text-center">
@@ -26,7 +34,7 @@ const Hero = () => {
                   height={24}
               />
               <span className="text-[#0A0A0A] text-sm md:text-base">
-              Coordinate - Schedule - Empower
+              Coordinate • Schedule • Empower – Elevate Your Team Management
             </span>
               <div className="bg-[#0A0A0A] p-1 rounded-full">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -53,9 +61,8 @@ const Hero = () => {
               Elevate Your Staff Management with Cloud-Based Solutions
             </h1>
             <p className="text-base md:text-lg text-[#3d495b] max-w-[600px] mx-auto mt-4 md:mt-6">
-              The ultimate staff management platform that streamlines employee
-              tracking, shift scheduling, time-off requests, and attendance—all in
-              one unified solution.
+              The ultimate cloud‑based platform for project tracking,
+              time & attendance, quality inspections, and client management.
             </p>
           </motion.div>
 
@@ -70,12 +77,12 @@ const Hero = () => {
                 href="/contact"
                 className="bg-[#0A0A0A] text-white text-base md:text-[17px] px-6 py-3 md:py-4 rounded-xl hover:bg-black/90 transition-colors w-full md:w-auto"
             >
-              Get Started
+              Start Free Trial
             </Link>
 
             <div
                 className="flex items-center gap-3 border p-1 rounded-full pr-2 cursor-pointer hover:bg-black/5"
-                onClick={() => router.push('/contact')}
+                onClick={scrollToPricing}
             >
               <div className="flex">
                 <div className="flex -space-x-2">
@@ -96,13 +103,13 @@ const Hero = () => {
                   <Image
                       src="https://framerusercontent.com/images/prQs9tObWVtpStifstN0OexkE.png"
                       alt="Staffluent - Team member"
-                      width={32}
-                      height={32}
-                      className="rounded-full border-2 border-white relative z-10"
+                      width={28}
+                      height={28}
+                      className="rounded-full border-2 border-white relative z-10 md:w-8 md:h-8"
                   />
                 </div>
               </div>
-              <span className="text-[#3d495b] text-base">How it works</span>
+              <span className="text-[#3d495b] text-sm md:text-base">View Pricing</span>
             </div>
           </motion.div>
 

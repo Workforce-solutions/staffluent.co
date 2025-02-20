@@ -109,7 +109,7 @@ const Advantages = () => {
                     href="/contact"
                     className="inline-block bg-[#0A0A0A] text-white px-4 py-3 rounded-xl hover:bg-black/90 transition-colors text-center w-full md:w-auto"
                 >
-                  Get Started
+                  Start Free Trial
                 </Link>
               </motion.div>
             </motion.div>

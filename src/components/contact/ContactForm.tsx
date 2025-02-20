@@ -1,7 +1,7 @@
 // src/components/contact/ContactForm.tsx
 "use client";
 import { useState } from 'react';
-import { Mail, Loader, CheckCircle } from 'lucide-react';
+import { Mail, Loader, CheckCircle, CalendarCheck, CreditCard, Sparkles } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -98,7 +98,6 @@ const ContactForm = () => {
         setIsSubmitting(true);
 
         try {
-            // Simulating API call
             await new Promise(resolve => setTimeout(resolve, 2000));
             toast.success('Form submitted successfully!');
             setFormData({
@@ -127,48 +126,51 @@ const ContactForm = () => {
             <div className="max-w-[1200px] mx-auto px-4">
                 {/* Header Section */}
                 <div className="text-center mb-16">
+                    <div className="inline-flex items-center gap-2 bg-[#F8FAFC] border border-[#DEE5ED] rounded-full px-4 py-2 mb-4">
+                        <Sparkles className="w-5 h-5 text-[#0A0A0A]" />
+                        <span className="text-[#0A0A0A]">14-Day Free Trial Available</span>
+                    </div>
                     <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                        Start Optimizing Your Business Today
+                        Start Your Risk-Free Trial Today
                     </h1>
                     <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-                        Learn how Staffluent can help streamline your operations, boost team productivity,
-                        and improve project management efficiency.
+                        Experience the full power of Staffluent for 14 days with complete access
+                        to all features. No credit card required to get started.
                     </p>
                 </div>
 
-
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    {/* Contact Information */}
+                    {/* Benefits Section */}
                     <div className="lg:col-span-1">
                         <div className="bg-white p-8 rounded-lg shadow-sm">
-                            <h3 className="text-xl font-semibold mb-6 text-gray-900">Why Choose Staffluent</h3>
+                            <h3 className="text-xl font-semibold mb-6 text-gray-900">Trial Benefits</h3>
 
                             <div className="space-y-6">
                                 <div className="space-y-4">
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
-                                        <CheckCircle className="text-green-500" size={20} />
-                                        Comprehensive Management Suite
+                                        <CalendarCheck className="text-green-500" size={20} />
+                                        14 Days Full Access
+                                    </p>
+                                    <p className="font-medium flex items-center gap-2 text-gray-800">
+                                        <CreditCard className="text-green-500" size={20} />
+                                        No Credit Card Required
                                     </p>
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
-                                        Real-time Analytics
+                                        All Premium Features
                                     </p>
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
-                                        Team Collaboration Tools
+                                        Unlimited Team Access
                                     </p>
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
-                                        Custom Integration Options
-                                    </p>
-                                    <p className="font-medium flex items-center gap-2 text-gray-800">
-                                        <CheckCircle className="text-green-500" size={20} />
-                                        24/7 Technical Support
+                                        Full Support & Training
                                     </p>
                                 </div>
 
                                 <div className="pt-6 border-t">
-                                    <p className="font-medium text-gray-900">Contact Support:</p>
+                                    <p className="font-medium text-gray-900">Have Questions?</p>
                                     <a href="mailto:support@staffluent.co"
                                        className="text-[#0A0A0A] hover:text-[#171717] flex items-center gap-2 mt-2">
                                         <Mail size={20} />
@@ -179,9 +181,10 @@ const ContactForm = () => {
                         </div>
                     </div>
 
-                    {/* Contact Form */}
+                    {/* Contact Form - Rest remains the same */}
                     <div className="lg:col-span-2">
                         <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-sm grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* Form fields remain the same */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                     Company Name *
@@ -328,7 +331,7 @@ const ContactForm = () => {
                                             <Loader className="animate-spin" size={20} />
                                             Processing...
                                         </>
-                                    ) : 'Submit Request'}
+                                    ) : 'Start Free Trial'}
                                 </button>
                             </div>
                         </form>
