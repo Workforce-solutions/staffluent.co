@@ -78,7 +78,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="md:py-10 py-4" id="pricing">
+    <section className="md:py-10 py-10" id="pricing">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -250,7 +250,7 @@ const Pricing = () => {
                 <h3 className="text-3xl font-semibold text-gray-500 mb-4">
                   Start optimizing your workflow today.
                 </h3>
-                <p className="text-gray-500 text-lg text-left max-w-sm mb-8">
+                <p className="text-gray-500 text-lg text-center lg:text-left max-w-sm mb-8">
                   Experience how our comprehensive platform streamlines project
                   tracking, enhances team collaboration, and provides powerful
                   analytics to drive your success.

@@ -37,7 +37,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="md:py-10 py-4">
+    <section className="md:py-10 py-10">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
