@@ -115,7 +115,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Dashboard and Features combined container for proper overlap */}
-          <div className="relative w-full mt-20">
+          <div className="relative w-full md:mt-16 mt-8">
             {/* Dashboard Preview */}
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
@@ -125,7 +125,7 @@ const Hero = () => {
             >
               <div className="w-full rounded-[20px] bg-white">
                 <Image
-                    src="https://framerusercontent.com/images/6R7Itar4Nwn8lsiojWr72ZW1uKk.png?scale-down-to=1024"
+                    src="home-banner.png"
                     alt="Staffluent - Platform Dashboard Preview"
                     width={1140}
                     height={600}

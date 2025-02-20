@@ -122,7 +122,7 @@ const Advantages = () => {
                 transition={{ duration: 0.8 }}
             >
               <Image
-                  src="https://framerusercontent.com/images/mSmtNMWqbIobNUiGm49hZpq614.svg"
+                  src="advantage-staffluent-1.png"
                   alt="Staffluent - Centered Intelligence"
                   width={575}
                   height={530}
