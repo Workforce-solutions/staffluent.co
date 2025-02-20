@@ -15,8 +15,8 @@ const About = () => {
         {/* Logo and Title */}
         <div className="flex flex-col items-center mb-16 relative overflow-hidden">
           <Image
-            src="https://framerusercontent.com/images/YWkjUs3TyLqowl3SfODlTHzg.png"
-            alt="Staffluent"
+            src="logo.png"
+            alt="Staffluent - Centered Intelligence"
             width={100}
             height={100}
             className="mb-10"
@@ -34,7 +34,7 @@ const About = () => {
               key={index}
               className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-2xl p-6 text-center"
             >
-              <p className="text-[50px] leading-none font-semibold font-['Bricolage_Grotesque'] text-[#0c0c0c] mb-4">
+              <p className="text-[50px] leading-none font-semibold text-[#0c0c0c] mb-4">
                 {stat.number}
               </p>
               <p className="text-[#3d495b]">{stat.text}</p>

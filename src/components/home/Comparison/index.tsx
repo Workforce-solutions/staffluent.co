@@ -27,7 +27,7 @@ const Comparison = () => {
   ];
 
   return (
-    <section className="py-20" id="comparison">
+    <section className="md:py-10 py-10" id="comparison">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 max-w-[800px] mx-auto">
@@ -42,13 +42,13 @@ const Comparison = () => {
             </div>
             <Image
               src="https://framerusercontent.com/images/5QS6LygmogoJDxB113pzHwYAIy8.svg"
-              alt="VS"
+              alt="Staffluent - Centered Intelligence"
               width={50}
               height={50}
             />
             <Image
-              src="https://framerusercontent.com/images/k3wWW2siq0myz0pRkEcsJY4Gfqs.svg"
-              alt="VS"
+              src="StaffLogoWhite.png"
+              alt="Staffluent - Centered Intelligence"
               width={280}
               height={180}
             />
@@ -100,8 +100,8 @@ const Comparison = () => {
             </div>
             <div className="flex justify-center bg-[#F1F4F8] rounded-b-xl p-6">
               <Image
-                src="https://framerusercontent.com/images/YWkjUs3TyLqowl3SfODlTHzg.png"
-                alt="Staffluent"
+                src="logo.png"
+                alt="Staffluent - Centered Intelligence"
                 width={70}
                 height={70}
               />

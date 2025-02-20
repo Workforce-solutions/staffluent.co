@@ -78,7 +78,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section className="py-20" id="pricing">
+    <section className="md:py-10 py-10" id="pricing">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -237,7 +237,7 @@ const Pricing = () => {
             <div className="absolute inset-0">
               <Image
                 src="https://framerusercontent.com/images/OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
-                alt="Background"
+                alt="Staffluent - Centered Intelligence"
                 fill
                 className="object-cover rounded-3xl"
               />
@@ -250,7 +250,7 @@ const Pricing = () => {
                 <h3 className="text-3xl font-semibold text-gray-500 mb-4">
                   Start optimizing your workflow today.
                 </h3>
-                <p className="text-gray-500 text-lg text-left max-w-sm mb-8">
+                <p className="text-gray-500 text-lg text-center lg:text-left max-w-sm mb-8">
                   Experience how our comprehensive platform streamlines project
                   tracking, enhances team collaboration, and provides powerful
                   analytics to drive your success.
@@ -271,7 +271,7 @@ const Pricing = () => {
                 <div className="relative">
                   <Image
                     src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
-                    alt="Product List"
+                    alt="Staffluent - Centered Intelligence"
                     width={480}
                     height={260}
                     className="rounded-xl shadow-lg"
@@ -281,7 +281,7 @@ const Pricing = () => {
                   <div className="absolute -bottom-[29%] -left-16 hidden md:block">
                     <Image
                       src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
-                      alt="Message UI"
+                      alt="Staffluent - Centered Intelligence"
                       width={700}
                       height={200}
                       className="rounded-xl shadow-lg w-full"

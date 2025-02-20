@@ -14,45 +14,45 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-10 w-full overflow-x-hidden">
-      <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col items-center text-center">
-        {/* Tag Button */}
-        <div className="p-1 border border-[rgba(222,229,237,0.27)] rounded-full">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(222,229,237,50)] hover:bg-black/5 transition-colors">
-            <Image
-              src="https://framerusercontent.com/images/IMr6LHJrnxrNlwu88UNWxCvghkA.svg"
-              alt="Tag"
-              width={24}
-              height={24}
-            />
-            <span className="text-[#0A0A0A] text-base">
+      <section className="pt-10 w-full overflow-x-hidden">
+        <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col items-center text-center">
+          {/* Tag Button */}
+          <div className="p-1 border border-[rgba(222,229,237,0.27)] rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(222,229,237,50)] hover:bg-black/5 transition-colors">
+              <Image
+                  src="https://framerusercontent.com/images/IMr6LHJrnxrNlwu88UNWxCvghkA.svg"
+                  alt="Staffluent - Centered Intelligence"
+                  width={24}
+                  height={24}
+              />
+              <span className="text-[#0A0A0A] text-sm md:text-base">
               Coordinate - Schedule - Empower
             </span>
-            <div className="bg-[#0A0A0A] p-1 rounded-full">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path
-                  d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5"
-                  stroke="white"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <div className="bg-[#0A0A0A] p-1 rounded-full">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path
+                      d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
-        </div>
 
           {/* Main Content */}
           <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              className="mt-10 mb-6"
+              className="mt-8 md:mt-10 mb-4 md:mb-6"
           >
-            <h1 className="text-[68px] md:text-[68px] leading-[1.2] font-bold font-['Bricolage_Grotesque'] text-[#0c0c0c] max-w-[800px] mx-auto">
+            <h1 className="text-[42px] md:text-[68px] leading-[1.1] md:leading-[1.2] font-bold font-['Bricolage_Grotesque'] text-[#0c0c0c] max-w-[800px] mx-auto">
               Elevate Your Staff Management with Cloud-Based Solutions
             </h1>
-            <p className="text-lg text-[#3d495b] max-w-[600px] mx-auto mt-6">
+            <p className="text-base md:text-lg text-[#3d495b] max-w-[600px] mx-auto mt-4 md:mt-6">
               The ultimate staff management platform that streamlines employee
               tracking, shift scheduling, time-off requests, and attendance—all in
               one unified solution.
@@ -64,11 +64,11 @@ const Hero = () => {
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              className="flex flex-col items-center gap-8 mt-10"
+              className="flex flex-col items-center gap-6 md:gap-8"
           >
             <Link
                 href="/contact"
-                className="bg-[#0A0A0A] text-white text-[17px] px-6 py-4 rounded-xl hover:bg-black/90 transition-colors w-full md:w-auto"
+                className="bg-[#0A0A0A] text-white text-base md:text-[17px] px-6 py-3 md:py-4 rounded-xl hover:bg-black/90 transition-colors w-full md:w-auto"
             >
               Get Started
             </Link>
@@ -81,21 +81,21 @@ const Hero = () => {
                 <div className="flex -space-x-2">
                   <Image
                       src="https://framerusercontent.com/images/VLgy4LHFmPRcroCjnlXTid9rvcc.png"
-                      alt="Team member"
-                      width={32}
-                      height={32}
-                      className="rounded-full border-2 border-white relative z-30"
+                      alt="Staffluent - Team member"
+                      width={28}
+                      height={28}
+                      className="rounded-full border-2 border-white relative z-30 md:w-8 md:h-8"
                   />
                   <Image
                       src="https://framerusercontent.com/images/UENPQ6M5gthstqeACgcVeN76TZk.png"
-                      alt="Team member"
-                      width={32}
-                      height={32}
-                      className="rounded-full border-2 border-white relative z-20"
+                      alt="Staffluent - Team member"
+                      width={28}
+                      height={28}
+                      className="rounded-full border-2 border-white relative z-20 md:w-8 md:h-8"
                   />
                   <Image
                       src="https://framerusercontent.com/images/prQs9tObWVtpStifstN0OexkE.png"
-                      alt="Team member"
+                      alt="Staffluent - Team member"
                       width={32}
                       height={32}
                       className="rounded-full border-2 border-white relative z-10"
@@ -118,7 +118,7 @@ const Hero = () => {
               <div className="w-full rounded-[20px] bg-white">
                 <Image
                     src="https://framerusercontent.com/images/6R7Itar4Nwn8lsiojWr72ZW1uKk.png?scale-down-to=1024"
-                    alt="Dashboard Preview"
+                    alt="Staffluent - Platform Dashboard Preview"
                     width={1140}
                     height={600}
                     className="w-full h-auto"

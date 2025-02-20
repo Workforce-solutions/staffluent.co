@@ -20,7 +20,7 @@ const BrandLogo: React.FC<BrandLogoProps> = ({
             <Image
                 className={styles.image2Icon}
                 src="/image-2.png"
-                alt="Brand Logos"
+                alt="Staffluent - Centered Intelligence"
                 width={1440}
                 height={275}
                 loading="lazy"
