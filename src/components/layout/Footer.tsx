@@ -34,7 +34,7 @@ const Footer = () => {
               >
                 <Image
                     src="https://framerusercontent.com/images/bq8j0XRxNw5W65cEtpyVTuWArA.svg"
-                    alt="Email"
+                    alt="Staffluent - Email"
                     width={24}
                     height={24}
                 />
@@ -69,7 +69,7 @@ const Footer = () => {
                   >
                     <Image
                         src="https://framerusercontent.com/images/lE6exgFCC7D83cPTOY1ydeVc5Q.svg"
-                        alt="LinkedIn"
+                        alt="Staffluent - LinkedIn Account"
                         width={24}
                         height={24}
                     />
@@ -82,7 +82,7 @@ const Footer = () => {
                   >
                     <Image
                         src="https://framerusercontent.com/images/qpDZ05AACAyO52WOnvrc0Bz3i0Y.svg"
-                        alt="Instagram"
+                        alt="Staffluent - Instagram Account"
                         width={24}
                         height={24}
                     />
@@ -95,7 +95,7 @@ const Footer = () => {
                   >
                     <Image
                         src="https://framerusercontent.com/images/mHz04n9m5dvAnDw0bIe3uCF268.svg"
-                        alt="X.com"
+                        alt="Staffluent - X.com Account"
                         width={24}
                         height={24}
                     />

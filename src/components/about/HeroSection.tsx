@@ -17,7 +17,7 @@ const HeroSection = () => {
               <div className="relative">
                 <Image
                     src="/img-2.png"
-                    alt="Platform Dashboard Preview"
+                    alt="Staffluent Web App Preview"
                     width={800}
                     height={400}
                     className="w-full rounded-2xl shadow-lg border border-[#DEE5ED]"
