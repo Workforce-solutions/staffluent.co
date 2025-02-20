@@ -11,7 +11,7 @@ const TermsPage = () => {
         { href: "/", label: "Home" },
         { href: "/about", label: "About" },
         { href: "/request-demo", label: "Request a Demo" },
-        { href: "https://app.staffluent.co/login", label: "Access Platform" }, // This only shows in mobile menu
+        { href: "https://app.staffluent.co/login", label: "Access Platform" },
     ];
 
     const TermsContent = () => (
@@ -23,187 +23,155 @@ const TermsPage = () => {
                 {/* Introduction */}
                 <section className="mb-12">
                     <p className="text-gray-700 leading-relaxed">
-                        Welcome to Staffluent. These Terms of Use govern your access to and use of the Staffluent platform,
-                        including our website, mobile applications, and services (collectively, the &ldquo;Services&rdquo;).
-                        Please read these terms carefully before using our Services.
+                        These Terms of Use ("Terms") govern your access to and use of the Staffluent website (the "Site") and related services provided by Staffluent, a registered brand of VenueBoost Inc. ("we," "us," or "our"). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, please do not use the Site.
                     </p>
                 </section>
 
                 {/* Main Terms Sections */}
                 <div className="space-y-12">
-                    {/* Agreement to Terms */}
+                    {/* Acceptance of Terms */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">1. Agreement to Terms</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">1. Acceptance of Terms</h2>
                         <div className="space-y-4 text-gray-700">
                             <p>
-                                By accessing or using Staffluent&apos;s Services, you agree to be bound by these Terms of Use
-                                and our Privacy Policy. If you are using the Services on behalf of an organization,
-                                you represent and warrant that you have the authority to bind that organization to
-                                these Terms.
-                            </p>
-                            <p>
-                                We may update these Terms at any time. We will notify you of any material changes via
-                                email or through the Services. Your continued use of the Services after such notice
-                                constitutes your acceptance of the updated Terms.
-                            </p>
-                        </div>
-                    </section>
-
-                    {/* Access and Account Security */}
-                    <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">2. Access and Account Security</h2>
-                        <div className="space-y-4 text-gray-700">
-                            <h3 className="text-xl font-medium mb-2">2.1 Account Requirements</h3>
-                            <ul className="list-disc pl-6 space-y-2">
-                                <li>You must be 18 years or older to use the Services</li>
-                                <li>You must provide accurate, complete, and current information</li>
-                                <li>You are responsible for maintaining the confidentiality of your account credentials</li>
-                                <li>You must notify us immediately of any unauthorized access</li>
-                            </ul>
-
-                            <h3 className="text-xl font-medium mb-2 mt-6">2.2 Account Security</h3>
-                            <ul className="list-disc pl-6 space-y-2">
-                                <li>Use strong passwords and enable two-factor authentication when available</li>
-                                <li>Do not share your account credentials with others</li>
-                                <li>Log out from your account when using shared devices</li>
-                                <li>Regularly review your account activity</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    {/* Use of Services */}
-                    <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">3. Use of Services</h2>
-                        <div className="space-y-4 text-gray-700">
-                            <h3 className="text-xl font-medium mb-2">3.1 Permitted Use</h3>
-                            <p>You may use the Services only for:</p>
-                            <ul className="list-disc pl-6 space-y-2">
-                                <li>Workforce management and time tracking</li>
-                                <li>Project and task management</li>
-                                <li>Team communication and collaboration</li>
-                                <li>Client management and service delivery</li>
-                            </ul>
-
-                            <h3 className="text-xl font-medium mb-2 mt-6">3.2 Prohibited Activities</h3>
-                            <p>You agree not to:</p>
-                            <ul className="list-disc pl-6 space-y-2 text-red-600">
-                                <li>Violate any applicable laws or regulations</li>
-                                <li>Submit false or misleading information</li>
-                                <li>Interfere with or disrupt the Services</li>
-                                <li>Attempt to gain unauthorized access</li>
-                                <li>Use the Services for malicious purposes</li>
-                                <li>Infringe on intellectual property rights</li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    {/* Data Collection and Privacy */}
-                    <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">4. Data Collection and Privacy</h2>
-                        <div className="space-y-4 text-gray-700">
-                            <p>
-                                Our collection and use of personal information is governed by our
+                                By using our Site, you acknowledge that you have read, understood, and agree to these Terms and our
                                 <Link href="/privacy-policy" className="text-blue-600 hover:underline mx-1">
                                     Privacy Policy
                                 </Link>
-                                which is incorporated into these Terms.
+                                . These Terms constitute a legally binding agreement between you and VenueBoost Inc.
                             </p>
+                        </div>
+                    </section>
+
+                    {/* Modifications */}
+                    <section>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">2. Modifications</h2>
+                        <div className="bg-yellow-50 p-6 rounded-lg space-y-4 text-gray-700">
+                            <p>
+                                We reserve the right to change or modify these Terms at any time. Any changes will be effective immediately upon posting on the Site. Your continued use of the Site following the posting of any changes constitutes acceptance of those changes.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* Use of Site */}
+                    <section>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">3. Use of the Site</h2>
+                        <div className="space-y-6 text-gray-700">
+                            <h3 className="text-xl font-medium mb-2">3.1 Eligibility</h3>
                             <div className="bg-blue-50 p-4 rounded-lg">
-                                <h3 className="text-xl font-medium mb-2">4.1 Location Data</h3>
-                                <p>
-                                    The Services may collect location data when enabled. You can control location
-                                    tracking through your device settings and app permissions.
-                                </p>
+                                <p>You represent that you are at least 18 years of age or have the consent of a parent or guardian to use the Site.</p>
+                            </div>
+
+                            <h3 className="text-xl font-medium mb-2">3.2 Permitted Use</h3>
+                            <div className="bg-blue-50 p-4 rounded-lg space-y-4">
+                                <p>You agree to use the Site solely for lawful purposes and in accordance with these Terms.</p>
+                                <ul className="list-disc pl-6 space-y-2">
+                                    <li>Workforce management and time tracking</li>
+                                    <li>Project and task management</li>
+                                    <li>Team communication and collaboration</li>
+                                    <li>Client management and service delivery</li>
+                                </ul>
+                            </div>
+
+                            <h3 className="text-xl font-medium mb-2">3.3 Prohibited Activities</h3>
+                            <div className="bg-red-50 p-4 rounded-lg">
+                                <ul className="list-disc pl-6 space-y-2 text-red-600">
+                                    <li>Use the Site in any way that could damage, disable, or overburden it</li>
+                                    <li>Interfere with any other party's use of the Site</li>
+                                    <li>Submit false or misleading information</li>
+                                    <li>Attempt to gain unauthorized access</li>
+                                    <li>Use the Site for malicious purposes</li>
+                                </ul>
                             </div>
                         </div>
                     </section>
 
                     {/* Intellectual Property */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">5. Intellectual Property Rights</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">4. Intellectual Property</h2>
                         <div className="space-y-4 text-gray-700">
+                            <h3 className="text-xl font-medium mb-2">4.1 Ownership</h3>
                             <p>
-                                The Services and their contents are owned by Staffluent and protected by copyright,
-                                trademark, and other intellectual property laws.
+                                All content on the Site, including text, graphics, logos, images, and software, is the property of VenueBoost Inc. or its licensors and is protected by intellectual property laws.
                             </p>
+
+                            <h3 className="text-xl font-medium mb-2">4.2 Restrictions</h3>
                             <div className="bg-gray-50 p-4 rounded-lg">
-                                <h3 className="text-xl font-medium mb-2">License Grant</h3>
-                                <p>
-                                    We grant you a limited, non-exclusive, non-transferable license to use the
-                                    Services in accordance with these Terms.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    {/* Payment Terms */}
-                    <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">6. Payment Terms</h2>
-                        <div className="space-y-4 text-gray-700">
-                            <h3 className="text-xl font-medium mb-2">6.1 Billing</h3>
-                            <ul className="list-disc pl-6 space-y-2">
-                                <li>Subscription fees are billed in advance</li>
-                                <li>All fees are non-refundable unless required by law</li>
-                                <li>You are responsible for all applicable taxes</li>
-                            </ul>
-
-                            <h3 className="text-xl font-medium mb-2 mt-6">6.2 Changes to Fees</h3>
-                            <p>
-                                We may change our fees at any time. We will notify you of any fee changes at
-                                least 30 days in advance.
-                            </p>
-                        </div>
-                    </section>
-
-                    {/* Termination */}
-                    <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">7. Termination</h2>
-                        <div className="space-y-4 text-gray-700">
-                            <div className="bg-red-50 p-4 rounded-lg">
-                                <h3 className="text-xl font-medium mb-2">7.1 Termination by Us</h3>
-                                <p>We may terminate or suspend your access to the Services:</p>
-                                <ul className="list-disc pl-6 space-y-2 mt-2">
-                                    <li>For violations of these Terms</li>
-                                    <li>At your employer&apos;s request</li>
-                                    <li>For prolonged inactivity</li>
-                                    <li>For any other reason with notice</li>
+                                <p>You may not:</p>
+                                <ul className="list-disc pl-6 space-y-2">
+                                    <li>Reproduce or distribute any Site content</li>
+                                    <li>Modify or create derivative works</li>
+                                    <li>Publicly display or exploit content</li>
+                                    <li>Use content without prior written consent</li>
                                 </ul>
                             </div>
+                        </div>
+                    </section>
 
-                            <h3 className="text-xl font-medium mb-2 mt-6">7.2 Effect of Termination</h3>
+                    {/* User Content */}
+                    <section>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">5. User Content</h2>
+                        <div className="bg-blue-50 p-6 rounded-lg space-y-4 text-gray-700">
                             <p>
-                                Upon termination, your right to use the Services will cease immediately. You may
-                                request your data in accordance with our data retention policies.
+                                If you submit any content (such as comments, feedback, or other materials) to the Site, you grant us a non-exclusive, worldwide, royalty-free, perpetual license to use, reproduce, modify, and display such content.
                             </p>
                         </div>
                     </section>
 
                     {/* Disclaimers and Limitations */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">8. Disclaimers and Limitations</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">6. Disclaimers and Limitation of Liability</h2>
                         <div className="bg-yellow-50 p-6 rounded-lg space-y-4 text-gray-700">
-                            <h3 className="text-xl font-medium mb-2">8.1 Warranty Disclaimer</h3>
+                            <h3 className="text-xl font-medium mb-2">6.1 Disclaimer of Warranties</h3>
                             <p className="uppercase text-sm">
-                                THE SERVICES ARE PROVIDED &ldquo;AS IS&rdquo; WITHOUT ANY WARRANTY OF ANY KIND
+                                The Site and its content are provided "as is" and "as available" basis without any warranties of any kind, either express or implied.
                             </p>
 
-                            <h3 className="text-xl font-medium mb-2 mt-6">8.2 Limitation of Liability</h3>
+                            <h3 className="text-xl font-medium mb-2">6.2 Limitation of Liability</h3>
                             <p>
-                                TO THE MAXIMUM EXTENT PERMITTED BY LAW, STAFFLUENT SHALL NOT BE LIABLE FOR ANY
-                                INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES.
+                                To the fullest extent permitted by law, VenueBoost Inc. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, arising out of or related to your use of the Site.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* Indemnification */}
+                    <section>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">7. Indemnification</h2>
+                        <div className="bg-gray-50 p-6 rounded-lg space-y-4 text-gray-700">
+                            <p>
+                                You agree to indemnify, defend, and hold harmless VenueBoost Inc. and its affiliates from any claims, liabilities, damages, losses, or expenses (including reasonable attorneys' fees) arising out of or in any way connected with your access to or use of the Site.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* Governing Law */}
+                    <section>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">8. Governing Law</h2>
+                        <div className="bg-blue-50 p-6 rounded-lg space-y-4 text-gray-700">
+                            <p>
+                                These Terms are governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law provisions.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* Termination */}
+                    <section>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">9. Termination</h2>
+                        <div className="space-y-4 text-gray-700">
+                            <p>
+                                We reserve the right to suspend or terminate your access to the Site at our sole discretion, without notice, for conduct that we believe violates these Terms or is harmful to other users or our business.
                             </p>
                         </div>
                     </section>
 
                     {/* Contact Information */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">9. Contact Us</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">10. Contact Us</h2>
                         <div className="bg-gray-50 p-6 rounded-lg">
-                            <p className="mb-4">For questions about these Terms, please contact us at:</p>
+                            <p className="mb-4">If you have any questions about these Terms, please contact us:</p>
                             <div className="space-y-2 text-gray-700">
-                                <p>Email: legal@staffluent.co</p>
-                                <p>Phone: +1 (844) 248-1465</p>
-                                <p>Address: 222 East 44th Street, New York, NY 10017</p>
+                                <p>Email: <a href="mailto:contact@staffluent.co" className="text-indigo-600 hover:text-indigo-800 underline transition-colors">contact@staffluent.co</a></p>
+                                <p>Address: 222 East 44th Street, New York, NY 10017, United States</p>
                             </div>
                         </div>
                     </section>
