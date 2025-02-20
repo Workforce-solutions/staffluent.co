@@ -61,7 +61,7 @@ const HeroSection = () => {
                 Start Now
               </Link>
               <Link
-                  href="/contact"
+                  href="/request-demo"
                   className="border border-[#0A0A0A] text-[#0A0A0A] px-8 py-3 rounded-xl hover:bg-[#0A0A0A]/5 transition-colors"
               >
                 Request Demo

@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Building } from 'lucide-react';
 
-const ContactPage = () => {
+const ContactUsPage = () => {
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
 
     const navLinks = [
@@ -162,4 +162,4 @@ const ContactPage = () => {
     );
 };
 
-export default ContactPage;
+export default ContactUsPage;

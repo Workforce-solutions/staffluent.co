@@ -75,7 +75,7 @@ const Hero = () => {
               className="flex flex-col items-center gap-6 md:gap-8"
           >
             <Link
-                href="/contact"
+                href="/request-demo"
                 className="bg-[#0A0A0A] text-white text-base md:text-[17px] px-6 py-3 md:py-4 rounded-xl hover:bg-black/90 transition-colors w-full md:w-auto"
             >
               Start Free Trial

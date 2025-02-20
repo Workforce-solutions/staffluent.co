@@ -1,10 +1,9 @@
-// src/app/contact/page.tsx
 "use client";
 import React, { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import ContactForm from "@/components/contact/ContactForm";
 import Link from "next/link";
+import RequestADemo from "@/components/RequestADemo";
 
 const RequestDemoPage = () => {
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
@@ -25,7 +24,7 @@ const RequestDemoPage = () => {
             />
             {!isHamburgerMenuOpen ? (
                 <div>
-                    <ContactForm />
+                    <RequestADemo />
                     <Footer />
                 </div>
             ) : (

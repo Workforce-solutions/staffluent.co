@@ -52,10 +52,10 @@ const Footer = () => {
               <div className="space-y-4 text-center md:text-left">
                 <h3 className="text-white font-semibold">Company</h3>
                 <div className="space-y-2">
-                  <Link href="/#about-us" className="block text-white/80 hover:text-white">
+                  <Link href="/about" className="block text-white/80 hover:text-white">
                     About Us
                   </Link>
-                  <Link href="/contact" className="block text-white/80 hover:text-white">
+                  <Link href="/contact-us" className="block text-white/80 hover:text-white">
                     Contact us
                   </Link>
                   <Link href="/legal" className="block text-white/80 hover:text-white">
