@@ -49,8 +49,8 @@ const Comparison = () => {
             <Image
               src="StaffLogoWhite.png"
               alt="Staffluent - Centered Intelligence"
-              width={280}
-              height={180}
+              width={300}
+              height={120}
             />
           </div>
           <p className="text-[#3d495b] text-lg max-w-[600px] mx-auto">
