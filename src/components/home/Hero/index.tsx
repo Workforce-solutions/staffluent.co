@@ -12,16 +12,16 @@ const Hero = () => {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path
               d="M13 10V3L4 14H11V21L20 10H13Z"
-              stroke="#1c1c1c"
+              stroke="#0A0A0A"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
-          <span className="text-[#1c1c1c] text-base">
+          <span className="text-[#0A0A0A] text-base">
             Coordinate - Schedule - Empower
           </span>
-          <div className="bg-[#1c1c1c] p-1 rounded-full">
+          <div className="bg-[#0A0A0A] p-1 rounded-full">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
                 d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5"
@@ -50,7 +50,7 @@ const Hero = () => {
         <div className="flex flex-col items-center gap-8 mt-10">
           <Link
             href="/contact"
-            className="bg-[#1c1c1c] text-white text-[17px] px-6 py-4 rounded-xl hover:bg-black/90 transition-colors w-full md:w-auto"
+            className="bg-[#0A0A0A] text-white text-[17px] px-6 py-4 rounded-xl hover:bg-black/90 transition-colors w-full md:w-auto"
           >
             Get Started
           </Link>

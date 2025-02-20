@@ -63,7 +63,7 @@ const Comparison = () => {
           {/* Other Platforms */}
           <div className="bg-white rounded-xl border border-[#DEE5ED]">
             <div className="flex justify-center bg-[#F1F4F8] rounded-t-xl p-6">
-              <h3 className="text-[22px] font-bold text-center text-[#1c1c1c]">
+              <h3 className="text-[22px] font-bold text-center text-[#0A0A0A]">
                 OTHER PLATFORMS
               </h3>
             </div>
