@@ -1,12 +1,12 @@
 import styles from "../page.module.css";
-import ContactPage from "../../pages/Contact";
+import ContactUsPage from "../../pages/ContactUs";
 
 
 
-export default function Contact() {
+export default function ContactUs() {
   return (
     <div className={styles.homeDesktop}>
-      <ContactPage />
+      <ContactUsPage />
     </div>
   );
 }
