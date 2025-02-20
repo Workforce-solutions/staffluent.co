@@ -27,7 +27,7 @@ const Comparison = () => {
   ];
 
   return (
-    <section className="py-20" id="comparison">
+    <section className="md:py-10 py-4" id="comparison">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 max-w-[800px] mx-auto">

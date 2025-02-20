@@ -49,7 +49,7 @@ const Advantages = () => {
   return (
     <>
       {/* First Advantage Section */}
-      <section className="py-20" id="advantage">
+      <section className="md:py-10 py-4" id="advantage">
         <div className="max-w-[1200px] mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h2 className="md:text-6xl text-5xl leading-tight font-bold">
