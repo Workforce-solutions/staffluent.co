@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 import ContactForm from "@/components/contact/ContactForm";
 import Link from "next/link";
 
-const ContactPage = () => {
+const RequestDemoPage = () => {
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
 
     const navLinks = [
@@ -41,4 +41,4 @@ const ContactPage = () => {
     );
 };
 
-export default ContactPage;
+export default RequestDemoPage;

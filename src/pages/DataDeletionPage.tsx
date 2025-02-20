@@ -37,7 +37,7 @@ const DataDeletionPage = () => {
     const navLinks = [
         { href: "/", label: "Home" },
         { href: "/about", label: "About" },
-        { href: "/contact", label: "Contact" },
+        { href: "/request-demo", label: "Request a Demo" },
     ];
 
     const DataDeletionContent = () => (

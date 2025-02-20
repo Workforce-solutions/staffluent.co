@@ -10,8 +10,8 @@ const PrivacyPolicyPage = () => {
     const navLinks = [
         { href: "/", label: "Home" },
         { href: "/about", label: "About" },
-        { href: "/contact", label: "Contact" },
-        { href: "https://app.staffluent.co/login", label: "Access Platform" }, // This only shows in mobile menu
+        { href: "/request-demo", label: "Request a Demo" },
+        { href: "https://app.staffluent.co/login", label: "Access Platform" },
     ];
 
     const PrivacyContent = () => (
@@ -23,9 +23,7 @@ const PrivacyPolicyPage = () => {
                 {/* Introduction */}
                 <section className="mb-12">
                     <p className="text-gray-700 leading-relaxed">
-                        At Staffluent, we take your privacy seriously. This Privacy Policy explains how we collect, use,
-                        disclose, and safeguard your information when you use our workforce management platform,
-                        including our website, mobile applications, and related services (collectively, the &ldquo;Services&rdquo;).
+                        At Staffluent, a registered brand of VenueBoost Inc., we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (the "Site") and use our workforce management platform, including our mobile applications and related services (collectively, the "Services"). By accessing or using our Services, you agree to this Privacy Policy.
                     </p>
                 </section>
 
@@ -35,7 +33,17 @@ const PrivacyPolicyPage = () => {
                     <section>
                         <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">1. Information We Collect</h2>
                         <div className="space-y-6 text-gray-700">
-                            <h3 className="text-xl font-medium mb-2">1.1 Employee Data</h3>
+                            <h3 className="text-xl font-medium mb-2">1.1 Website Data</h3>
+                            <div className="bg-blue-50 p-4 rounded-lg space-y-4">
+                                <ul className="list-disc pl-6 space-y-2">
+                                    <li>Personal Information: Name, email address, phone number, and company name when voluntarily provided</li>
+                                    <li>Usage Data: Pages visited, time spent on pages, and interaction patterns</li>
+                                    <li>Device Information: IP address, browser type, and device details</li>
+                                    <li>Cookies and similar tracking technologies to enhance user experience and analyze trends</li>
+                                </ul>
+                            </div>
+
+                            <h3 className="text-xl font-medium mb-2">1.2 Employee Data</h3>
                             <div className="bg-blue-50 p-4 rounded-lg space-y-4">
                                 <p>We collect the following information for employees:</p>
                                 <ul className="list-disc pl-6 space-y-2">
@@ -50,7 +58,7 @@ const PrivacyPolicyPage = () => {
                                 </ul>
                             </div>
 
-                            <h3 className="text-xl font-medium mb-2">1.2 Client Data</h3>
+                            <h3 className="text-xl font-medium mb-2">1.3 Client Data</h3>
                             <div className="bg-blue-50 p-4 rounded-lg space-y-4">
                                 <p>For our clients, we collect:</p>
                                 <ul className="list-disc pl-6 space-y-2">
@@ -64,7 +72,7 @@ const PrivacyPolicyPage = () => {
                                 </ul>
                             </div>
 
-                            <h3 className="text-xl font-medium mb-2">1.3 Management Data</h3>
+                            <h3 className="text-xl font-medium mb-2">1.4 Management Data</h3>
                             <div className="bg-blue-50 p-4 rounded-lg space-y-4">
                                 <p>For team leaders and operations managers:</p>
                                 <ul className="list-disc pl-6 space-y-2">
@@ -76,16 +84,6 @@ const PrivacyPolicyPage = () => {
                                     <li>Team schedule and shift information</li>
                                 </ul>
                             </div>
-
-                            <h3 className="text-xl font-medium mb-2">1.4 Automatically Collected Data</h3>
-                            <div className="bg-gray-50 p-4 rounded-lg space-y-4">
-                                <ul className="list-disc pl-6 space-y-2">
-                                    <li>Device information (IP address, device type, operating system)</li>
-                                    <li>Usage patterns and activity logs</li>
-                                    <li>Location data (when permitted)</li>
-                                    <li>Performance and analytics data</li>
-                                </ul>
-                            </div>
                         </div>
                     </section>
 
@@ -93,6 +91,18 @@ const PrivacyPolicyPage = () => {
                     <section>
                         <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">2. How We Use Your Information</h2>
                         <div className="space-y-6 text-gray-700">
+                            <div className="bg-gray-50 p-4 rounded-lg space-y-4">
+                                <p>We use your information to:</p>
+                                <ul className="list-disc pl-6 space-y-2">
+                                    <li>Provide, operate, and maintain our services</li>
+                                    <li>Improve, personalize, and expand our Site and service offerings</li>
+                                    <li>Understand and analyze how you use our Site</li>
+                                    <li>Communicate with you, including for customer service, updates, and marketing purposes (with your consent where required)</li>
+                                    <li>Process transactions and send related information</li>
+                                    <li>Comply with legal obligations and enforce our terms</li>
+                                </ul>
+                            </div>
+
                             <h3 className="text-xl font-medium mb-2">2.1 Core Platform Functions</h3>
                             <ul className="list-disc pl-6 space-y-2">
                                 <li>Time tracking and attendance management</li>
@@ -110,38 +120,31 @@ const PrivacyPolicyPage = () => {
                                 <li>Optimizing resource allocation</li>
                                 <li>Enhancing user experience</li>
                             </ul>
-
-                            <h3 className="text-xl font-medium mb-2">2.3 Compliance and Security</h3>
-                            <ul className="list-disc pl-6 space-y-2">
-                                <li>Ensuring workplace safety and compliance</li>
-                                <li>Detecting and preventing fraud</li>
-                                <li>Maintaining audit trails</li>
-                                <li>Meeting legal obligations</li>
-                            </ul>
                         </div>
                     </section>
 
-                    {/* Data Sharing */}
+                    {/* Information Sharing */}
                     <section>
                         <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">3. Information Sharing</h2>
                         <div className="space-y-4 text-gray-700">
-                            <p>We share your information with:</p>
-
                             <div className="bg-yellow-50 p-4 rounded-lg space-y-4">
-                                <h3 className="text-xl font-medium">3.1 Internal Sharing</h3>
+                                <h3 className="text-xl font-medium">3.1 Third-Party Service Providers</h3>
+                                <p>We may share your information with trusted third-party vendors who assist us in:</p>
                                 <ul className="list-disc pl-6 space-y-2">
-                                    <li>Team leaders can access their team members&apos; data</li>
-                                    <li>Operations managers can view assigned project information</li>
-                                    <li>Administrators have access based on their role permissions</li>
+                                    <li>Operating our Site and services</li>
+                                    <li>Processing payments</li>
+                                    <li>Providing hosting services</li>
+                                    <li>Analytics and performance monitoring</li>
                                 </ul>
+                                <p className="mt-4">These vendors are obligated to protect your data and only use it as directed by us.</p>
                             </div>
 
                             <div className="bg-yellow-50 p-4 rounded-lg space-y-4 mt-4">
-                                <h3 className="text-xl font-medium">3.2 External Sharing</h3>
+                                <h3 className="text-xl font-medium">3.2 Legal Requirements and Business Transfers</h3>
                                 <ul className="list-disc pl-6 space-y-2">
-                                    <li>Service providers (hosting, analytics, payment processing)</li>
-                                    <li>Legal authorities when required by law</li>
-                                    <li>Clients (limited to relevant project data)</li>
+                                    <li>We may disclose information if required by law or valid legal requests</li>
+                                    <li>In the event of a merger, acquisition, or asset sale, your information may be transferred</li>
+                                    <li>We ensure continued protection of your data in such events</li>
                                 </ul>
                             </div>
                         </div>
@@ -168,8 +171,8 @@ const PrivacyPolicyPage = () => {
                     {/* Data Security */}
                     <section>
                         <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">5. Data Security</h2>
-                        <div className="space-y-4 text-gray-700">
-                            <p>We implement various security measures including:</p>
+                        <div className="bg-gray-50 p-6 rounded-lg space-y-4 text-gray-700">
+                            <p>We implement appropriate technical and organizational measures to secure your personal information against unauthorized access, disclosure, alteration, or destruction. These measures include:</p>
                             <ul className="list-disc pl-6 space-y-2">
                                 <li>Encryption of data in transit and at rest</li>
                                 <li>Regular security assessments</li>
@@ -177,21 +180,15 @@ const PrivacyPolicyPage = () => {
                                 <li>Employee training on data protection</li>
                                 <li>Regular security updates</li>
                             </ul>
+                            <p className="mt-4">However, no security system is impenetrable, and we cannot guarantee absolute security.</p>
                         </div>
                     </section>
 
-                    {/* Data Retention */}
+                    {/* International Data Transfers */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">6. Data Retention</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">6. International Data Transfers</h2>
                         <div className="bg-gray-50 p-6 rounded-lg space-y-4 text-gray-700">
-                            <h3 className="text-xl font-medium">Retention Periods</h3>
-                            <ul className="list-disc pl-6 space-y-2">
-                                <li>Active accounts: Data retained while account is active</li>
-                                <li>Employee records: Retained according to employment law requirements</li>
-                                <li>Financial records: Kept for required tax and audit purposes</li>
-                                <li>Project data: Maintained for specified retention period</li>
-                                <li>Inactive accounts: Data archived after 12 months of inactivity</li>
-                            </ul>
+                            <p>Your information may be stored and processed in the United States or other countries where our service providers operate. By using our Site, you consent to the transfer of your data to countries that may have different data protection laws than your jurisdiction.</p>
                         </div>
                     </section>
 
@@ -199,7 +196,7 @@ const PrivacyPolicyPage = () => {
                     <section>
                         <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">7. Your Rights</h2>
                         <div className="space-y-4 text-gray-700">
-                            <p>You have the right to:</p>
+                            <p>Depending on your location, you may have certain rights regarding your personal data:</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="bg-green-50 p-4 rounded-lg">
                                     <ul className="list-disc pl-6 space-y-2">
@@ -225,11 +222,10 @@ const PrivacyPolicyPage = () => {
                     <section>
                         <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">8. Contact Us</h2>
                         <div className="bg-gray-50 p-6 rounded-lg">
-                            <p className="mb-4 text-[#0A0A0A]">For privacy-related inquiries, please contact our Data Protection Officer:</p>
+                            <p className="mb-4 text-[#0A0A0A]">If you have questions or concerns about this Privacy Policy, please contact us:</p>
                             <div className="space-y-2 text-gray-700">
-                                <p>Email: privacy@staffluent.co</p>
-                                <p>Phone: +1 (844) 248-1465</p>
-                                <p>Address: 222 East 44th Street, New York, NY 10017</p>
+                                <p>Email: <a href="mailto:contact@staffluent.co" className="text-indigo-600 hover:text-indigo-800 underline transition-colors">contact@staffluent.co</a></p>
+                                <p>Address: 222 East 44th Street, New York, NY 10017, United States</p>
                             </div>
                         </div>
                     </section>

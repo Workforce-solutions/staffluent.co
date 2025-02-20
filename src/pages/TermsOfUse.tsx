@@ -10,7 +10,7 @@ const TermsPage = () => {
     const navLinks = [
         { href: "/", label: "Home" },
         { href: "/about", label: "About" },
-        { href: "/contact", label: "Contact" },
+        { href: "/request-demo", label: "Request a Demo" },
         { href: "https://app.staffluent.co/login", label: "Access Platform" }, // This only shows in mobile menu
     ];
 
