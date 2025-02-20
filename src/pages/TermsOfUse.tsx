@@ -17,7 +17,7 @@ const TermsPage = () => {
         <div className="max-w-6xl mx-auto px-4 py-12">
             <div className="bg-white rounded-lg shadow-sm p-4">
                 <h1 className="text-4xl font-bold mb-8 text-center">Terms of Use</h1>
-                <p className="text-gray-600 text-center mb-12">Last Updated: November 27, 2024</p>
+                <p className="text-gray-600 text-center mb-12">Last Updated: February 15, 2025</p>
 
                 {/* Introduction */}
                 <section className="mb-12">

@@ -2,6 +2,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import React from "react";
 
 interface HeaderProps {
     isHamburgerMenuOpen: boolean;
@@ -29,12 +30,20 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: Heade
 
                     {/* Center - Logo */}
                     <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                        {/*<Image*/}
+                        {/*    src="https://framerusercontent.com/images/YWkjUs3TyLqowl3SfODlTHzg.png"*/}
+                        {/*    alt="Staffluent"*/}
+                        {/*    width={40}*/}
+                        {/*    height={40}*/}
+                        {/*    className="w-10 h-10"*/}
+                        {/*/>*/}
                         <Image
-                            src="https://framerusercontent.com/images/YWkjUs3TyLqowl3SfODlTHzg.png"
-                            alt="Staffluent"
-                            width={40}
-                            height={40}
-                            className="w-10 h-10"
+                            src="logo-footer.svg"
+                            alt="Staffluent Logo"
+                                width={200}
+                                height={100}
+                            // fill
+                            className="object-contain"    // Changed from object-cover to object-contain
                         />
                     </Link>
 
