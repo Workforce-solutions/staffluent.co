@@ -269,7 +269,7 @@ const Pricing = () => {
               <div className="lg:flex-1 flex items-end justify-end relative">
                 <div className="relative">
                   <Image
-                      src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
+                      src="https://framerusercontent.com/images/6R7Itar4Nwn8lsiojWr72ZW1uKk.png?scale-down-to=1024"
                       alt="Staffluent - Centered Intelligence"
                       width={480}
                       height={260}
@@ -277,7 +277,7 @@ const Pricing = () => {
                   />
                   <div className="absolute -bottom-[29%] -left-16 hidden md:block">
                     <Image
-                        src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
+                        src="https://framerusercontent.com/images/6R7Itar4Nwn8lsiojWr72ZW1uKk.png?scale-down-to=1024"
                         alt="Staffluent - Centered Intelligence"
                         width={700}
                         height={20}

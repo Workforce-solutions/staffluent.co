@@ -2,11 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { SparklesIcon } from "lucide-react";
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -14,13 +14,14 @@ const Hero = () => {
   };
 
 
-  const scrollToPricing = (e) => {
+  const scrollToPricing = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     const pricingSection = document.getElementById('pricing');
     if (pricingSection) {
       pricingSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   return (
       <section className="pt-10 w-full overflow-x-hidden">
         <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col items-center text-center">

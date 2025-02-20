@@ -13,7 +13,7 @@ const AboutPageComponent = () => {
                     </div>
                     <h2 className="text-5xl font-bold mb-4">Empowering Teams Through Intelligent Project Management</h2>
                     <p className="text-[#3d495b] max-w-3xl mx-auto">
-                        We're revolutionizing how teams work together by providing comprehensive project tracking,
+                        We are revolutionizing how teams work together by providing comprehensive project tracking,
                         real-time collaboration tools, and powerful analytics in one integrated platform.
                     </p>
                 </div>
