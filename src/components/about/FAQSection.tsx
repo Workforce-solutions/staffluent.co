@@ -13,29 +13,24 @@ const FAQSection = () => {
 
   const faqData: FAQItem[] = [
     {
-      question: "What makes Staffluent different from other platforms?",
-      answer:
-          "Staffluent uniquely combines project management, team collaboration, and performance analytics in one integrated solution. Our platform offers real-time tracking, comprehensive reporting, and client portal features all working seamlessly together.",
+      question: "What is Staffluent?",
+      answer: "Staffluent is a comprehensive workforce and project management platform that streamlines operations—integrating project tracking, time & attendance, quality inspections, scheduling, and field operations. It's designed to support organizations of all sizes, from small teams to large enterprises.",
     },
     {
-      question: "How does the project tracking system work?",
-      answer:
-          "Our system provides real-time project monitoring, task management, and team performance tracking. You can easily manage work orders, conduct quality inspections, and maintain detailed project records all in one place.",
+      question: "How does Staffluent scale to meet the needs of organizations of all sizes?",
+      answer: "Our platform is built with flexibility in mind. Whether you're a startup or a multinational enterprise, Staffluent provides scalable modules—featuring advanced role‑based access controls, customizable workflows, and seamless integrations—that adapt to your evolving needs. We're committed to delivering value across the board, and our pricing structure is designed to be competitive for every customer segment.",
     },
     {
-      question: "How do you handle team collaboration?",
-      answer:
-          "We provide internal chat systems, project comments, team messaging, and smart notifications to ensure seamless communication. Teams can collaborate effectively while maintaining clear communication channels.",
+      question: "What core modules does Staffluent offer?",
+      answer: "Staffluent's key modules include: Project & Task Management (create, assign, and track projects with real‑time updates), Time & Attendance (real‑time clock in/out, digital timesheets), Quality Inspections (automated checks, compliance tracking), Scheduling & Team Management (visual calendars, shift planning), Reports & Analytics (customizable dashboards), Communication Hub (integrated messaging), and Field Operations (mobile capabilities with GPS check‑ins).",
     },
     {
-      question: "What kind of analytics do you provide?",
-      answer:
-          "Our platform offers comprehensive analytics including productivity tracking, time utilization metrics, department performance analysis, and custom report generation to help optimize your operations.",
+      question: "How does Staffluent integrate with existing systems?",
+      answer: "Our platform is designed with open APIs and flexible integration options to connect smoothly with your current software ecosystem—whether it's HR systems, calendar apps, or other enterprise tools—ensuring a centralized, streamlined workflow.",
     },
     {
-      question: "How does the client portal work?",
-      answer:
-          "Clients get their own dedicated portal for managing service requests, tracking project progress, and communicating with teams. It provides full transparency and easy collaboration between your team and clients.",
+      question: "What measures does Staffluent take to ensure data security?",
+      answer: "Data security is paramount. Staffluent adheres to industry-leading standards, incorporating robust encryption, secure access controls, and regular security audits to protect your sensitive information and maintain compliance with relevant regulations.",
     },
   ];
 
