@@ -5,6 +5,8 @@ const config = {
         unoptimized: true,
     },
     assetPrefix: '/',
+    trailingSlash: true,  // Add this
+    basePath: '',         // Add this
 };
 
 export default config;
