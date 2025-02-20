@@ -11,7 +11,7 @@ interface HeaderProps {
 
 const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: HeaderProps) => {
     return (
-        <header className="fixed top-0 left-0 right-0 z-10 pt-[30px]">
+        <header className="fixed top-0 left-0 right-0 z-40 pt-[30px]">
             <div className="max-w-[1200px] mx-auto px-4">
                 <nav className="w-full flex items-center justify-between bg-black rounded-2xl px-4 py-4 backdrop-blur-md">
                     {/* Left section - Navigation */}
