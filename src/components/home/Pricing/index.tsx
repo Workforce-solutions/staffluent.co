@@ -248,13 +248,13 @@ const Pricing = () => {
               />
             </div>
 
-            <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start md:gap-12">
-              <div className="text-center lg:text-left px-14 py-16 rounded-xl">
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between md:gap-12">
+              <div className="text-center lg:text-left px-14 py-16 rounded-xl lg:max-w-[45%]">
                 <h3 className="text-3xl font-semibold text-gray-500 mb-4">
                   Start your free trial today
                 </h3>
-                <p className="text-gray-500 text-lg text-center lg:text-left max-w-sm mb-8">
-                  Experience all features risk-free for 14 days. No credit card required.
+                <p className="text-gray-500 text-lg text-center lg:text-left max-w-lg mb-8">
+                  Experience all premium features risk-free for 14 days, including advanced analytics, team collaboration tools, and full project management capabilities.
                 </p>
                 <div>
                   <Link
@@ -266,28 +266,28 @@ const Pricing = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center justify-end my-auto gap-4 relative w-auto">
+              <div className="lg:flex-1 flex items-end justify-end relative">
                 <div className="relative">
                   <Image
                       src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
                       alt="Staffluent - Centered Intelligence"
                       width={480}
                       height={260}
-                      className="rounded-xl shadow-lg"
+                      className="rounded-xl shadow-lg ml-auto"
                   />
                   <div className="absolute -bottom-[29%] -left-16 hidden md:block">
                     <Image
                         src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
                         alt="Staffluent - Centered Intelligence"
                         width={700}
-                        height={200}
+                        height={20}
                         className="rounded-xl shadow-lg w-full"
                     />
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+            </div>
         </div>
       </section>
   );
