@@ -24,7 +24,7 @@ const Footer = () => {
                       priority
                   />
                 </Link>
-                <p className="text-white">
+                <p className="text-white max-w-xs">
                   Empowering your productivity with intuitive tools and seamless solutions.
                 </p>
               </div>
@@ -43,10 +43,10 @@ const Footer = () => {
             </div>
 
             {/* Right Column */}
-            <div className="grid md:grid-cols-[1fr,auto] gap-8">
+            <div className="flex gap-28 justify-end">
               {/* Company Links */}
               <div className="space-y-4">
-                <h3 className="text-white font-medium">Company</h3>
+                <h3 className="text-white font-semibold">Company</h3>
                 <div className="space-y-2">
                   <Link href="/#about-us" className="block text-white/80 hover:text-white">
                     About Us
@@ -59,8 +59,8 @@ const Footer = () => {
 
               {/* Social Links */}
               <div className="space-y-4">
-                <h3 className="text-white font-medium">Social Profiles</h3>
-                <div className="flex gap-2 md:justify-end">
+                <h3 className="text-white font-semibold">Social Profiles</h3>
+                <div className="flex gap-2">
                   <a
                       href="https://www.linkedin.com/"
                       target="_blank"
