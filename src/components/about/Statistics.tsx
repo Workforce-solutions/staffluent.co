@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const StatsSection = () => {
   const stats = [
@@ -29,25 +30,29 @@ const StatsSection = () => {
   ];
 
   return (
-    <div className="bg-[#F6F9FF]">
-      <section className="max-w-[1200px] px-[20px] mx-auto py-16 mx-auto">
-        <h2 className="text-4xl font-bold text-center text-black mb-16">
-          We do this differently
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {stats.map((stat, index) => (
-            <div key={index} className="space-y-4">
-              <div className="text-5xl font-bold text-black">{stat.value}</div>
-              <div className="text-2xl text-gray-600">{stat.label}</div>
-              <p className="text-gray-500 leading-relaxed">
-                {stat.description}
-              </p>
+      <section className="py-20 bg-[#F8FAFC]">
+        <div className="max-w-[1200px] mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center bg-white border border-[#DEE5ED] rounded-full px-4 py-2 mb-4">
+              <Image src="/api/placeholder/24/24" alt="Stats icon" width={24} height={24} className="mr-2" />
+              <span className="text-[#1c1c1c]">Our Impact</span>
             </div>
-          ))}
+            <h2 className="text-4xl font-bold mb-4">We do this differently</h2>
+          </div>
+
+          {/* Stats Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {stats.map((stat, index) => (
+                <div key={index} className="bg-white border border-[#DEE5ED] rounded-2xl p-8">
+                  <div className="text-5xl font-bold text-[#1c1c1c] mb-4">{stat.value}</div>
+                  <h3 className="text-2xl font-semibold text-[#1c1c1c] mb-2">{stat.label}</h3>
+                  <p className="text-[#3d495b]">{stat.description}</p>
+                </div>
+            ))}
+          </div>
         </div>
       </section>
-    </div>
   );
 };
 
