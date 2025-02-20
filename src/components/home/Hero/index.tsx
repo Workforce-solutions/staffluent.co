@@ -55,26 +55,26 @@ const Hero = () => {
             Get Started
           </Link>
 
-          <div className="flex items-center gap-3 border p-1 rounded-full">
+          <div className="flex items-center gap-3 border p-1 rounded-full pr-2">
             <div className="flex">
               <div className="flex -space-x-2">
                 <Image
                   src="https://framerusercontent.com/images/VLgy4LHFmPRcroCjnlXTid9rvcc.png"
-                  alt="Team member"
+                  alt="Staffluent -Team member"
                   width={32}
                   height={32}
                   className="rounded-full border-2 border-white relative z-30"
                 />
                 <Image
                   src="https://framerusercontent.com/images/UENPQ6M5gthstqeACgcVeN76TZk.png"
-                  alt="Team member"
+                  alt="Staffluent -Team member"
                   width={32}
                   height={32}
                   className="rounded-full border-2 border-white relative z-20"
                 />
                 <Image
                   src="https://framerusercontent.com/images/prQs9tObWVtpStifstN0OexkE.png"
-                  alt="Team member"
+                  alt="Staffluent - Team member"
                   width={32}
                   height={32}
                   className="rounded-full border-2 border-white relative z-10"
@@ -92,7 +92,7 @@ const Hero = () => {
             <div className="w-full rounded-[20px] bg-white">
               <Image
                 src="https://framerusercontent.com/images/6R7Itar4Nwn8lsiojWr72ZW1uKk.png?scale-down-to=1024"
-                alt="Dashboard Preview"
+                alt="Staffluent Web App Preview"
                 width={1140}
                 height={600}
                 className="w-full h-auto"

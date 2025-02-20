@@ -22,7 +22,7 @@ const Demo = () => {
             <div className={styles.dashboardWrapper}>
               <Image
                 src="/img-2.png"
-                alt="Platform Dashboard Preview"
+                alt="Staffluent - Platform Dashboard Preview"
                 width={800}
                 height={500}
                 className={styles.dashboardImage}
