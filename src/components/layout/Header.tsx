@@ -15,7 +15,7 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: Heade
     return (
         <header className="fixed top-0 left-0 right-0 z-40 pt-[30px]">
             <div className="max-w-[1200px] mx-auto px-4">
-                <nav className="w-full flex items-center justify-between bg-black rounded-2xl px-4 py-4 backdrop-blur-md">
+                <nav className="relative w-full flex items-center justify-between bg-black rounded-2xl px-4 py-4 backdrop-blur-md">
                     {/* Left section - Navigation */}
                     <div className="hidden md:flex items-center space-x-2">
                         {navigationLinks.map((link) => (
@@ -29,11 +29,15 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: Heade
                         ))}
                     </div>
 
-                    {/* Center - Logo */}
-                    <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                    {/* Logo */}
+                    <Link
+                        href="/"
+                        className="absolute left-4 md:left-1/2 top-1/2 -translate-y-1/2 md:-translate-x-1/2"
+                    >
                         <Image
                             src="logo-footer.svg"
                             alt="Staffluent Logo"
+                            style={{marginLeft: "-4px"}}
                             width={200}
                             height={100}
                             className="object-contain"
@@ -41,7 +45,7 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: Heade
                     </Link>
 
                     {/* Right section */}
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 ml-auto">
                         <Link
                             href="https://app.staffluent.co/login"
                             target="_blank"
