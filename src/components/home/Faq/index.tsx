@@ -72,7 +72,7 @@ const FAQ = () => {
             <CircleHelp className="w-5 h-5 text-[#0A0A0A] mr-2" />
             <span className="text-[#0A0A0A]">FAQ's</span>
           </div>
-          <h2 className="text-6xl font-bold">Frequently Asked Questions</h2>
+          <h2 className="md:text-6xl text-5xl font-bold">Frequently Asked Questions</h2>
         </div>
 
         {/* FAQ List */}

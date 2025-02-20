@@ -86,7 +86,7 @@ const Pricing = () => {
             <Crown className="w-5 h-5 text-[#0A0A0A] mr-2" />
             <span className="text-[#0A0A0A]">Pricing</span>
           </div>
-          <h2 className="text-6xl font-bold mb-4">Flexible Pricing Plans</h2>
+          <h2 className="md:text-6xl text-5xl font-bold mb-4">Flexible Pricing Plans</h2>
           <p className="text-[#3d495b] max-w-xl text-lg mx-auto">
             Elevate your SaaS product with this expertly designed template,
             built for SaaS growth.
@@ -173,7 +173,7 @@ const Pricing = () => {
                   )}
                 </div>
                 <div className="mb-4">
-                  <span className="text-6xl font-semibold">
+                  <span className="md:text-6xl text-5xl font-semibold">
                     {billingCycle === "monthly"
                       ? plan.price.monthly
                       : plan.price.yearly}

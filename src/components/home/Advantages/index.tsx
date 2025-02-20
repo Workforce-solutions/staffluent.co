@@ -37,7 +37,7 @@ const Advantages = () => {
       <section className="py-20" id="advantage">
         <div className="max-w-[1200px] mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <h2 className="text-6xl leading-tight font-bold">
+            <h2 className="md:text-6xl text-5xl leading-tight font-bold">
               Why Choose Staffluent
             </h2>
 
@@ -99,7 +99,7 @@ const Advantages = () => {
 
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-6xl leading-tight font-bold">
+              <h2 className="md:text-6xl text-5xl leading-tight font-bold">
                 Explore Staffluent AI-Enhanced Features
               </h2>
               <p className="text-[#3d495b] text-lg">
