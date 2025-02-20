@@ -9,43 +9,47 @@ const Footer = () => {
           {/* Top Section */}
           <div className="grid md:grid-cols-2 gap-12 mb-12">
             {/* Left Column */}
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <Link href="/" className="block w-[200px] h-20 relative">
-                  <Image
-                      src="logo-footer.svg"
-                      alt="Staffluent Logo"
-                      style={{
-                        marginLeft: "-12px",
-                        marginTop: "-14px"
-                      }}
-                      fill
-                      className="object-contain"
-                      priority
-                  />
-                </Link>
+            <div className="flex flex-col items-center md:items-start space-y-8">
+              <div className="space-y-4 text-center md:text-left">
+                <div className="flex justify-center md:justify-start">
+                  <Link href="/" className="block w-[200px] h-20 relative">
+                    <Image
+                        src="logo-footer.svg"
+                        alt="Staffluent Logo"
+                        style={{
+                          marginLeft: "-12px",
+                          marginTop: "-14px"
+                        }}
+                        fill
+                        className="object-contain"
+                        priority
+                    />
+                  </Link>
+                </div>
                 <p className="text-white max-w-xs">
                   Empowering your productivity with intuitive tools and seamless solutions.
                 </p>
               </div>
-              <a
-                  href="mailto:contact@staffluent.co"
-                  className="inline-flex items-center gap-2 bg-white rounded-xl px-4 py-2 text-[#262626]"
-              >
-                <Image
-                    src="https://framerusercontent.com/images/bq8j0XRxNw5W65cEtpyVTuWArA.svg"
-                    alt="Staffluent - Email"
-                    width={24}
-                    height={24}
-                />
-                <span>contact@staffluent.co</span>
-              </a>
+              <div className="flex justify-center md:justify-start w-full">
+                <a
+                    href="mailto:contact@staffluent.co"
+                    className="inline-flex items-center gap-2 bg-white rounded-xl px-4 py-2 text-[#262626]"
+                >
+                  <Image
+                      src="https://framerusercontent.com/images/bq8j0XRxNw5W65cEtpyVTuWArA.svg"
+                      alt="Staffluent - Email"
+                      width={24}
+                      height={24}
+                  />
+                  <span>contact@staffluent.co</span>
+                </a>
+              </div>
             </div>
 
             {/* Right Column */}
-            <div className="flex gap-28 justify-end">
+            <div className="flex flex-col md:flex-row md:justify-end gap-8 md:gap-28">
               {/* Company Links */}
-              <div className="space-y-4">
+              <div className="space-y-4 text-center md:text-left">
                 <h3 className="text-white font-semibold">Company</h3>
                 <div className="space-y-2">
                   <Link href="/#about-us" className="block text-white/80 hover:text-white">
@@ -58,9 +62,9 @@ const Footer = () => {
               </div>
 
               {/* Social Links */}
-              <div className="space-y-4">
+              <div className="space-y-4 text-center md:text-left">
                 <h3 className="text-white font-semibold">Social Profiles</h3>
-                <div className="flex gap-2">
+                <div className="flex justify-center md:justify-start gap-2">
                   <a
                       href="https://www.linkedin.com/"
                       target="_blank"
@@ -120,7 +124,7 @@ const Footer = () => {
                 <Link href="/terms" className="text-[#b3b3b3] cursor-pointer hover:text-white transition-colors">
                   Terms of Use
                 </Link>
-                <Link href="/privacy-policy" className="text-[#b3b3b3]  cursor-pointer hover:text-white transition-colors">
+                <Link href="/privacy-policy" className="text-[#b3b3b3] cursor-pointer hover:text-white transition-colors">
                   Privacy Policy
                 </Link>
               </div>
