@@ -1,96 +1,75 @@
-// src/components/home/Features/ContactForm.tsx
-"use client";
+import React from "react";
 import Image from "next/image";
-import {
-  Users,
-  Clock,
-  LayoutPanelTop,
-  BarChart,
-  UserCog,
-  MessageSquare,
-} from "lucide-react";
-import styles from "./Features.module.css";
-
-const features = [
-  {
-    icon: <Users className={styles.icon} />,
-    title: "Workforce Management",
-    description:
-      "Complete employee profiles, department management, and role-based permissions with performance tracking",
-  },
-  {
-    icon: <Clock className={styles.icon} />,
-    title: "Time & Attendance",
-    description:
-      "Real-time attendance tracking, break management, and automated time monitoring",
-  },
-  {
-    icon: <LayoutPanelTop className={styles.icon} />,
-    title: "Project Management",
-    description:
-      "Comprehensive project tracking with tasks, quality inspections, and work order management",
-  },
-  {
-    icon: <BarChart className={styles.icon} />,
-    title: "Performance Analytics",
-    description:
-      "Track productivity, analyze trends, and identify top performers with detailed metrics",
-  },
-  {
-    icon: <UserCog className={styles.icon} />,
-    title: "Client Portal",
-    description:
-      "Service requests, invoicing, and real-time project tracking for clients",
-  },
-  {
-    icon: <MessageSquare className={styles.icon} />,
-    title: "Team Collaboration",
-    description:
-      "Internal chat, team messaging, and integrated project communications",
-  },
-];
+import { Bell, Calendar, SparklesIcon, Star, Target, Timer, Waypoints } from "lucide-react";
 
 const Features = () => {
+  const features = [
+    {
+      title: "AI Task Management",
+      description: "Automatically prioritize and organize your daily tasks.",
+      icon: SparklesIcon,
+    },
+    {
+      title: "Real-Time Collaboration",
+      description: "Work together seamlessly with live updates.",
+      icon: Waypoints,
+    },
+    {
+      title: "Customizable Dashboards",
+      description: "Tailor your workspace to fit your workflow.",
+      icon: Target,
+    },
+    {
+      title: "Automated Reminders",
+      description: "Stay on track with smart deadline alerts.",
+      icon: Bell,
+    },
+    {
+      title: "Time-Blocking Tools",
+      description: "Plan and manage your time efficiently and effectively.",
+      icon: Timer,
+    },
+    {
+      title: "Integrated Calendars",
+      description: "Sync with your existing calendar apps effortlessly.",
+      icon: Calendar,
+    },
+  ];
+
   return (
-    <section className={styles.featuresSection}>
-      <div className={styles.container}>
-        <div className={styles.content}>
-          {/* Left Side - Text and Features */}
-          <div className={styles.leftContent}>
-            <span className={styles.label}>Platform Features</span>
-            <h2 className={`${styles.title} text-5xl`}>
-              Comprehensive Project & Team Management Platform
-            </h2>
-            <p className={`${styles.description} text-xl tracking-wider`}>
-              All-in-one solution for project tracking, team collaboration, and
-              performance management with powerful analytics
-            </p>
+    <section className="py-20">
+      <div className="max-w-[1200px] mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#DEE5ED] bg-[#F8FAFC] mb-6">
+            <Star className="h-5 w-5" />
+            <span className="text-[#1C1C1C] text-base">Features</span>
+          </div>
+          <h2 className="text-6xl font-bold text-[#1C1C1C] mb-4">
+            What Staffluent Offers You
+          </h2>
+          <p className="text-[#3D495B] text-lg max-w-[600px] mx-auto">
+            Explore the tools and capabilities that elevate your productivity
+            and streamline tasks.
+          </p>
+        </div>
 
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
             <div
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-24`}
+              key={feature.title}
+              className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-2xl p-8 flex flex-col items-center text-center"
             >
-              {features.map((feature, index) => (
-                <div key={index} className={styles.featureCard}>
-                  <div className={styles.iconWrapper}>{feature.icon}</div>
-                  <h3 className={styles.featureTitle}>{feature.title}</h3>
-                  <p className={styles.featureDescription}>
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
+              <div className="w-12 h-12 bg-[#1C1C1C] rounded-xl flex items-center justify-center mb-6">
+                <feature.icon className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-[#1C1C1C] mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-[#3D495B]">{feature.description}</p>
             </div>
-          </div>
-
-          {/* Right Side - Image */}
-          <div className={styles.imageWrapper}>
-            <Image
-              src="/img-3.png"
-              alt="Platform Dashboard"
-              width={600}
-              height={800}
-              className={styles.image}
-            />
-          </div>
+          ))}
         </div>
       </div>
     </section>

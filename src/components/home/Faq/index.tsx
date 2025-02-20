@@ -1,126 +1,156 @@
-// src/components/home/FAQ/ContactForm.tsx
-"use client";
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Minus } from 'lucide-react';
-import styles from './Faq.module.css';
-
-interface FAQItem {
-    question: string;
-    answer: string;
-    category?: string;
-}
-
-const faqData: FAQItem[] = [
-    {
-        question: "What makes your platform different from other project management tools?",
-        answer: "Our platform uniquely combines project management, time tracking, and team collaboration in one integrated solution. We offer advanced features like real-time performance analytics, automated time tracking, and comprehensive client portal - all designed to work seamlessly together to enhance your team's productivity.",
-        category: "General"
-    },
-    {
-        question: "How does the project tracking system work?",
-        answer: "Our project tracking system provides real-time visibility into project progress, task management, and team performance. You can easily assign tasks, monitor deadlines, track time spent, and generate detailed reports. Plus, our quality control tools and issue tracking ensure nothing falls through the cracks.",
-        category: "Features"
-    },
-    {
-        question: "What type of analytics and reporting features do you offer?",
-        answer: "We provide comprehensive analytics including real-time performance metrics, productivity trends, team performance tracking, and custom report generation. You can track project progress, monitor time utilization, analyze team productivity, and generate insights that help optimize your operations.",
-        category: "Features"
-    },
-    {
-        question: "How do you handle data security and privacy-policy?",
-        answer: "Security is our top priority. We implement industry-standard encryption, regular security audits, and strict access controls. Your data is backed up regularly, and we comply with major data protection regulations to ensure your information stays safe and confidential.",
-        category: "Security"
-    },
-    {
-        question: "What services can I manage through the platform?",
-        answer: "Our platform helps you manage a wide range of business services including app development, project management, quality assurance, and technical support. You can organize services by categories, handle service requests, manage approvals, and track delivery - all in one place."
-    },
-    {
-        question: "What kind of support do you provide?",
-        answer: "We offer comprehensive 24/7 customer support through multiple channels including live chat, email, and phone. Our support team is highly trained and can assist with technical issues, feature questions, and best practice recommendations. We also provide detailed documentation and video tutorials.",
-        category: "Support"
-    },
-    {
-        question: "What services can I manage through the platform?",
-        answer: "Our platform helps you manage a wide range of business services including app development, project management, quality assurance, and technical support. You can organize services by categories, handle service requests, manage approvals, and track delivery - all in one place."
-    },
-    {
-        question: "How does the client portal work?",
-        answer: "Clients get their own dedicated portal where they can submit service requests, track project progress, communicate with teams, and access project galleries. It provides full transparency and easy collaboration between your team and clients."
-    },
-    {
-        question: "What project management features are included?",
-        answer: "Our comprehensive project tracking includes task management, team collaboration, quality control, work orders, and real-time progress monitoring. Managers can oversee everything from task assignments to quality inspections in one unified system."
-    },
-    {
-        question: "How does the team collaboration system work?",
-        answer: "Teams can collaborate through internal chat, project comments, task discussions, and a smart notification system. Project managers can coordinate with team members and clients efficiently while maintaining clear communication channels."
-    },
-    {
-        question: "What kind of performance tracking do you offer?",
-        answer: "Track productivity, time utilization, department performance, and generate custom reports. Get insights into team efficiency, project progress, and operational metrics through detailed analytics dashboards."
-    },
-
-];
+import React, { useState } from "react";
+import Image from "next/image";
+import { CircleHelp } from "lucide-react";
 
 const FAQ = () => {
-    const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState(null);
 
-    return (
-        <section className={styles.faqSection}>
-            <div className={styles.container}>
-                {/* Header */}
-                <div className={styles.header}>
-                    <h2 className={styles.title}>Common Questions About Our Platform</h2>
-                    <p className={styles.subtitle}>
-                        Get quick answers to your questions about features, pricing, and support
-                    </p>
-                </div>
+  const faqs = [
+    {
+      question:
+        "What makes your platform different from other project management tools?",
+      answer:
+        "Our platform stands out through its intuitive interface, AI-powered automation, and seamless team collaboration features. We focus on streamlining workflows while providing robust analytics and customization options.",
+    },
+    {
+      question: "What time tracking features are available?",
+      answer:
+        "We offer comprehensive time tracking features including automated timers, manual time entry, project-based tracking, detailed reports, and integration with popular billing platforms.",
+    },
+    {
+      question: "How do you handle quality control?",
+      answer:
+        "Our quality control system includes automated checks, peer review processes, milestone validations, and detailed audit trails to ensure consistent project quality.",
+    },
+    {
+      question: "What administrative controls are provided?",
+      answer:
+        "Administrators have access to robust controls including user permission management, workflow customization, resource allocation, and detailed activity monitoring.",
+    },
+    {
+      question: "How does your reporting system work?",
+      answer:
+        "Our reporting system provides real-time analytics, customizable dashboards, automated report generation, and export capabilities in multiple formats.",
+    },
+    {
+      question: "How does the project tracking system work?",
+      answer:
+        "The project tracking system offers real-time progress monitoring, milestone tracking, resource utilization metrics, and automated status updates.",
+    },
+    {
+      question: "How do you handle team collaboration?",
+      answer:
+        "We facilitate team collaboration through real-time communication tools, shared workspaces, document collaboration, and integrated task management.",
+    },
+    {
+      question: "What kind of analytics do you provide?",
+      answer:
+        "Our analytics suite includes project performance metrics, team productivity analysis, resource utilization reports, and predictive analytics for better decision-making.",
+    },
+    {
+      question: "How does the client portal work?",
+      answer:
+        "The client portal provides a dedicated space for client collaboration, project updates, file sharing, and communication, all with customizable access controls.",
+    },
+    {
+      question: "How do you handle service management?",
+      answer:
+        "Our service management includes automated workflow processes, SLA tracking, ticket management, and integrated communication channels.",
+    },
+  ];
 
-                {/* FAQ Items */}
-                <div className={styles.faqContainer}>
-                    {faqData.map((faq, index) => (
-                        <motion.div
-                            key={index}
-                            className={styles.faqItem}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
-                            <button
-                                className={`${styles.questionButton} ${activeIndex === index ? styles.active : ''}`}
-                                onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                            >
-                                <span>{faq.question}</span>
-                                <div className={styles.icon}>
-                                    {activeIndex === index ? (
-                                        <Minus className={styles.iconInner} size={20} />
-                                    ) : (
-                                        <Plus className={styles.iconInner} size={20} />
-                                    )}
-                                </div>
-                            </button>
+  const toggleFAQ = (index: any) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
-                            <AnimatePresence>
-                                {activeIndex === index && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: "auto", opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className={styles.answerContainer}
-                                    >
-                                        <p className={styles.answer}>{faq.answer}</p>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <section className="py-20" id="faq">
+      <div className="max-w-[1200px] mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-[#F8FAFC] border border-[#DEE5ED] rounded-full px-4 py-2 mb-4">
+            <CircleHelp className="w-5 h-5 text-[#1c1c1c] mr-2" />
+            <span className="text-[#1c1c1c]">FAQ's</span>
+          </div>
+          <h2 className="text-6xl font-bold">Frequently Asked Questions</h2>
+        </div>
+
+        {/* FAQ List */}
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-4">
+            {faqs.slice(0, 5).map((faq, index) => (
+              <div
+                key={index}
+                className="bg-[#F4F7F9] border border-[#E4EBF0] rounded-2xl overflow-hidden"
+              >
+                <button
+                  className="w-full text-left px-6 py-4 flex justify-between items-center"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <span className="text-xl font-medium pr-8">
+                    {faq.question}
+                  </span>
+                  <div className="bg-[#333333] rounded-full p-2 flex-shrink-0">
+                    <div className="w-6 h-6 relative">
+                      <Image
+                        src={
+                          openIndex === index
+                            ? "https://framerusercontent.com/images/ilTrUqtaRn3OV7UKGJjSNsQC1w.svg"
+                            : "https://framerusercontent.com/images/ROg7tkXh5h3JY9OVXT66zDJMFUw.svg"
+                        }
+                        alt={openIndex === index ? "Minus" : "Plus"}
+                        width={24}
+                        height={24}
+                        className="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </button>
+                {openIndex === index && (
+                  <div className="px-6 pb-4 text-[#3d495b]">{faq.answer}</div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="space-y-4">
+            {faqs.slice(5).map((faq, index) => (
+              <div
+                key={index + 5}
+                className="bg-[#F4F7F9] border border-[#E4EBF0] rounded-2xl overflow-hidden"
+              >
+                <button
+                  className="w-full text-left px-6 py-4 flex justify-between items-center"
+                  onClick={() => toggleFAQ(index + 5)}
+                >
+                  <span className="text-xl font-medium pr-8">
+                    {faq.question}
+                  </span>
+                  <div className="bg-[#333333] rounded-full p-2 flex-shrink-0">
+                    <div className="w-6 h-6 relative">
+                      <Image
+                        src={
+                          openIndex === index + 5
+                            ? "https://framerusercontent.com/images/ilTrUqtaRn3OV7UKGJjSNsQC1w.svg"
+                            : "https://framerusercontent.com/images/ROg7tkXh5h3JY9OVXT66zDJMFUw.svg"
+                        }
+                        alt={openIndex === index + 5 ? "Minus" : "Plus"}
+                        width={24}
+                        height={24}
+                        className="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </button>
+                {openIndex === index + 5 && (
+                  <div className="px-6 pb-4 text-[#3d495b]">{faq.answer}</div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default FAQ;

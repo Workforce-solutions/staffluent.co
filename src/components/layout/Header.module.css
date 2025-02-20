@@ -1,23 +1,23 @@
-/* src/components/layout/Header/Header.module.css */
+/* src/components/layout/Header.module.css */
 .header {
-    height: 80px;
-    background-color: var(--neutral-white);
-    border-bottom: 1px solid #E5E7EB;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 10;
+    padding: 30px 0;
 }
 
 .container {
     max-width: 1200px;
-    height: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: #000000;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
 }
 
 .logoLink {
@@ -35,69 +35,43 @@
     height: 40px;
 }
 
-.logoText {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--primary);
-}
-
 .nav {
-    /* display: flex; */
-    /* gap: 32px; */
+    display: flex;
+    gap: 24px;
 }
 
 .navLink {
-    color: #4B5563;
-    font-size: 16px;
-    font-weight: 500;
+    color: #ffffff;
     text-decoration: none;
-    transition: color 0.2s;
+    padding: 14px 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s;
 }
 
 .navLink:hover {
-    color: var(--primary);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .authButtons {
     display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.loginButton {
-    color: #4B5563;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.loginButton:hover {
-    color: var(--primary);
+    gap: 12px;
 }
 
 .signupButton {
-    padding: 10px 24px;
-    background-color: var(--primary);
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 60px;
-    transition: background-color 0.2s;
+    background-color: #ffffff;
+    color: #1c1c1c;
+    padding: 14px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: opacity 0.3s;
 }
 
 .signupButton:hover {
-    background-color: var(--primary);
+    opacity: 0.9;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-
-    .authButtons {
-        gap: 8px;
-    }
-
-    .signupButton {
-        padding: 8px 16px;
+@media (max-width: 809px) {
+    .nav {
+        display: none;
     }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { BookPlus } from "lucide-react";
 
 const StatsSection = () => {
   const stats = [
@@ -6,48 +7,59 @@ const StatsSection = () => {
       value: "10+",
       label: "Core Features",
       description:
-          "From project management to performance analytics, our platform offers comprehensive tools for modern team collaboration.",
+        "From project management to performance analytics, our platform offers comprehensive tools for modern team collaboration.",
     },
     {
       value: "24/7",
       label: "Real-time Tracking",
       description:
-          "Monitor project progress, team performance, and key metrics in real-time with our advanced tracking capabilities.",
+        "Monitor project progress, team performance, and key metrics in real-time with our advanced tracking capabilities.",
     },
     {
       value: "360°",
       label: "Team Overview",
       description:
-          "Get complete visibility of your team's activities, projects, and performance with our comprehensive dashboard.",
+        "Get complete visibility of your team's activities, projects, and performance with our comprehensive dashboard.",
     },
     {
       value: "100%",
       label: "Integration",
       description:
-          "Seamlessly connect project management, time tracking, and client communication in one unified platform.",
+        "Seamlessly connect project management, time tracking, and client communication in one unified platform.",
     },
   ];
 
   return (
-    <div className="bg-[#F6F9FF]">
-      <section className="max-w-[1200px] px-[20px] mx-auto py-16 mx-auto">
-        <h2 className="text-4xl font-bold text-center text-black mb-16">
-          We do this differently
-        </h2>
+    <section className="py-20 bg-[#F8FAFC]">
+      <div className="max-w-[1200px] mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center bg-white border border-[#DEE5ED] rounded-full px-4 py-2 mb-4">
+            <BookPlus className="w-6 h-6 mr-2" />
+            <span className="text-[#1c1c1c]">Our Impact</span>
+          </div>
+          <h2 className="text-4xl font-bold mb-4">We do this differently</h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Stats Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="space-y-4">
-              <div className="text-5xl font-bold text-black">{stat.value}</div>
-              <div className="text-2xl text-gray-600">{stat.label}</div>
-              <p className="text-gray-500 leading-relaxed">
-                {stat.description}
-              </p>
+            <div
+              key={index}
+              className="bg-white border border-[#DEE5ED] rounded-2xl p-8"
+            >
+              <div className="text-5xl font-bold text-[#1c1c1c] mb-4">
+                {stat.value}
+              </div>
+              <h3 className="text-2xl font-semibold text-[#1c1c1c] mb-2">
+                {stat.label}
+              </h3>
+              <p className="text-[#3d495b]">{stat.description}</p>
             </div>
           ))}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

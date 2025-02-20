@@ -1,120 +1,122 @@
-/* src/components/home/Hero/Cta.module.css */
+/* src/components/home/Hero.module.css */
 .heroSection {
-  padding: 80px 20px;
-  background-color: var(--neutral-white);
-  text-align: center;
-  overflow: hidden;
+  padding-top: 180px;
+  padding-bottom: 0;
+  background-color: #ffffff;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 956px;
   margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
 }
 
 .topTag {
-  display: inline-block;
-  margin-bottom: 24px;
-  color: var(--primary);
-  /* font-size: 18px; */
-  /* font-weight: 500; */
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border: 1px solid #dde5ed;
+  border-radius: 100px;
+  color: #333333;
 }
 
 .mainHeading {
-  /* font-size: 48px; */
-  line-height: 1.2;
+  font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 700;
-  color: #1A1A1A;
-  max-width: 900px;
-  margin: 0 auto 24px;
+  line-height: 1.2;
+  color: #0c0c0c;
+  max-width: 800px;
 }
 
 .subHeading {
   font-size: 18px;
-  line-height: 1.6;
-  color: #666666;
-  max-width: 800px;
-  margin: 0 auto 40px;
+  line-height: 1.5;
+  color: #3d495b;
+  max-width: 600px;
 }
 
 .ctaButtons {
   display: flex;
   gap: 16px;
-  justify-content: center;
-  margin-bottom: 60px;
+  align-items: center;
 }
 
 .primaryButton {
-  padding: 16px 35px;
-  background-color: var(--primary);
-  color: white;
-  border-radius: 60px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-decoration: none;
   font-weight: 500;
-  transition: background-color 0.3s;
-}
-
-.primaryButton:hover {
-  background-color: var(--primary);
 }
 
 .secondaryButton {
-  padding: 16px 32px;
-  background-color: transparent;
-  color: var(--primary);
-  border: 1px solid var(--primary);
-  border-radius: 60px;
-  font-weight: 500;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: background-color 0.3s;
-}
-
-.secondaryButton:hover {
-  background-color: #F3F4F6;
+  padding: 8px 12px;
+  border: 1px solid #dde5ed;
+  border-radius: 100px;
+  color: #3d495b;
+  text-decoration: none;
 }
 
 .playIcon {
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #1c1c1c;
+  border-radius: 100%;
+  color: #ffffff;
 }
 
 .dashboardImage {
-  position: relative;
-  margin-top: 40px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1010px;
 }
 
 .image {
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 12px;
+  border-radius: 24px;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
+@media (max-width: 809px) {
   .heroSection {
-    padding: 0 20px;
+    padding-top: 160px;
+  }
+
+  .container {
+    padding: 0 16px;
+    gap: 30px;
   }
 
   .mainHeading {
-    font-size: 30px;
+    font-size: 34px;
   }
 
   .subHeading {
     font-size: 16px;
   }
 
-  .dashboardImage {
-    margin-top: 30px;
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
   }
 
-  .primaryButton {
-    padding: 12px 24px;
-  }
-
+  .primaryButton,
   .secondaryButton {
-    padding: 12px 24px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 }
