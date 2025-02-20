@@ -41,7 +41,7 @@ const FAQSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-[#F8FAFC] border border-[#DEE5ED] rounded-full px-4 py-2 mb-4">
             <MessageCircleQuestionIcon className="w-6 h-6 mr-2" />
-            <span className="text-[#1c1c1c]">FAQ's</span>
+            <span className="text-[#0A0A0A]">FAQ's</span>
           </div>
           <h2 className="text-4xl font-bold">Frequently Asked Questions</h2>
         </div>

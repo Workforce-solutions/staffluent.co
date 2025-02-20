@@ -106,7 +106,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="border-t border-[#1c1c1c] pt-8">
+          <div className="border-t border-[#0A0A0A] pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <a
                   href="https://lander.studio/"
@@ -117,10 +117,10 @@ const Footer = () => {
                 © 2025 Staffluent. All rights reserved
               </a>
               <div className="flex gap-6">
-                <Link href="/terms" className="text-[#b3b3b3] hover:text-white transition-colors">
+                <Link href="/terms" className="text-[#b3b3b3] cursor-pointer hover:text-white transition-colors">
                   Terms of Use
                 </Link>
-                <Link href="/privacy-policy" className="text-[#b3b3b3] hover:text-white transition-colors">
+                <Link href="/privacy-policy" className="text-[#b3b3b3]  cursor-pointer hover:text-white transition-colors">
                   Privacy Policy
                 </Link>
               </div>

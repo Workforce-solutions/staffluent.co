@@ -69,8 +69,8 @@ const FAQ = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-[#F8FAFC] border border-[#DEE5ED] rounded-full px-4 py-2 mb-4">
-            <CircleHelp className="w-5 h-5 text-[#1c1c1c] mr-2" />
-            <span className="text-[#1c1c1c]">FAQ's</span>
+            <CircleHelp className="w-5 h-5 text-[#0A0A0A] mr-2" />
+            <span className="text-[#0A0A0A]">FAQ's</span>
           </div>
           <h2 className="text-6xl font-bold">Frequently Asked Questions</h2>
         </div>

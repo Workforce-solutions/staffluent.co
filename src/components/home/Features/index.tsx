@@ -43,9 +43,9 @@ const Features = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#DEE5ED] bg-[#F8FAFC] mb-6">
             <Star className="h-5 w-5" />
-            <span className="text-[#1C1C1C] text-base">Features</span>
+            <span className="text-[#0A0A0A] text-base">Features</span>
           </div>
-          <h2 className="text-6xl font-bold text-[#1C1C1C] mb-4">
+          <h2 className="text-6xl font-bold text-[#0A0A0A] mb-4">
             What Staffluent Offers You
           </h2>
           <p className="text-[#3D495B] text-lg max-w-[600px] mx-auto">
@@ -61,10 +61,10 @@ const Features = () => {
               key={feature.title}
               className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-2xl p-8 flex flex-col items-center text-center"
             >
-              <div className="w-12 h-12 bg-[#1C1C1C] rounded-xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-[#0A0A0A] rounded-xl flex items-center justify-center mb-6">
                 <feature.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-[#1C1C1C] mb-3">
+              <h3 className="text-xl font-semibold text-[#0A0A0A] mb-3">
                 {feature.title}
               </h3>
               <p className="text-[#3D495B]">{feature.description}</p>

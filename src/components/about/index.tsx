@@ -9,7 +9,7 @@ const AboutPageComponent = () => {
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center bg-[#F8FAFC] border border-[#DEE5ED] rounded-full px-4 py-2 mb-4">
                         <UserRoundIcon className="w-6 h-6 mr-2" />
-                        <span className="text-[#1c1c1c]">About Us</span>
+                        <span className="text-[#0A0A0A]">About Us</span>
                     </div>
                     <h2 className="text-5xl font-bold mb-4">Empowering Teams Through Intelligent Project Management</h2>
                     <p className="text-[#3d495b] max-w-3xl mx-auto">
