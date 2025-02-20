@@ -14,39 +14,33 @@ const Hero = () => {
   };
 
   return (
-      <section className="pt-10 w-full overflow-x-hidden">
-        <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col items-center text-center">
-          {/* Tag Button */}
-          <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(222,229,237,0.27)] hover:bg-black/5 transition-colors"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                  d="M13 10V3L4 14H11V21L20 10H13Z"
-                  stroke="#0A0A0A"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-              />
-            </svg>
+    <section className="pt-10 w-full overflow-x-hidden">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col items-center text-center">
+        {/* Tag Button */}
+        <div className="p-1 border border-[rgba(222,229,237,0.27)] rounded-full">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(222,229,237,50)] hover:bg-black/5 transition-colors">
+            <Image
+              src="https://framerusercontent.com/images/IMr6LHJrnxrNlwu88UNWxCvghkA.svg"
+              alt="Tag"
+              width={24}
+              height={24}
+            />
             <span className="text-[#0A0A0A] text-base">
-            Coordinate - Schedule - Empower
-          </span>
+              Coordinate - Schedule - Empower
+            </span>
             <div className="bg-[#0A0A0A] p-1 rounded-full">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <path
-                    d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                  d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
-          </motion.div>
+          </div>
+        </div>
 
           {/* Main Content */}
           <motion.div
