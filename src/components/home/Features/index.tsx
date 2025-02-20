@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Bell, Calendar, SparklesIcon, Star, Target, Timer, Waypoints } from "lucide-react";
+import {Star} from "lucide-react";
 
 const Features = () => {
   const features = [
@@ -56,7 +56,7 @@ const Features = () => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <div
               key={feature.title}
               className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-2xl p-8 flex flex-col items-center text-center"

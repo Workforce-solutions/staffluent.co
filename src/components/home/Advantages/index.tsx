@@ -84,7 +84,7 @@ const Advantages = () => {
                   className="flex flex-col md:flex-row flex-wrap gap-4 max-w-lg mx-auto md:mx-0"
                   variants={container}
               >
-                {features.map((feature, index) => (
+                {features.map((feature) => (
                     <motion.div
                         key={feature.title}
                         variants={fadeInUp}
