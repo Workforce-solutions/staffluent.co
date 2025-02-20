@@ -64,7 +64,7 @@ const Comparison = () => {
                 <div className="grid md:grid-cols-2 gap-8 max-w-[1000px] mx-auto">
                     {/* Other Platforms */}
                     <div className="bg-white p-6 rounded-xl border border-[#DEE5ED]">
-                        <h3 className="text-[22px] font-bold text-center text-[#1c1c1c] mb-6">
+                        <h3 className="text-[22px] font-bold text-center text-[#0A0A0A] mb-6">
                             OTHER PLATFORMS
                         </h3>
                         <div className="space-y-4">

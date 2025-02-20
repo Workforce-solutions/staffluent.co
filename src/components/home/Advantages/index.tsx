@@ -35,7 +35,7 @@ const Advantages = () => {
                                     key={feature.title}
                                     className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-xl p-4 flex items-center gap-3"
                                 >
-                                    <div className="w-8 h-8 bg-[#1c1c1c] rounded-lg flex items-center justify-center">
+                                    <div className="w-8 h-8 bg-[#0A0A0A] rounded-lg flex items-center justify-center">
                                         <Image
                                             src={feature.icon}
                                             alt={feature.title}
@@ -51,7 +51,7 @@ const Advantages = () => {
 
                         <Link
                             href="/contact"
-                            className="inline-block bg-[#1c1c1c] text-white px-6 py-4 rounded-xl hover:bg-black/90 transition-colors"
+                            className="inline-block bg-[#0A0A0A] text-white px-6 py-4 rounded-xl hover:bg-black/90 transition-colors"
                         >
                             Get Started
                         </Link>

@@ -101,7 +101,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="border-t border-[#1c1c1c] pt-8">
+          <div className="border-t border-[#0A0A0A] pt-8">
             <div className="flex justify-center">
               <a
                   href="https://lander.studio/"

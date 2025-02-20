@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-      <section className="py-20 bg-[#1c1c1c]">
+      <section className="py-20 bg-[#F8FAFC]">
         <div className="max-w-[1200px] mx-auto px-4">
           <div className="text-center">
             <motion.div
@@ -14,20 +14,24 @@ const HeroSection = () => {
                 transition={{ duration: 0.6 }}
                 className="mb-12"
             >
-              <Image
-                  src="/img-2.png"
-                  alt="Platform Dashboard Preview"
-                  width={800}
-                  height={400}
-                  className="w-full rounded-2xl shadow-xl"
-              />
+              <div className="relative">
+                <Image
+                    src="/img-2.png"
+                    alt="Platform Dashboard Preview"
+                    width={800}
+                    height={400}
+                    className="w-full rounded-2xl shadow-lg border border-[#DEE5ED]"
+                />
+                {/* Optional overlay gradient */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-[#F8FAFC]/20 to-transparent" />
+              </div>
             </motion.div>
 
             <motion.h2
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-4xl md:text-5xl font-bold text-white mb-6"
+                className="text-4xl md:text-5xl font-bold text-[#0A0A0A] mb-6"
             >
               Transform Your Project and<br />
               Team Management Today
@@ -37,7 +41,7 @@ const HeroSection = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-[#B3B3B3] max-w-3xl mx-auto mb-12"
+                className="text-[#3d495b] max-w-3xl mx-auto mb-12 text-lg"
             >
               Experience how our comprehensive platform streamlines project tracking,
               enhances team collaboration, and provides powerful analytics to drive
@@ -52,13 +56,13 @@ const HeroSection = () => {
             >
               <Link
                   href="https://app.staffluent.co"
-                  className="bg-white text-[#1c1c1c] px-8 py-3 rounded-xl hover:bg-white/90 transition-colors"
+                  className="bg-[#0A0A0A] text-white px-8 py-3 rounded-xl hover:bg-[#0A0A0A]/90 transition-colors"
               >
                 Start Now
               </Link>
               <Link
                   href="/contact"
-                  className="border border-white text-white px-8 py-3 rounded-xl hover:bg-white/10 transition-colors"
+                  className="border border-[#0A0A0A] text-[#0A0A0A] px-8 py-3 rounded-xl hover:bg-[#0A0A0A]/5 transition-colors"
               >
                 Request Demo
               </Link>

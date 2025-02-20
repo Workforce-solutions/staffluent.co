@@ -63,7 +63,7 @@ const Pricing = () => {
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center bg-[#F8FAFC] border border-[#DEE5ED] rounded-full px-4 py-2 mb-4">
                         <Image src="/api/placeholder/24/24" alt="Pricing icon" width={24} height={24} className="mr-2" />
-                        <span className="text-[#1c1c1c]">Pricing</span>
+                        <span className="text-[#0A0A0A]">Pricing</span>
                     </div>
                     <h2 className="text-4xl font-bold mb-4">Flexible Pricing Plans</h2>
                     <p className="text-[#3d495b]">
@@ -120,7 +120,7 @@ const Pricing = () => {
                                 <div className="flex justify-between items-start mb-6">
                                     <h3 className="text-2xl font-bold">{plan.name}</h3>
                                     {plan.popular && (
-                                        <span className="bg-[#1c1c1c] text-white px-3 py-1 rounded-full text-sm">
+                                        <span className="bg-[#0A0A0A] text-white px-3 py-1 rounded-full text-sm">
                       Most Popular
                     </span>
                                     )}
@@ -134,7 +134,7 @@ const Pricing = () => {
                                 <p className="text-[#3d495b] mb-6">{plan.description}</p>
                                 <Link
                                     href="/contact"
-                                    className="block w-full bg-[#1c1c1c] text-white text-center py-3 rounded-xl hover:bg-black/90 transition-colors"
+                                    className="block w-full bg-[#0A0A0A] text-white text-center py-3 rounded-xl hover:bg-black/90 transition-colors"
                                 >
                                     Get started
                                 </Link>
@@ -145,7 +145,7 @@ const Pricing = () => {
                                     {plan.features.map((feature, featureIndex) => (
                                         <div key={featureIndex} className="flex items-center">
                                             {feature.included ? (
-                                                <Check className="w-5 h-5 text-[#1c1c1c] mr-3" />
+                                                <Check className="w-5 h-5 text-[#0A0A0A] mr-3" />
                                             ) : (
                                                 <X className="w-5 h-5 text-[#92959E] mr-3" />
                                             )}
