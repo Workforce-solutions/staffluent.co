@@ -29,12 +29,7 @@ const HomePage = () => {
       {!isHamburgerMenuOpen ? (
         <>
           <Hero />
-          <Demo />
-          <Features />
-          <Missions />
-          <FAQ />
-          <CTA />
-          <Footer />
+
         </>
       ) : (
         <div className="absolute top-0 left-0 w-full h-[calc(100vh-100px)] bg-white flex flex-col items-center gap-4 pr-6 mt-24">
