@@ -170,7 +170,7 @@ const ContactForm = () => {
                                 <div className="pt-6 border-t">
                                     <p className="font-medium text-gray-900">Contact Support:</p>
                                     <a href="mailto:support@staffluent.co"
-                                       className="text-indigo-600 hover:text-indigo-700 flex items-center gap-2 mt-2">
+                                       className="text-[#0A0A0A] hover:text-[#171717] flex items-center gap-2 mt-2">
                                         <Mail size={20} />
                                         support@staffluent.co
                                     </a>
@@ -319,8 +319,8 @@ const ContactForm = () => {
                                     disabled={isSubmitting}
                                     className={`w-full py-4 px-6 rounded-lg text-lg font-medium shadow-sm flex items-center justify-center gap-2
                                         ${isSubmitting
-                                        ? 'bg-indigo-400 cursor-not-allowed'
-                                        : 'bg-indigo-600 hover:bg-indigo-700'} 
+                                        ? 'bg-[#0A0A0A] cursor-not-allowed'
+                                        : 'bg-[#0A0A0A] hover:bg-[#0A0A0A]'} 
                                         text-white transition-colors`}
                                 >
                                     {isSubmitting ? (
