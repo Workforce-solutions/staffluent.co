@@ -23,7 +23,7 @@ const PrivacyPolicyPage = () => {
                 {/* Introduction */}
                 <section className="mb-12">
                     <p className="text-gray-700 leading-relaxed">
-                        At Staffluent, a registered brand of VenueBoost Inc., we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (the "Site") and use our workforce management platform, including our mobile applications and related services (collectively, the "Services"). By accessing or using our Services, you agree to this Privacy Policy.
+                        At Staffluent, a registered brand of VenueBoost Inc., we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (the &ldquo;Site&rdquo;) and use our workforce management platform, including our mobile applications and related services (collectively, the &ldquo;Services&rdquo;). By accessing or using our Services, you agree to this Privacy Policy.
                     </p>
                 </section>
 

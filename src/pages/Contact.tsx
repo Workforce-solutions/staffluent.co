@@ -30,7 +30,7 @@ const ContactPage = () => {
                         <div className="max-w-[1200px] mx-auto px-4">
                             {/* Header */}
                             <div className="text-center mb-16">
-                                <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">We're Here to Help</h1>
+                                <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">We&apos;re Here to Help</h1>
                                 <p className="text-gray-700 text-lg max-w-2xl mx-auto">
                                     Whether you have questions, need support, or want to explore a strategic partnership,
                                     our team is ready to assist.
