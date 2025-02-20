@@ -13,7 +13,7 @@ const About = () => {
     <section className="pt-20 w-full">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Logo and Title */}
-        <div className="flex flex-col items-center mb-16">
+        <div className="flex flex-col items-center mb-16 relative overflow-hidden">
           <Image
             src="https://framerusercontent.com/images/YWkjUs3TyLqowl3SfODlTHzg.png"
             alt="Staffluent"
@@ -21,7 +21,8 @@ const About = () => {
             height={100}
             className="mb-10"
           />
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+          <div className="blur-div"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 z-10">
             Streamline Your Project and Team Management
           </h2>
         </div>

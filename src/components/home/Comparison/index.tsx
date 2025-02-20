@@ -31,7 +31,7 @@ const Comparison = () => {
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 max-w-[800px] mx-auto">
-          <div className="flex justify-center items-center gap-8 mb-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 mb-4">
             <div className="text-center">
               <h2 className="text-[33px] uppercase font-bold font-['Bricolage_Grotesque'] text-[#0c0c0c]">
                 Other
@@ -40,17 +40,18 @@ const Comparison = () => {
                 Platforms
               </h2>
             </div>
-            <div className="relative w-20 h-20">
-              <Image
-                src="/api/placeholder/80/80"
-                alt="VS"
-                width={80}
-                height={80}
-              />
-            </div>
-            <h2 className="text-5xl uppercase font-bold font-['Bricolage_Grotesque'] text-[#0c0c0c]">
-              Staffluent
-            </h2>
+            <Image
+              src="https://framerusercontent.com/images/5QS6LygmogoJDxB113pzHwYAIy8.svg"
+              alt="VS"
+              width={50}
+              height={50}
+            />
+            <Image
+              src="https://framerusercontent.com/images/k3wWW2siq0myz0pRkEcsJY4Gfqs.svg"
+              alt="VS"
+              width={280}
+              height={180}
+            />
           </div>
           <p className="text-[#3d495b] text-lg max-w-[600px] mx-auto">
             See how Staffluent outperforms other platforms with superior

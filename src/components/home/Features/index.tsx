@@ -7,32 +7,32 @@ const Features = () => {
     {
       title: "AI Task Management",
       description: "Automatically prioritize and organize your daily tasks.",
-      icon: SparklesIcon,
+      icon: "https://framerusercontent.com/images/dr6GD1t1ONXQwbFmH89FVAeK1fM.svg",
     },
     {
       title: "Real-Time Collaboration",
       description: "Work together seamlessly with live updates.",
-      icon: Waypoints,
+      icon: "https://framerusercontent.com/images/p5McfwFP7uurSKgF6PViQA4Gtc4.svg",
     },
     {
       title: "Customizable Dashboards",
       description: "Tailor your workspace to fit your workflow.",
-      icon: Target,
+      icon: "https://framerusercontent.com/images/qQeZEnuuvvo8KgCmqFiT3Ti7fw.svg",
     },
     {
       title: "Automated Reminders",
       description: "Stay on track with smart deadline alerts.",
-      icon: Bell,
+      icon: "https://framerusercontent.com/images/euaBpQVAMFZkJzzAmPHqkPmUQoY.svg",
     },
     {
       title: "Time-Blocking Tools",
       description: "Plan and manage your time efficiently and effectively.",
-      icon: Timer,
+      icon: "https://framerusercontent.com/images/KAxSGCHUlTP7V9W9PSAIhI9DaTo.svg",
     },
     {
       title: "Integrated Calendars",
       description: "Sync with your existing calendar apps effortlessly.",
-      icon: Calendar,
+      icon: "https://framerusercontent.com/images/W4FbcyGRxahhSiKZQSpElKkQpec.svg",
     },
   ];
 
@@ -62,7 +62,13 @@ const Features = () => {
               className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-2xl p-8 flex flex-col items-center text-center"
             >
               <div className="w-12 h-12 bg-[#0A0A0A] rounded-xl flex items-center justify-center mb-6">
-                <feature.icon className="w-7 h-7 text-white" />
+                <Image
+                  src={feature.icon}
+                  alt={feature.title}
+                  width={28}
+                  height={28}
+                  className="text-white"
+                />
               </div>
               <h3 className="text-xl font-semibold text-[#0A0A0A] mb-3">
                 {feature.title}
