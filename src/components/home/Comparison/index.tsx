@@ -47,7 +47,7 @@ const Comparison = () => {
               height={50}
             />
             <Image
-              src="https://framerusercontent.com/images/k3wWW2siq0myz0pRkEcsJY4Gfqs.svg"
+              src="StaffLogoWhite.png"
               alt="Staffluent - Centered Intelligence"
               width={280}
               height={180}
@@ -100,7 +100,7 @@ const Comparison = () => {
             </div>
             <div className="flex justify-center bg-[#F1F4F8] rounded-b-xl p-6">
               <Image
-                src="https://framerusercontent.com/images/YWkjUs3TyLqowl3SfODlTHzg.png"
+                src="logo.png"
                 alt="Staffluent - Centered Intelligence"
                 width={70}
                 height={70}

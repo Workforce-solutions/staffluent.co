@@ -15,7 +15,7 @@ const About = () => {
         {/* Logo and Title */}
         <div className="flex flex-col items-center mb-16 relative overflow-hidden">
           <Image
-            src="https://framerusercontent.com/images/YWkjUs3TyLqowl3SfODlTHzg.png"
+            src="logo.png"
             alt="Staffluent - Centered Intelligence"
             width={100}
             height={100}
