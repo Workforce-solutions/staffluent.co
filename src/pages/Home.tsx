@@ -8,6 +8,8 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import About from "@/components/home/About";
 import Advantages from "@/components/home/Advantages";
+import Comparison from "@/components/home/Comparison";
+import Pricing from "@/components/home/Pricing";
 import React, { useState } from "react";
 import Link from "next/link";
 
@@ -33,6 +35,10 @@ const HomePage = () => {
           <About />
           <Advantages />
           <Features />
+          <Comparison />
+          <Pricing />
+          <FAQ />
+          <CTA />
 
         </>
       ) : (

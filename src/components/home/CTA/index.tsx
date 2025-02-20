@@ -1,47 +1,77 @@
-// src/components/home/CTA/ContactForm.tsx
-"use client";
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import styles from './Cta.module.css';
+import React from 'react';
+import Image from "next/image";
+import Link from "next/link";
 
 const CTA = () => {
-    return (
-        <section className={styles.ctaSection}>
-            <div className={styles.container}>
-                <div className={`flex flex-col lg:flex-row`}>
-                    {/* Left side - Text and Value Proposition */}
-                    <div className={`${styles.textContent} lg:w-3/5 mb-4 lg:mb-0`}>
-                        <motion.h2
-                            className={styles.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                        >
-                            Streamline Your Project and Team Management
-                        </motion.h2>
+    const features = [
+        { text: "Instant Access", icon: "https://framerusercontent.com/images/y614ZOn5y3YhoWTwrEfyfwT6SOo.svg" },
+        { text: "Boost Productivity", icon: "https://framerusercontent.com/images/y614ZOn5y3YhoWTwrEfyfwT6SOo.svg" },
+        { text: "Easy Setup", icon: "https://framerusercontent.com/images/y614ZOn5y3YhoWTwrEfyfwT6SOo.svg" },
+    ];
 
-                        <motion.p
-                            className={`tracking-wider text-slate-200 text-sm lg:text-lg`}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.1 }}
-                        >
-                            Join companies that have revolutionized their workflow with our comprehensive
-                            platform. From project tracking to team collaboration, performance analytics
-                            to client management - everything you need in one powerful solution.
-                        </motion.p>
+    return (
+        <section className="py-20 relative" id="cta">
+            <div className="max-w-[1200px] mx-auto px-4 relative">
+                {/* Background Image */}
+                <div className="absolute inset-0">
+                    <Image
+                        src="https://framerusercontent.com/images/OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
+                        alt="Background"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
+                    {/* Text Content */}
+                    <div className="max-w-2xl text-center lg:text-left">
+                        <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                            Simply Better Project & Team Management
+                        </h3>
+                        <p className="text-[#DDE5ED] text-lg mb-12">
+                            All your workflow needs in one powerful platform. Join companies that have transformed how they work, track, and collaborate.
+                        </p>
+
+                        {/* Features */}
+                        <div className="flex flex-col md:flex-row gap-4 mb-12">
+                            {features.map((feature, index) => (
+                                <div
+                                    key={index}
+                                    className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-4"
+                                >
+                                    <div className="w-6 h-6 relative">
+                                        <Image
+                                            src={feature.icon}
+                                            alt={feature.text}
+                                            width={24}
+                                            height={24}
+                                            className="w-full h-full"
+                                        />
+                                    </div>
+                                    <span className="text-white font-medium">{feature.text}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
-                    {/* Right side - Action Buttons */}
-                    <div className={`lg:w-2/5 flex justify-center items-center h-auto`}>
-                        <div className={`${styles.ctaButtons}`}>
-                            <Link href="https://app.staffluent.co" className={`${styles.primaryButton}`}>
-                                Start Now
-                            </Link>
-                            <Link href="/contact" className={`${styles.secondaryButton}`}>
-                                Request Demo
-                            </Link>
+                    {/* Arrow and Button */}
+                    <div className="flex flex-col items-center gap-8">
+                        <div className="w-12 h-12 relative">
+                            <Image
+                                src="https://framerusercontent.com/images/Pht5ouuJ9vLestX5AiQRKct5PuM.svg"
+                                alt="Arrow"
+                                width={48}
+                                height={48}
+                                className="w-full h-full"
+                            />
                         </div>
+                        <Link
+                            href="/contact"
+                            className="bg-white text-[#262626] px-8 py-4 rounded-xl hover:bg-white/90 transition-colors text-lg font-medium"
+                        >
+                            Get Started
+                        </Link>
                     </div>
                 </div>
             </div>
