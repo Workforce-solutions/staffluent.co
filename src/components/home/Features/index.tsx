@@ -45,7 +45,7 @@ const Features = () => {
             <Star className="h-5 w-5" />
             <span className="text-[#0A0A0A] text-base">Features</span>
           </div>
-          <h2 className="text-6xl font-bold text-[#0A0A0A] mb-4">
+          <h2 className="md:text-6xl text-5xl font-bold text-[#0A0A0A] mb-4">
             What Staffluent Offers You
           </h2>
           <p className="text-[#3D495B] text-lg max-w-[600px] mx-auto">
