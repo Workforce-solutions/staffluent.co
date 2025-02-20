@@ -6,7 +6,8 @@ import Features from "@/components/home/Features";
 import Hero from "@/components/home/Hero";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
-import Missions from "@/components/home/Missions";
+import About from "@/components/home/About";
+import Advantages from "@/components/home/Advantages";
 import React, { useState } from "react";
 import Link from "next/link";
 
@@ -29,6 +30,9 @@ const HomePage = () => {
       {!isHamburgerMenuOpen ? (
         <>
           <Hero />
+          <About />
+          <Advantages />
+          <Features />
 
         </>
       ) : (
