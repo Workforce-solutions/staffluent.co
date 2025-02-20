@@ -1,4 +1,3 @@
-// src/components/layout/Header.tsx
 "use client";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,13 +10,15 @@ interface HeaderProps {
 }
 
 const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: HeaderProps) => {
+
+    const navigationLinks = navLinks.slice(0, -1);
     return (
         <header className="fixed top-0 left-0 right-0 z-40 pt-[30px]">
             <div className="max-w-[1200px] mx-auto px-4">
                 <nav className="w-full flex items-center justify-between bg-black rounded-2xl px-4 py-4 backdrop-blur-md">
                     {/* Left section - Navigation */}
                     <div className="hidden md:flex items-center space-x-2">
-                        {navLinks.map((link) => (
+                        {navigationLinks.map((link) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
@@ -30,20 +31,12 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: Heade
 
                     {/* Center - Logo */}
                     <Link href="/" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                        {/*<Image*/}
-                        {/*    src="https://framerusercontent.com/images/YWkjUs3TyLqowl3SfODlTHzg.png"*/}
-                        {/*    alt="Staffluent"*/}
-                        {/*    width={40}*/}
-                        {/*    height={40}*/}
-                        {/*    className="w-10 h-10"*/}
-                        {/*/>*/}
                         <Image
                             src="logo-footer.svg"
                             alt="Staffluent Logo"
-                                width={200}
-                                height={100}
-                            // fill
-                            className="object-contain"    // Changed from object-cover to object-contain
+                            width={200}
+                            height={100}
+                            className="object-contain"
                         />
                     </Link>
 
@@ -53,12 +46,12 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: Heade
                             href="https://app.staffluent.co/login"
                             target="_blank"
                             rel="noopener"
-                            className="bg-white text-black text-[17px] px-4 py-3.5 rounded-xl hover:bg-white/90 transition-colors"
+                            className="hidden md:flex bg-white text-black text-[17px] px-4 py-3.5 rounded-xl hover:bg-white/90 transition-colors"
                         >
                             Access Platform
                         </Link>
 
-                        {/* Mobile menu */}
+                        {/* Mobile menu button */}
                         <button
                             className="md:hidden p-2"
                             onClick={() => setIsHamburgerMenuOpen(!isHamburgerMenuOpen)}
