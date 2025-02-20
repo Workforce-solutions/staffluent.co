@@ -15,6 +15,10 @@ const Footer = () => {
                   <Image
                       src="logo-footer.svg"
                       alt="Staffluent Logo"
+                      style={{
+                        marginLeft: "-12px",
+                        marginTop: "-14px"
+                      }}
                       fill
                       className="object-contain"
                       priority
@@ -39,7 +43,7 @@ const Footer = () => {
             </div>
 
             {/* Right Column */}
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-[1fr,auto] gap-8">
               {/* Company Links */}
               <div className="space-y-4">
                 <h3 className="text-white font-medium">Company</h3>
@@ -56,7 +60,7 @@ const Footer = () => {
               {/* Social Links */}
               <div className="space-y-4">
                 <h3 className="text-white font-medium">Social Profiles</h3>
-                <div className="flex gap-2">
+                <div className="flex gap-2 md:justify-end">
                   <a
                       href="https://www.linkedin.com/"
                       target="_blank"
