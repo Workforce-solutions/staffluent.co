@@ -23,7 +23,7 @@ const TermsPage = () => {
                 {/* Introduction */}
                 <section className="mb-12">
                     <p className="text-gray-700 leading-relaxed">
-                        These Terms of Use ("Terms") govern your access to and use of the Staffluent website (the "Site") and related services provided by Staffluent, a registered brand of VenueBoost Inc. ("we," "us," or "our"). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, please do not use the Site.
+                        These Terms of Use (&ldquo;Terms&rdquo;) govern your access to and use of the Staffluent website (the (&ldquo;Site&rdquo;) and related services provided by Staffluent, a registered brand of VenueBoost Inc. (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, please do not use the Site.
                     </p>
                 </section>
 
@@ -77,7 +77,7 @@ const TermsPage = () => {
                             <div className="bg-red-50 p-4 rounded-lg">
                                 <ul className="list-disc pl-6 space-y-2 text-red-600">
                                     <li>Use the Site in any way that could damage, disable, or overburden it</li>
-                                    <li>Interfere with any other party's use of the Site</li>
+                                    <li>Interfere with any other party&apos;s use of the Site</li>
                                     <li>Submit false or misleading information</li>
                                     <li>Attempt to gain unauthorized access</li>
                                     <li>Use the Site for malicious purposes</li>
@@ -124,7 +124,7 @@ const TermsPage = () => {
                         <div className="bg-yellow-50 p-6 rounded-lg space-y-4 text-gray-700">
                             <h3 className="text-xl font-medium mb-2">6.1 Disclaimer of Warranties</h3>
                             <p className="uppercase text-sm">
-                                The Site and its content are provided "as is" and "as available" basis without any warranties of any kind, either express or implied.
+                                The Site and its content are provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis without any warranties of any kind, either express or implied.
                             </p>
 
                             <h3 className="text-xl font-medium mb-2">6.2 Limitation of Liability</h3>
@@ -139,7 +139,7 @@ const TermsPage = () => {
                         <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">7. Indemnification</h2>
                         <div className="bg-gray-50 p-6 rounded-lg space-y-4 text-gray-700">
                             <p>
-                                You agree to indemnify, defend, and hold harmless VenueBoost Inc. and its affiliates from any claims, liabilities, damages, losses, or expenses (including reasonable attorneys' fees) arising out of or in any way connected with your access to or use of the Site.
+                                You agree to indemnify, defend, and hold harmless VenueBoost Inc. and its affiliates from any claims, liabilities, damages, losses, or expenses (including reasonable attorneys&apos; fees) arising out of or in any way connected with your access to or use of the Site.
                             </p>
                         </div>
                     </section>

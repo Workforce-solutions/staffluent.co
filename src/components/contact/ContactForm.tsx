@@ -1,7 +1,7 @@
 "use client";
 // src/components/contact/ContactForm.tsx
 import { useState } from 'react';
-import { Mail, Loader } from 'lucide-react';
+import { Loader } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
