@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(222,229,237,50)] hover:bg-black/5 transition-colors">
             <Image
               src="https://framerusercontent.com/images/IMr6LHJrnxrNlwu88UNWxCvghkA.svg"
-              alt="Tag"
+              alt="Staffluent - Centered Intelligence"
               width={24}
               height={24}
             />
@@ -64,7 +64,7 @@ const Hero = () => {
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              className="flex flex-col items-center gap-8 mt-10"
+              className="flex flex-col items-center gap-8 mt-"
           >
             <Link
                 href="/contact"
@@ -81,21 +81,21 @@ const Hero = () => {
                 <div className="flex -space-x-2">
                   <Image
                       src="https://framerusercontent.com/images/VLgy4LHFmPRcroCjnlXTid9rvcc.png"
-                      alt="Team member"
+                      alt="Staffluent - Team member"
                       width={32}
                       height={32}
                       className="rounded-full border-2 border-white relative z-30"
                   />
                   <Image
                       src="https://framerusercontent.com/images/UENPQ6M5gthstqeACgcVeN76TZk.png"
-                      alt="Team member"
+                      alt="Staffluent - Team member"
                       width={32}
                       height={32}
                       className="rounded-full border-2 border-white relative z-20"
                   />
                   <Image
                       src="https://framerusercontent.com/images/prQs9tObWVtpStifstN0OexkE.png"
-                      alt="Team member"
+                      alt="Staffluent - Team member"
                       width={32}
                       height={32}
                       className="rounded-full border-2 border-white relative z-10"
@@ -118,7 +118,7 @@ const Hero = () => {
               <div className="w-full rounded-[20px] bg-white">
                 <Image
                     src="https://framerusercontent.com/images/6R7Itar4Nwn8lsiojWr72ZW1uKk.png?scale-down-to=1024"
-                    alt="Dashboard Preview"
+                    alt="Staffluent - Platform Dashboard Preview"
                     width={1140}
                     height={600}
                     className="w-full h-auto"

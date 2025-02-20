@@ -89,7 +89,7 @@ const Advantages = () => {
           <div className="relative rounded-3xl border border-[#DEE5ED] overflow-hidden">
             <Image
               src="https://framerusercontent.com/images/mSmtNMWqbIobNUiGm49hZpq614.svg"
-              alt="Advantage illustration"
+              alt="Staffluent - Centered Intelligence"
               width={575}
               height={530}
             />
@@ -105,7 +105,7 @@ const Advantages = () => {
             <div className="relative rounded-3xl border border-[#DEE5ED] overflow-hidden">
               <Image
                 src="https://framerusercontent.com/images/4tAswm4VmUUUuFeWv5aNzy3XNoI.svg"
-                alt="AI Features illustration"
+                alt="Staffluent - Centered Intelligence"
                 width={600}
                 height={450}
               />
@@ -113,7 +113,7 @@ const Advantages = () => {
             {/* Curved Arrow */}
             <Image
               src="https://framerusercontent.com/images/DJaenqiURD5xYuKBLs68FRtHMB4.svg"
-              alt="Curved Arrow"
+              alt="Staffluent - Centered Intelligence"
               width={120}
               height={80}
               className="absolute -right-16 top-3/4 -translate-y-1/2"

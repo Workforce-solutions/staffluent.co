@@ -237,7 +237,7 @@ const Pricing = () => {
             <div className="absolute inset-0">
               <Image
                 src="https://framerusercontent.com/images/OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
-                alt="Background"
+                alt="Staffluent - Centered Intelligence"
                 fill
                 className="object-cover rounded-3xl"
               />
@@ -271,7 +271,7 @@ const Pricing = () => {
                 <div className="relative">
                   <Image
                     src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
-                    alt="Product List"
+                    alt="Staffluent - Centered Intelligence"
                     width={480}
                     height={260}
                     className="rounded-xl shadow-lg"
@@ -281,7 +281,7 @@ const Pricing = () => {
                   <div className="absolute -bottom-[29%] -left-16 hidden md:block">
                     <Image
                       src="https://framerusercontent.com/images/4Gs0etOnzevNvE6hc9z1SfqNYY.png"
-                      alt="Message UI"
+                      alt="Staffluent - Centered Intelligence"
                       width={700}
                       height={200}
                       className="rounded-xl shadow-lg w-full"

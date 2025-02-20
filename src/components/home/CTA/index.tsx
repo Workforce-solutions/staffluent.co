@@ -25,7 +25,7 @@ const CTA = () => {
         <div className="absolute inset-0">
           <Image
             src="https://framerusercontent.com/images/OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
-            alt="Background"
+            alt="Staffluent - Centered Intelligence"
             fill
             className="object-cover rounded-3xl"
           />
@@ -70,7 +70,7 @@ const CTA = () => {
             {/* Curved Arrow */}
             <Image
               src="https://framerusercontent.com/images/Pht5ouuJ9vLestX5AiQRKct5PuM.svg"
-              alt="Arrow"
+              alt="Staffluent - Centered Intelligence"
               width={48}
               height={48}
               className="w-full h-full mb-28"
