@@ -32,7 +32,7 @@ const Pricing = () => {
         monthly: "$49",
         yearly: "$39.20"
       },
-      description: "Advanced features for growing businesses.",
+      description: "Ideal for growing businesses that need advanced features.",
       features: [
         { name: "Core team dashboard", included: true },
         { name: "Essential project and task management", included: true },
@@ -50,7 +50,7 @@ const Pricing = () => {
         monthly: "$69",
         yearly: "$55.20"
       },
-      description: "Complete solution for large organizations.",
+      description: "The ultimate solution for large organizations.",
       features: [
         { name: "Everything in Professional", included: true },
         { name: "Dedicated account manager", included: true },
