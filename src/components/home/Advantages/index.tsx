@@ -61,7 +61,7 @@ const Advantages = () => {
               {features.map((feature) => (
                 <div
                   key={feature.title}
-                  className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-xl p-2 flex items-center justify-center gap-3"
+                  className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-xl p-2 flex items-center justify-center gap-3 mx-auto"
                 >
                   <div className="w-10 h-10 bg-[#0A0A0A] rounded-lg flex items-center justify-center">
                     <Image
@@ -79,7 +79,7 @@ const Advantages = () => {
 
             <Link
               href="/contact"
-              className="inline-block bg-[#0A0A0A] text-white px-6 py-4 rounded-xl hover:bg-black/90 transition-colors"
+              className="inline-block bg-[#0A0A0A] text-white px-4 py-3 rounded-xl hover:bg-black/90 transition-colors text-center w-full md:w-auto"
             >
               Get Started
             </Link>
