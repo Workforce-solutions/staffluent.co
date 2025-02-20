@@ -2,8 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { SparklesIcon } from "lucide-react";
+import { useRouter } from 'next/navigation';
 
 const Hero = () => {
+  const router = useRouter();
   return (
     <section className="pt-10 w-full overflow-x-hidden">
       <div className="max-w-[1200px] mx-auto px-4 md:px-6 flex flex-col items-center text-center">
@@ -55,29 +57,32 @@ const Hero = () => {
             Get Started
           </Link>
 
-          <div className="flex items-center gap-3 border p-1 rounded-full pr-2">
+          <div
+              className="flex items-center gap-3 border p-1 rounded-full pr-2 cursor-pointer hover:bg-black/5"
+              onClick={() => router.push('/contact')}
+          >
             <div className="flex">
               <div className="flex -space-x-2">
                 <Image
-                  src="https://framerusercontent.com/images/VLgy4LHFmPRcroCjnlXTid9rvcc.png"
-                  alt="Staffluent -Team member"
-                  width={32}
-                  height={32}
-                  className="rounded-full border-2 border-white relative z-30"
+                    src="https://framerusercontent.com/images/VLgy4LHFmPRcroCjnlXTid9rvcc.png"
+                    alt="Team member"
+                    width={32}
+                    height={32}
+                    className="rounded-full border-2 border-white relative z-30"
                 />
                 <Image
-                  src="https://framerusercontent.com/images/UENPQ6M5gthstqeACgcVeN76TZk.png"
-                  alt="Staffluent -Team member"
-                  width={32}
-                  height={32}
-                  className="rounded-full border-2 border-white relative z-20"
+                    src="https://framerusercontent.com/images/UENPQ6M5gthstqeACgcVeN76TZk.png"
+                    alt="Team member"
+                    width={32}
+                    height={32}
+                    className="rounded-full border-2 border-white relative z-20"
                 />
                 <Image
-                  src="https://framerusercontent.com/images/prQs9tObWVtpStifstN0OexkE.png"
-                  alt="Staffluent - Team member"
-                  width={32}
-                  height={32}
-                  className="rounded-full border-2 border-white relative z-10"
+                    src="https://framerusercontent.com/images/prQs9tObWVtpStifstN0OexkE.png"
+                    alt="Team member"
+                    width={32}
+                    height={32}
+                    className="rounded-full border-2 border-white relative z-10"
                 />
               </div>
             </div>
