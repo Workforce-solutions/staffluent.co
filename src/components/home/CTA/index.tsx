@@ -77,9 +77,10 @@ const CTA = () => {
             />
             <Link
               href="/contact"
+              style={{width: "120%"}}
               className="bg-white text-[#262626] px-8 py-4 rounded-xl hover:bg-white/90 transition-colors text-lg font-medium w-full"
             >
-              Get Started
+              Start Free Trial
             </Link>
           </div>
         </div>
