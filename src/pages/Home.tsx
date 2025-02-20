@@ -1,6 +1,5 @@
 "use client";
 import CTA from "@/components/home/CTA";
-import Demo from "@/components/home/Demo";
 import FAQ from "@/components/home/Faq";
 import Features from "@/components/home/Features";
 import Hero from "@/components/home/Hero";
@@ -39,6 +38,7 @@ const HomePage = () => {
           <Pricing />
           <FAQ />
           <CTA />
+          <Footer />
 
         </>
       ) : (

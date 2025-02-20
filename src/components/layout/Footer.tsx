@@ -1,129 +1,117 @@
-import Link from "next/link";
+import React from 'react';
 import Image from "next/image";
-import { MapPin, Mail, Phone, Twitter, Facebook, Linkedin } from "lucide-react";
-import styles from "./Footer.module.css";
-
-interface SocialLink {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
-}
-
-interface MainLink {
-  href: string;
-  label: string;
-}
+import Link from "next/link";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  const mainLinks: MainLink[] = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ];
-
-  const legalLinks: MainLink[] = [
-    { href: "/privacy-policy", label: "Privacy Policy" },
-    { href: "/terms", label: "Terms of Use" },
-    { href: "/data-deletion", label: "Data Deletion" },
-  ];
-
-  const socialLinks: SocialLink[] = [
-    { href: "#", icon: <Twitter size={20} />, label: "Twitter" },
-    { href: "#", icon: <Facebook size={20} />, label: "Facebook" },
-    { href: "#", icon: <Linkedin size={20} />, label: "LinkedIn" },
-  ];
-
-  const renderSocialLinks = () => {
-    return socialLinks.map((socialLink) => (
-        <a
-            key={socialLink.label}
-            href={socialLink.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.socialLink}
-            aria-label={socialLink.label}
-        >
-          {socialLink.icon}
-        </a>
-    ));
-  };
-
   return (
-      <footer className={styles.footer}>
-        <div className={styles.container}>
-          {/* Main Footer Content */}
-          <div className={styles.footerContent}>
-            {/* Company Info */}
-            <div className={styles.companyInfo}>
-              <Link href="/" className={styles.logoContainer}>
+      <footer className="w-full bg-[url('https://framerusercontent.com/images/74LehQoe77vSoidpjaDEmwrLHho.png')] bg-cover bg-center rounded-t-[50px]">
+        <div className="max-w-[1200px] mx-auto px-4 py-16">
+          {/* Top Section */}
+          <div className="grid md:grid-cols-2 gap-12 mb-12">
+            {/* Left Column */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <Link href="/" className="block w-16 h-16 relative">
+                  <Image
+                      src="https://framerusercontent.com/images/YWkjUs3TyLqowl3SfODlTHzg.png"
+                      alt="Logo Image"
+                      fill
+                      className="object-cover"
+                  />
+                </Link>
+                <p className="text-white">
+                  Empowering your productivity with intuitive tools and seamless solutions.
+                </p>
+              </div>
+              <a
+                  href="mailto:contact@staffluent.com"
+                  className="inline-flex items-center gap-2 bg-white rounded-xl px-4 py-2 text-[#262626]"
+              >
                 <Image
-                    src="/logo.png"
-                    alt="Staffluent Logo"
-                    width={40}
-                    height={40}
-                    className={styles.logo}
+                    src="https://framerusercontent.com/images/bq8j0XRxNw5W65cEtpyVTuWArA.svg"
+                    alt="Email"
+                    width={24}
+                    height={24}
                 />
-                <span className={styles.companyName}>Staffluent</span>
-              </Link>
+                <span>contact@staffluent.com</span>
+              </a>
+            </div>
 
-              <div className={styles.contactInfo}>
-                <div className={styles.contactItem}>
-                  <MapPin size={20} className={styles.icon} />
-                  <p>222 East 44th Street New York, NY 10017</p>
+            {/* Right Column */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Company Links */}
+              <div className="space-y-4">
+                <h3 className="text-white font-medium">Company</h3>
+                <div className="space-y-2">
+                  <Link href="/#about-us" className="block text-white/80 hover:text-white">
+                    About Us
+                  </Link>
+                  <Link href="/contact" className="block text-white/80 hover:text-white">
+                    Contact us
+                  </Link>
                 </div>
-                <div className={styles.contactItem}>
-                  <Mail size={20} className={styles.icon} />
-                  <a href="mailto:contact@staffluent.co">contact@staffluent.co</a>
-                </div>
-                <div className={styles.contactItem}>
-                  <Phone size={20} className={styles.icon} />
-                  <a href="tel:+18442481465">+1 (844) 248-1465</a>
+              </div>
+
+              {/* Social Links */}
+              <div className="space-y-4">
+                <h3 className="text-white font-medium">Social Profiles</h3>
+                <div className="flex gap-2">
+                  <a
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
+                  >
+                    <Image
+                        src="https://framerusercontent.com/images/lE6exgFCC7D83cPTOY1ydeVc5Q.svg"
+                        alt="LinkedIn"
+                        width={24}
+                        height={24}
+                    />
+                  </a>
+                  <a
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
+                  >
+                    <Image
+                        src="https://framerusercontent.com/images/qpDZ05AACAyO52WOnvrc0Bz3i0Y.svg"
+                        alt="Instagram"
+                        width={24}
+                        height={24}
+                    />
+                  </a>
+                  <a
+                      href="https://x.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
+                  >
+                    <Image
+                        src="https://framerusercontent.com/images/mHz04n9m5dvAnDw0bIe3uCF268.svg"
+                        alt="X.com"
+                        width={24}
+                        height={24}
+                    />
+                  </a>
                 </div>
               </div>
             </div>
-
-            {/* Navigation */}
-            <div className={styles.navigation}>
-              <h3 className={styles.sectionTitle}>Quick Links</h3>
-              <ul className={styles.linksList}>
-                {mainLinks.map((link) => (
-                    <li key={link.href}>
-                      <Link href={link.href} className={styles.link}>
-                        {link.label}
-                      </Link>
-                    </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Legal Links */}
-            <div className={styles.navigation}>
-              <h3 className={styles.sectionTitle}>Legal</h3>
-              <ul className={styles.linksList}>
-                {legalLinks.map((link) => (
-                    <li key={link.href}>
-                      <Link href={link.href} className={styles.link}>
-                        {link.label}
-                      </Link>
-                    </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Social Links */}
-            <div className={styles.social}>
-              <h3 className={styles.sectionTitle}>Connect With Us</h3>
-              <div className={styles.socialLinks}>{renderSocialLinks()}</div>
-            </div>
           </div>
 
-          {/* Footer Bottom */}
-          <div className={styles.footerBottom}>
-            <p className={styles.copyright}>
-              © {currentYear} Staffluent. All rights reserved
-            </p>
+          {/* Bottom Section */}
+          <div className="border-t border-[#1c1c1c] pt-8">
+            <div className="flex justify-center">
+              <a
+                  href="https://lander.studio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-[#262626] rounded-full px-6 py-2 text-[#b3b3b3] hover:bg-[#262626]/10"
+              >
+                © 2025 Staffluent. All rights reserved
+              </a>
+            </div>
           </div>
         </div>
       </footer>
