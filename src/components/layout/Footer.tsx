@@ -58,6 +58,9 @@ const Footer = () => {
                   <Link href="/contact" className="block text-white/80 hover:text-white">
                     Contact us
                   </Link>
+                  <Link href="/legal" className="block text-white/80 hover:text-white">
+                    Legal
+                  </Link>
                 </div>
               </div>
 

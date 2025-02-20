@@ -7,55 +7,44 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question:
-          "What makes your platform different from other project management tools?",
-      answer:
-          "Our platform stands out through its intuitive interface, AI-powered automation, and seamless team collaboration features. We focus on streamlining workflows while providing robust analytics and customization options.",
+      question: "What is Staffluent?",
+      answer: "Staffluent is a comprehensive workforce and project management platform that streamlines operations—integrating project tracking, time & attendance, quality inspections, scheduling, and field operations. It's designed to support organizations of all sizes, from small teams to large enterprises.",
     },
     {
-      question: "What time tracking features are available?",
-      answer:
-          "We offer comprehensive time tracking features including automated timers, manual time entry, project-based tracking, detailed reports, and integration with popular billing platforms.",
+      question: "How does Staffluent scale to meet the needs of organizations of all sizes?",
+      answer: "Our platform is built with flexibility in mind. Whether you're a startup or a multinational enterprise, Staffluent provides scalable modules—featuring advanced role‑based access controls, customizable workflows, and seamless integrations—that adapt to your evolving needs. We're committed to delivering value across the board, and our pricing structure is designed to be competitive for every customer segment.",
     },
     {
-      question: "How do you handle quality control?",
-      answer:
-          "Our quality control system includes automated checks, peer review processes, milestone validations, and detailed audit trails to ensure consistent project quality.",
+      question: "What core modules does Staffluent offer?",
+      answer: "Staffluent's key modules include: Project & Task Management (create, assign, and track projects with real‑time updates), Time & Attendance (real‑time clock in/out, digital timesheets), Quality Inspections (automated checks, compliance tracking), Scheduling & Team Management (visual calendars, shift planning), Reports & Analytics (customizable dashboards), Communication Hub (integrated messaging), and Field Operations (mobile capabilities with GPS check‑ins).",
     },
     {
-      question: "What administrative controls are provided?",
-      answer:
-          "Administrators have access to robust controls including user permission management, workflow customization, resource allocation, and detailed activity monitoring.",
+      question: "Is there a free trial available?",
+      answer: "Yes. Staffluent offers a 14‑day full‑access free trial, enabling you to explore every feature without any obligation or credit card requirement.",
     },
     {
-      question: "How does your reporting system work?",
-      answer:
-          "Our reporting system provides real-time analytics, customizable dashboards, automated report generation, and export capabilities in multiple formats.",
+      question: "How does Staffluent integrate with existing systems?",
+      answer: "Our platform is designed with open APIs and flexible integration options to connect smoothly with your current software ecosystem—whether it's HR systems, calendar apps, or other enterprise tools—ensuring a centralized, streamlined workflow.",
     },
     {
-      question: "How does the project tracking system work?",
-      answer:
-          "The project tracking system offers real-time progress monitoring, milestone tracking, resource utilization metrics, and automated status updates.",
+      question: "What measures does Staffluent take to ensure data security?",
+      answer: "Data security is paramount. Staffluent adheres to industry-leading standards, incorporating robust encryption, secure access controls, and regular security audits to protect your sensitive information and maintain compliance with relevant regulations.",
     },
     {
-      question: "How do you handle team collaboration?",
-      answer:
-          "We facilitate team collaboration through real-time communication tools, shared workspaces, document collaboration, and integrated task management.",
+      question: "Can Staffluent be customized to fit our specific business processes?",
+      answer: "Absolutely. Staffluent offers extensive customization options, including configurable dashboards, custom workflows, and role‑based permissions. We work closely with customers of all sizes to tailor the platform to their unique operational needs.",
     },
     {
-      question: "What kind of analytics do you provide?",
-      answer:
-          "Our analytics suite includes project performance metrics, team productivity analysis, resource utilization reports, and predictive analytics for better decision-making.",
+      question: "What kind of support can we expect with Staffluent?",
+      answer: "Our dedicated support team provides priority assistance, comprehensive onboarding, and ongoing technical support to ensure that your organization maximizes the value of the platform. We offer tailored consultation for enterprise customers while maintaining high-quality service for all users.",
     },
     {
-      question: "How does the client portal work?",
-      answer:
-          "The client portal provides a dedicated space for client collaboration, project updates, file sharing, and communication, all with customizable access controls.",
+      question: "How does Staffluent drive operational efficiency?",
+      answer: "By consolidating project management, time tracking, quality control, and communication into a single platform, Staffluent minimizes administrative overhead and improves workflow coordination. Its real‑time insights and AI‑powered analytics help identify bottlenecks and optimize resource allocation.",
     },
     {
-      question: "How do you handle service management?",
-      answer:
-          "Our service management includes automated workflow processes, SLA tracking, ticket management, and integrated communication channels.",
+      question: "What is the typical implementation process?",
+      answer: "We work collaboratively with your team to ensure a smooth implementation. The process includes a detailed planning phase, configuration tailored to your business processes, comprehensive training sessions, and ongoing support to ensure a seamless transition and rapid adoption.",
     },
   ];
 
