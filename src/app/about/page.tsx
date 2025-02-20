@@ -1,5 +1,5 @@
-import AboutPage from "@/pages/About";
 import styles from "../page.module.css";
+import AboutPage from "@/pages/About";
 
 export default function About() {
   return (

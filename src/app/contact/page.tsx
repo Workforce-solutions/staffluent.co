@@ -1,5 +1,6 @@
-import ContactPage from "@/pages/Contact";
 import styles from "../page.module.css";
+import ContactPage from "@/pages/Contact";
+
 
 export default function Contact() {
   return (

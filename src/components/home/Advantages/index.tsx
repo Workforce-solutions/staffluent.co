@@ -143,7 +143,7 @@ const Advantages = () => {
             >
               <div className="relative rounded-3xl border border-[#DEE5ED] overflow-hidden">
                 <Image
-                    src="https://framerusercontent.com/images/4tAswm4VmUUUuFeWv5aNzy3XNoI.svg"
+                    src="advantage-staffluent-2.png"
                     alt="Staffluent - Centered Intelligence"
                     width={600}
                     height={450}
