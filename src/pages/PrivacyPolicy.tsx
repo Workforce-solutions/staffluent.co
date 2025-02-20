@@ -16,8 +16,8 @@ const PrivacyPolicyPage = () => {
     const PrivacyContent = () => (
         <div className="max-w-6xl mx-auto px-4 py-12">
             <div className="bg-white rounded-lg shadow-sm p-4">
-                <h1 className="text-4xl font-bold mb-8 text-center">Privacy Policy</h1>
-                <p className="text-gray-600 text-center mb-12">Last Updated: November 27, 2024</p>
+                <h1 className="text-4xl text-[#0A0A0A] font-bold mb-8 text-center">Privacy Policy</h1>
+                <p className="text-gray-600 text-center mb-12">Last Updated: February 15, 2025</p>
 
                 {/* Introduction */}
                 <section className="mb-12">
@@ -32,7 +32,7 @@ const PrivacyPolicyPage = () => {
                 <div className="space-y-12">
                     {/* Information We Collect */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">1. Information We Collect</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">1. Information We Collect</h2>
                         <div className="space-y-6 text-gray-700">
                             <h3 className="text-xl font-medium mb-2">1.1 Employee Data</h3>
                             <div className="bg-blue-50 p-4 rounded-lg space-y-4">
@@ -90,7 +90,7 @@ const PrivacyPolicyPage = () => {
 
                     {/* How We Use Your Information */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">2. How We Use Your Information</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">2. How We Use Your Information</h2>
                         <div className="space-y-6 text-gray-700">
                             <h3 className="text-xl font-medium mb-2">2.1 Core Platform Functions</h3>
                             <ul className="list-disc pl-6 space-y-2">
@@ -122,7 +122,7 @@ const PrivacyPolicyPage = () => {
 
                     {/* Data Sharing */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">3. Information Sharing</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">3. Information Sharing</h2>
                         <div className="space-y-4 text-gray-700">
                             <p>We share your information with:</p>
 
@@ -148,7 +148,7 @@ const PrivacyPolicyPage = () => {
 
                     {/* Location Services */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">4. Location Services</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">4. Location Services</h2>
                         <div className="bg-blue-50 p-6 rounded-lg space-y-4 text-gray-700">
                             <p>Our mobile app uses location services for:</p>
                             <ul className="list-disc pl-6 space-y-2">
@@ -166,7 +166,7 @@ const PrivacyPolicyPage = () => {
 
                     {/* Data Security */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">5. Data Security</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">5. Data Security</h2>
                         <div className="space-y-4 text-gray-700">
                             <p>We implement various security measures including:</p>
                             <ul className="list-disc pl-6 space-y-2">
@@ -181,7 +181,7 @@ const PrivacyPolicyPage = () => {
 
                     {/* Data Retention */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">6. Data Retention</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">6. Data Retention</h2>
                         <div className="bg-gray-50 p-6 rounded-lg space-y-4 text-gray-700">
                             <h3 className="text-xl font-medium">Retention Periods</h3>
                             <ul className="list-disc pl-6 space-y-2">
@@ -196,7 +196,7 @@ const PrivacyPolicyPage = () => {
 
                     {/* Your Rights */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">7. Your Rights</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">7. Your Rights</h2>
                         <div className="space-y-4 text-gray-700">
                             <p>You have the right to:</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -222,9 +222,9 @@ const PrivacyPolicyPage = () => {
 
                     {/* Contact Information */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">8. Contact Us</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">8. Contact Us</h2>
                         <div className="bg-gray-50 p-6 rounded-lg">
-                            <p className="mb-4">For privacy-related inquiries, please contact our Data Protection Officer:</p>
+                            <p className="mb-4 text-[#0A0A0A]">For privacy-related inquiries, please contact our Data Protection Officer:</p>
                             <div className="space-y-2 text-gray-700">
                                 <p>Email: privacy@staffluent.co</p>
                                 <p>Phone: +1 (844) 248-1465</p>

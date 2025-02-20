@@ -17,7 +17,7 @@ const TermsPage = () => {
         <div className="max-w-6xl mx-auto px-4 py-12">
             <div className="bg-white rounded-lg shadow-sm p-4">
                 <h1 className="text-4xl font-bold mb-8 text-center">Terms of Use</h1>
-                <p className="text-gray-600 text-center mb-12">Last Updated: November 27, 2024</p>
+                <p className="text-gray-600 text-center mb-12">Last Updated: February 15, 2025</p>
 
                 {/* Introduction */}
                 <section className="mb-12">
@@ -32,7 +32,7 @@ const TermsPage = () => {
                 <div className="space-y-12">
                     {/* Agreement to Terms */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">1. Agreement to Terms</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">1. Agreement to Terms</h2>
                         <div className="space-y-4 text-gray-700">
                             <p>
                                 By accessing or using Staffluent&apos;s Services, you agree to be bound by these Terms of Use
@@ -50,7 +50,7 @@ const TermsPage = () => {
 
                     {/* Access and Account Security */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">2. Access and Account Security</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">2. Access and Account Security</h2>
                         <div className="space-y-4 text-gray-700">
                             <h3 className="text-xl font-medium mb-2">2.1 Account Requirements</h3>
                             <ul className="list-disc pl-6 space-y-2">
@@ -72,7 +72,7 @@ const TermsPage = () => {
 
                     {/* Use of Services */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">3. Use of Services</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">3. Use of Services</h2>
                         <div className="space-y-4 text-gray-700">
                             <h3 className="text-xl font-medium mb-2">3.1 Permitted Use</h3>
                             <p>You may use the Services only for:</p>
@@ -98,7 +98,7 @@ const TermsPage = () => {
 
                     {/* Data Collection and Privacy */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">4. Data Collection and Privacy</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">4. Data Collection and Privacy</h2>
                         <div className="space-y-4 text-gray-700">
                             <p>
                                 Our collection and use of personal information is governed by our
@@ -119,7 +119,7 @@ const TermsPage = () => {
 
                     {/* Intellectual Property */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">5. Intellectual Property Rights</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">5. Intellectual Property Rights</h2>
                         <div className="space-y-4 text-gray-700">
                             <p>
                                 The Services and their contents are owned by Staffluent and protected by copyright,
@@ -137,7 +137,7 @@ const TermsPage = () => {
 
                     {/* Payment Terms */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">6. Payment Terms</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">6. Payment Terms</h2>
                         <div className="space-y-4 text-gray-700">
                             <h3 className="text-xl font-medium mb-2">6.1 Billing</h3>
                             <ul className="list-disc pl-6 space-y-2">
@@ -156,7 +156,7 @@ const TermsPage = () => {
 
                     {/* Termination */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">7. Termination</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">7. Termination</h2>
                         <div className="space-y-4 text-gray-700">
                             <div className="bg-red-50 p-4 rounded-lg">
                                 <h3 className="text-xl font-medium mb-2">7.1 Termination by Us</h3>
@@ -179,7 +179,7 @@ const TermsPage = () => {
 
                     {/* Disclaimers and Limitations */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">8. Disclaimers and Limitations</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">8. Disclaimers and Limitations</h2>
                         <div className="bg-yellow-50 p-6 rounded-lg space-y-4 text-gray-700">
                             <h3 className="text-xl font-medium mb-2">8.1 Warranty Disclaimer</h3>
                             <p className="uppercase text-sm">
@@ -196,7 +196,7 @@ const TermsPage = () => {
 
                     {/* Contact Information */}
                     <section>
-                        <h2 className="text-2xl font-semibold mb-4 text-blue-800">9. Contact Us</h2>
+                        <h2 className="text-2xl font-semibold mb-4 text-[#0A0A0A]">9. Contact Us</h2>
                         <div className="bg-gray-50 p-6 rounded-lg">
                             <p className="mb-4">For questions about these Terms, please contact us at:</p>
                             <div className="space-y-2 text-gray-700">

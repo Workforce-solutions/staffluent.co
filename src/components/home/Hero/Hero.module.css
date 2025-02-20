@@ -48,7 +48,7 @@
 }
 
 .primaryButton {
-  background-color: #1c1c1c;
+  background-color: #0A0A0A;
   color: #ffffff;
   padding: 16px 24px;
   border-radius: 12px;
@@ -73,7 +73,7 @@
   justify-content: center;
   width: 24px;
   height: 24px;
-  background: #1c1c1c;
+  background: #0A0A0A;
   border-radius: 100%;
   color: #ffffff;
 }
