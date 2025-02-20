@@ -135,7 +135,7 @@ const ContactForm = () => {
                     </h1>
                     <p className="text-gray-700 text-lg max-w-2xl mx-auto">
                         Experience the full power of Staffluent for 14 days with complete access
-                        to all features. No credit card required to get started.
+                        to all features.
                     </p>
                 </div>
 
@@ -150,10 +150,6 @@ const ContactForm = () => {
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CalendarCheck className="text-green-500" size={20} />
                                         14 Days Full Access
-                                    </p>
-                                    <p className="font-medium flex items-center gap-2 text-gray-800">
-                                        <CreditCard className="text-green-500" size={20} />
-                                        No Credit Card Required
                                     </p>
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />

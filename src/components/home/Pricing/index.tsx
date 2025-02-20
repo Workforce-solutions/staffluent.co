@@ -47,8 +47,8 @@ const Pricing = () => {
     {
       name: "Enterprise Plan",
       price: {
-        monthly: "$69",
-        yearly: "$55.20"
+        monthly: "Contact Us",
+        yearly: "Contact Us"
       },
       description: "The ultimate solution for large organizations.",
       features: [
@@ -67,21 +67,9 @@ const Pricing = () => {
   const includedFeatures = [
     {
       title: "14-Day Free Trial",
-      icon: "https://framerusercontent.com/images/uKcIDlgAZyRZYyVRxqM9O4CREf0.svg",
-    },
-    {
-      title: "No Credit Card Required",
-      icon: "https://framerusercontent.com/images/X9dLSrE97LggGEWbwCZN77cdSjU.svg",
-    },
-    {
-      title: "Core Dashboard Access",
-      icon: "https://framerusercontent.com/images/bvX5EBeBAMKczyExEfk9oNCsQ9A.svg",
-    },
-    {
-      title: "Basic Task Management",
-      icon: "https://framerusercontent.com/images/Z7J6959mSKIwttGnD0t9lDMpxA.svg",
+      icon: "/api/placeholder/20/20"
     }
-  ]
+  ];
 
   return (
       <section className="md:py-10 py-10" id="pricing">
@@ -94,7 +82,7 @@ const Pricing = () => {
             </div>
             <h2 className="md:text-6xl text-5xl font-bold mb-4">Simple, Transparent Pricing</h2>
             <p className="text-[#3d495b] max-w-xl text-lg mx-auto">
-              Start with a 14-day free trial. No credit card required.
+              Start with a 14-day free trial
             </p>
           </div>
 
@@ -130,23 +118,6 @@ const Pricing = () => {
 
               {billingCycle === "yearly" && (
                   <>
-                    <svg
-                        className="absolute -top-4 -right-16 w-24 h-12 text-[#DEE5ED]"
-                        viewBox="0 0 96 48"
-                        fill="none"
-                        stroke="currentColor"
-                    >
-                      <path
-                          d="M 10 38 C 30 38 70 38 90 10"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                      />
-                      <path
-                          d="M 80 10 L 90 10 L 90 20"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                      />
-                    </svg>
                     <div className="absolute -top-10 -right-24 md:-right-44 bg-white shadow-sm border border-[#DEE5ED] rounded-full py-1.5 px-4 text-sm whitespace-nowrap">
                       20% OFF on Yearly Plan
                     </div>
@@ -158,7 +129,7 @@ const Pricing = () => {
           {/* Trial Banner */}
           <div className="bg-[#F8FAFC] border border-[#DEE5ED] rounded-xl p-4 mb-8 text-center">
             <p className="text-[#0A0A0A] font-medium">
-              Try any plan free for 14 days with full feature access. No credit card required.
+              Try any plan free for 14 days with full feature access
             </p>
           </div>
 
@@ -182,17 +153,23 @@ const Pricing = () => {
                       )}
                     </div>
                     <div className="mb-4">
-                  <span className="md:text-6xl text-5xl font-semibold">
-                    {billingCycle === "monthly" ? plan.price.monthly : plan.price.yearly}
-                  </span>
-                      <span className="text-[#3d495b] ml-2">/ user / month</span>
+                      {plan.name === "Enterprise Plan" ? (
+                          <span className="md:text-4xl text-3xl font-semibold">Contact Us</span>
+                      ) : (
+                          <>
+                      <span className="md:text-6xl text-5xl font-semibold">
+                        {billingCycle === "monthly" ? plan.price.monthly : plan.price.yearly}
+                      </span>
+                            <span className="text-[#3d495b] ml-2">/ user / month</span>
+                          </>
+                      )}
                     </div>
                     <p className="text-[#3d495b] mb-6">{plan.description}</p>
                     <Link
                         href="/contact"
                         className="block w-full bg-[#0A0A0A] text-white text-center py-3 rounded-xl hover:bg-black/90 transition-colors"
                     >
-                      Start Free Trial
+                      {plan.name === "Enterprise Plan" ? "Contact Sales" : "Start Free Trial"}
                     </Link>
                   </div>
                   <div className="p-8">
@@ -239,16 +216,7 @@ const Pricing = () => {
 
           {/* CTA Section */}
           <div className="max-w-[1200px] mx-auto relative mt-16">
-            <div className="absolute inset-0">
-              <Image
-                  src="https://framerusercontent.com/images/OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
-                  alt="Staffluent - Centered Intelligence"
-                  fill
-                  className="object-cover rounded-3xl"
-              />
-            </div>
-
-            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between md:gap-12">
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between md:gap-12 bg-[#F8FAFC] rounded-3xl">
               <div className="text-center lg:text-left px-14 py-16 rounded-xl lg:max-w-[45%]">
                 <h3 className="text-3xl font-semibold text-gray-500 mb-4">
                   Start your free trial today
@@ -266,28 +234,17 @@ const Pricing = () => {
                 </div>
               </div>
 
-              <div className="lg:flex-1 flex items-end justify-end relative">
-                <div className="relative">
-                  <Image
-                      src="https://framerusercontent.com/images/6R7Itar4Nwn8lsiojWr72ZW1uKk.png?scale-down-to=1024"
-                      alt="Staffluent - Centered Intelligence"
-                      width={480}
-                      height={260}
-                      className="rounded-xl shadow-lg ml-auto"
-                  />
-                  <div className="absolute -bottom-[29%] -left-16 hidden md:block">
-                    <Image
-                        src="https://framerusercontent.com/images/6R7Itar4Nwn8lsiojWr72ZW1uKk.png?scale-down-to=1024"
-                        alt="Staffluent - Centered Intelligence"
-                        width={700}
-                        height={20}
-                        className="rounded-xl shadow-lg w-full"
-                    />
-                  </div>
-                </div>
+              <div className="lg:flex-1 flex items-end justify-end relative p-8">
+                <Image
+                    src="/api/placeholder/480/260"
+                    alt="Dashboard Preview"
+                    width={480}
+                    height={260}
+                    className="rounded-xl shadow-lg"
+                />
               </div>
             </div>
-            </div>
+          </div>
         </div>
       </section>
   );
