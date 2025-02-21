@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Mail, Loader, CheckCircle } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useSubmissions } from '@/hooks/useSubmissions';
+import { SubmissionType } from '@/app/api/external/omnigateway/types/submissions';
 
 interface FormData {
     companyName: string;
@@ -32,7 +34,7 @@ const RequestADemo = () => {
     });
 
     const [errors, setErrors] = useState<FormErrors>({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    const { submitForm, isLoading: isSubmitting } = useSubmissions();
 
     const teamSizes = [
         '1-10 employees',
@@ -94,12 +96,30 @@ const RequestADemo = () => {
             return;
         }
 
-        setIsSubmitting(true);
-
         try {
-            // Simulating API call
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            toast.success('Form submitted successfully!');
+            // Split contact person into first and last name
+            const nameParts = formData.contactPerson.trim().split(' ');
+            const firstName = nameParts[0];
+            const lastName = nameParts.slice(1).join(' ');
+
+            await submitForm({
+                firstName,
+                lastName,
+                email: formData.email,
+                phone: formData.phone,
+                content: formData.message,
+                type: SubmissionType.REQUEST_DEMO,
+                metadata: {
+                    companyName: formData.companyName,
+                    businessType: formData.businessType,
+                    teamSize: formData.teamSize,
+                    interestedFeatures: formData.interestedFeatures,
+                    timestamp: new Date(),
+                    userAgent: window.navigator.userAgent,
+                    ipHash: '' // This will be handled by the backend
+                }
+            });
+
             setFormData({
                 companyName: '',
                 businessType: '',
@@ -111,9 +131,7 @@ const RequestADemo = () => {
                 message: ''
             });
         } catch {
-            toast.error('Something went wrong. Please try again.');
-        } finally {
-            setIsSubmitting(false);
+            // Error handling is done in the hook
         }
     };
 
@@ -134,7 +152,6 @@ const RequestADemo = () => {
                         and improve project management efficiency.
                     </p>
                 </div>
-
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     {/* Contact Information */}
@@ -178,7 +195,7 @@ const RequestADemo = () => {
                         </div>
                     </div>
 
-                    {/* Contact Form */}
+                    {/* Request Demo Form */}
                     <div className="lg:col-span-2">
                         <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-sm grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -319,7 +336,7 @@ const RequestADemo = () => {
                                     className={`w-full py-4 px-6 rounded-lg text-lg font-medium shadow-sm flex items-center justify-center gap-2
                                         ${isSubmitting
                                         ? 'bg-[#0A0A0A] cursor-not-allowed'
-                                        : 'bg-[#0A0A0A] hover:bg-[#0A0A0A]'} 
+                                        : 'bg-[#0A0A0A] hover:bg-[#171717]'} 
                                         text-white transition-colors`}
                                 >
                                     {isSubmitting ? (
