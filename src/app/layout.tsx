@@ -1,5 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
+import { defaultMetadata } from '@/types/metadata'
 import localFont from "next/font/local";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -19,10 +20,31 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-    title: "Staffluent - Project & Team Management Platform",
-    description: "Streamline your project tracking, team collaboration, and performance monitoring with our comprehensive management platform. From real-time analytics to client portals.",
-    keywords: "project management, team collaboration, performance analytics, task management, time tracking, client portal",
-};
+    metadataBase: new URL('https://staffluent.co'),
+    title: defaultMetadata.title,
+    description: defaultMetadata.description,
+    openGraph: {
+        title: defaultMetadata.title,
+        description: defaultMetadata.description,
+        url: 'https://staffluent.co',
+        siteName: 'Staffluent',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+            },
+        ],
+        locale: 'en_US',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: defaultMetadata.title,
+        description: defaultMetadata.description,
+        images: ['/og-image.png'],
+    },
+}
 
 export default function RootLayout({
                                        children,
