@@ -2,8 +2,8 @@
 import { createOmniGateway } from './index';
 import { SubmissionFormData } from './types/submissions';
 
-export const createSubmissionsApi = (apiKey: string) => {
-    const api = createOmniGateway(apiKey);
+export const createSubmissionsApi = () => {
+    const api = createOmniGateway();
 
     return {
         createSubmission: async (submissionData: SubmissionFormData) => {
