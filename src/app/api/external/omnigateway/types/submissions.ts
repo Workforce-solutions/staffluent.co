@@ -6,6 +6,19 @@ export enum SubmissionType {
     OTHER = 'other'
 }
 
+export interface BaseMetadata {
+    timestamp: Date;
+    ipHash: string;
+    userAgent: string;
+}
+
+export interface RequestDemoMetadata extends BaseMetadata {
+    companyName: string;
+    businessType: string;
+    teamSize: string;
+    interestedFeatures: string[];
+}
+
 export interface SubmissionFormData {
     firstName?: string;
     lastName?: string;
@@ -13,9 +26,5 @@ export interface SubmissionFormData {
     phone?: string;
     content?: string;
     type: SubmissionType;
-    metadata?: {
-        timestamp: Date;
-        ipHash: string;
-        userAgent: string;
-    };
+    metadata?: BaseMetadata | RequestDemoMetadata;  // Allow different metadata types
 }
