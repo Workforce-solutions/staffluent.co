@@ -1,5 +1,4 @@
 // src/app/layout.tsx
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -18,11 +17,20 @@ const geistMono = localFont({
     display: 'swap',
 });
 
-export const metadata: Metadata = {
-    title: "Staffluent - Project & Team Management Platform",
-    description: "Streamline your project tracking, team collaboration, and performance monitoring with our comprehensive management platform. From real-time analytics to client portals.",
-    keywords: "project management, team collaboration, performance analytics, task management, time tracking, client portal",
-};
+const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Staffluent',
+    url: 'https://staffluent.co',
+    logo: 'https://staffluent.co/logo.png',
+    sameAs: [
+        'https://www.linkedin.com/company/staffluentco',
+        'https://x.com/staffluent_co',
+        'https://www.instagram.com/staffluent',
+        'https://www.facebook.com/staffluent'
+    ]
+}
+
 
 export default function RootLayout({
                                        children,
@@ -31,6 +39,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+        <head>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+            />
+        </head>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleAnalytics />
         {children}
