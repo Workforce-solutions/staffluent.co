@@ -10,6 +10,13 @@ import { Mail, Building } from 'lucide-react';
 const ContactUsPage = () => {
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
 
+    const socialLinks = {
+        linkedin: "https://www.linkedin.com/company/staffluentco",
+        instagram: "https://www.instagram.com/staffluent",
+        twitter: "https://x.com/staffluent_co",
+        facebook: "https://www.facebook.com/staffluent"
+    };
+
     const navLinks = [
         { href: "/", label: "Home" },
         { href: "/about", label: "About" },
@@ -92,41 +99,34 @@ const ContactUsPage = () => {
                                     <div>
                                         <h2 className="text-xl font-semibold mb-4">Social Profiles</h2>
                                         <div className="flex gap-2">
-                                            <a
-                                                href="https://www.linkedin.com/"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
-                                            >
+                                            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]">
                                                 <Image
                                                     src="https://framerusercontent.com/images/lE6exgFCC7D83cPTOY1ydeVc5Q.svg"
-                                                    alt="Staffluent - LinkedIn Account"
+                                                    alt="Staffluent - LinkedIn"
                                                     width={24}
                                                     height={24}
                                                 />
                                             </a>
-                                            <a
-                                                href="https://www.instagram.com/"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
-                                            >
+                                            <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]">
                                                 <Image
                                                     src="https://framerusercontent.com/images/qpDZ05AACAyO52WOnvrc0Bz3i0Y.svg"
-                                                    alt="Staffluent - Instagram Account"
+                                                    alt="Staffluent - Instagram"
                                                     width={24}
                                                     height={24}
                                                 />
                                             </a>
-                                            <a
-                                                href="https://x.com/"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
-                                            >
+                                            <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]">
                                                 <Image
                                                     src="https://framerusercontent.com/images/mHz04n9m5dvAnDw0bIe3uCF268.svg"
-                                                    alt="Staffluent - X.com Account"
+                                                    alt="Staffluent - X"
+                                                    width={24}
+                                                    height={24}
+                                                />
+                                            </a>
+                                            <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]">
+                                                <Image
+                                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtZmFjZWJvb2siPjxwYXRoIGQ9Ik0xOCA0aC0zYTUgNSAwIDAgMC01IDV2M0g3djRoM3Y4aDR2LThoM2wxLTRoLTR2LTNhMSAxIDAgMCAxIDEtMWgzeiIvPjwvc3ZnPg=="
+                                                    alt="Staffluent - Facebook"
                                                     width={24}
                                                     height={24}
                                                 />
