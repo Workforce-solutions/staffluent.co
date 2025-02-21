@@ -46,6 +46,22 @@ export const metadata: Metadata = {
     },
 }
 
+
+const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Staffluent',
+    url: 'https://staffluent.co',
+    logo: 'https://staffluent.co/logo.png',
+    sameAs: [
+        'https://www.linkedin.com/company/staffluentco',
+        'https://x.com/staffluent_co',
+        'https://www.instagram.com/staffluent',
+        'https://www.facebook.com/staffluent'
+    ]
+}
+
+
 export default function RootLayout({
                                        children,
                                    }: Readonly<{
@@ -53,6 +69,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+        <head>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+            />
+        </head>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GoogleAnalytics />
         {children}
