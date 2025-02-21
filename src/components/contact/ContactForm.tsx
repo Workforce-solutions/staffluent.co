@@ -1,9 +1,10 @@
 "use client";
-// src/components/contact/ContactForm.tsx
 import { useState } from 'react';
 import { Loader } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useSubmissions } from '@/hooks/useSubmissions';
+import { SubmissionType } from '@/app/api/external/omnigateway/types/submissions';
 
 interface FormData {
     name: string;
@@ -25,7 +26,7 @@ const ContactForm = () => {
     });
 
     const [errors, setErrors] = useState<FormErrors>({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    const { submitForm, isLoading: isSubmitting } = useSubmissions();
 
     const subjectOptions = [
         'General',
@@ -67,11 +68,26 @@ const ContactForm = () => {
             return;
         }
 
-        setIsSubmitting(true);
-
         try {
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            toast.success('Message sent successfully!');
+            // Split name into first and last name
+            const nameParts = formData.name.trim().split(' ');
+            const firstName = nameParts[0];
+            const lastName = nameParts.slice(1).join(' ');
+
+            await submitForm({
+                firstName,
+                lastName,
+                email: formData.email,
+                content: formData.message,
+                type: SubmissionType.CONTACT,
+                metadata: {
+                    subject: formData.subject,
+                    timestamp: new Date(),
+                    userAgent: window.navigator.userAgent,
+                    ipHash: '' // This will be handled by the backend
+                }
+            });
+
             setFormData({
                 name: '',
                 email: '',
@@ -79,9 +95,7 @@ const ContactForm = () => {
                 message: ''
             });
         } catch {
-            toast.error('Something went wrong. Please try again.');
-        } finally {
-            setIsSubmitting(false);
+            // Error handling is done in the hook
         }
     };
 
@@ -94,6 +108,7 @@ const ContactForm = () => {
             <div className="max-w-[1200px] mx-auto px-4">
                 <div className="max-w-2xl mx-auto">
                     <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-sm space-y-6">
+                        {/* Form fields remain the same */}
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">
                                 Name *

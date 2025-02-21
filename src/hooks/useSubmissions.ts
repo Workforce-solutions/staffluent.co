@@ -1,8 +1,8 @@
 // hooks/useSubmissions.ts
 import { useState, useCallback } from 'react';
-import { createSubmissionsApi } from '@/app/api/external/omnigateway/submissions';
+import { createSubmissionsApi } from '@/app/api/external/omnigateway/submission';
 import { SubmissionFormData } from '@/app/api/external/omnigateway/types/submissions';
-import toast from 'react-hot-toast';
+import { toast } from 'react-toastify';
 
 export const useSubmissions = () => {
     const [isLoading, setIsLoading] = useState(false);
