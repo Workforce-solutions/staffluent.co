@@ -12,12 +12,18 @@ export interface BaseMetadata {
     userAgent: string;
 }
 
+export interface ContactMetadata extends BaseMetadata {
+    subject: string;
+}
+
 export interface RequestDemoMetadata extends BaseMetadata {
     companyName: string;
     businessType: string;
     teamSize: string;
     interestedFeatures: string[];
 }
+
+export type SubmissionMetadata = BaseMetadata | ContactMetadata | RequestDemoMetadata;
 
 export interface SubmissionFormData {
     firstName?: string;
@@ -26,5 +32,5 @@ export interface SubmissionFormData {
     phone?: string;
     content?: string;
     type: SubmissionType;
-    metadata?: BaseMetadata | RequestDemoMetadata;  // Allow different metadata types
+    metadata?: SubmissionMetadata;
 }

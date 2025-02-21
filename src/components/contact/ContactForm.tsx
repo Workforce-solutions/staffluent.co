@@ -4,7 +4,7 @@ import { Loader } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSubmissions } from '@/hooks/useSubmissions';
-import { SubmissionType } from '@/app/api/external/omnigateway/types/submissions';
+import {ContactMetadata, SubmissionType} from '@/app/api/external/omnigateway/types/submissions';
 
 interface FormData {
     name: string;
@@ -84,9 +84,9 @@ const ContactForm = () => {
                     subject: formData.subject,
                     timestamp: new Date(),
                     userAgent: window.navigator.userAgent,
-                    ipHash: '' // This will be handled by the backend
-                }
-            });
+                    ipHash: ''
+                } as ContactMetadata
+            });;
 
             setFormData({
                 name: '',
