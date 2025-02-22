@@ -91,7 +91,7 @@ const VerifyEmail = () => {
                                             We couldn't verify your email. The link might be expired or invalid.
                                         </p>
                                         <button
-                                            onClick={() => router.push("/contact-support")}
+                                            onClick={() => router.push("/contact")}
                                             className="text-[#0A0A0A] underline hover:text-[#171717]"
                                         >
                                             Contact Support
