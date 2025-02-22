@@ -33,5 +33,9 @@ export const METADATA: Record<string, PageMetadata> = {
     blog: {
         title: "Blog - Latest Insights & Workforce Trends | Staffluent",
         description: "Explore expert insights, industry trends, and workforce management tips from Staffluent. Stay updated on the latest developments in HR and employee management."
-    }
+    },
+    registerTrial: {
+        title: "Register for Trial - Start Your Staffluent Experience",
+        description: "Begin your journey with Staffluent's workforce management platform. Sign up for a free trial and discover how we can transform your operations."
+    },
 };

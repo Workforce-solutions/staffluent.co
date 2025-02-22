@@ -24,8 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       alternates: {
         canonical: `${siteURL}/blog/${post.slug.current}`,
         languages: {
-          "en-US": "/en-US",
-          "de-DE": "/de-DE",
+          "en-US": "/en-US"
         },
       },
       robots: {
