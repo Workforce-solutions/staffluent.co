@@ -1,6 +1,6 @@
 const category = {
 	name: "tagDetail",
-	title: "Tag Detail",
+	title: "Category",
 	type: "document",
 	fields: [
 		{
