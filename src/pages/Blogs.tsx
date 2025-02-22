@@ -7,10 +7,11 @@ import Link from "next/link";
 import BlogItem from "@/components/Blog/BlogItem";
 import { getPosts } from "@/sanity/sanity-utils";
 import { integrations } from "../../integrations.config";
+import { Blog } from "@/types/blog";
 
 const BlogPage = () => {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
-  const [posts, setPosts] = useState<any[]>([]);
+  const [posts, setPosts] = useState<Blog[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(false);

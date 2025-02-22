@@ -21,7 +21,7 @@ const Footer = () => {
               <div className="flex justify-center md:justify-start">
                 <Link href="/" className="block w-[200px] h-20 relative">
                   <Image
-                    src="logo-footer.svg"
+                    src="/logo-footer.svg"
                     alt="Staffluent Logo"
                     style={{
                       marginLeft: "-12px",
@@ -44,7 +44,7 @@ const Footer = () => {
                 className="inline-flex items-center gap-2 bg-white rounded-xl px-4 py-2 text-[#262626]"
               >
                 <Image
-                  src="bq8j0XRxNw5W65cEtpyVTuWArA.svg"
+                  src="/bq8j0XRxNw5W65cEtpyVTuWArA.svg"
                   alt="Staffluent - Email"
                   width={24}
                   height={24}
@@ -92,7 +92,7 @@ const Footer = () => {
                   className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
                 >
                   <Image
-                    src="lE6exgFCC7D83cPTOY1ydeVc5Q.svg"
+                    src="/lE6exgFCC7D83cPTOY1ydeVc5Q.svg"
                     alt="Staffluent - LinkedIn"
                     width={24}
                     height={24}
@@ -106,7 +106,7 @@ const Footer = () => {
                   className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
                 >
                   <Image
-                    src="qpDZ05AACAyO52WOnvrc0Bz3i0Y.svg"
+                    src="/qpDZ05AACAyO52WOnvrc0Bz3i0Y.svg"
                     alt="Staffluent - Instagram"
                     width={24}
                     height={24}
@@ -120,7 +120,7 @@ const Footer = () => {
                   className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
                 >
                   <Image
-                    src="mHz04n9m5dvAnDw0bIe3uCF268.svg"
+                    src="/mHz04n9m5dvAnDw0bIe3uCF268.svg"
                     alt="Staffluent - X"
                     width={24}
                     height={24}
