@@ -44,6 +44,7 @@ export default function SingleBlogClient({
   }, [post]);
 
   const readingTime = Math.ceil((post?.body?.length || 0) / 1000);
+  // @ts-ignore
   const category = post?.category?.title || "HR Strategy";
   const publishDate = post?.publishedAt
     ? new Date(post.publishedAt).toLocaleDateString(undefined, {
@@ -64,7 +65,7 @@ export default function SingleBlogClient({
       <div className="mt-32">
         {/* Header Section */}
         <div className="w-full bg-white mb-16">
-          <div className="max-w-[1200px] mx-auto px-4">
+          <div className="max-w-[1200px] mx-auto px-4 md:pt-4">
             <div className="lg:w-3/4"> {/* Same width as content */}
               {/* Meta info */}
               <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
@@ -114,7 +115,7 @@ export default function SingleBlogClient({
         </div>
 
         {/* Content Section */}
-        <div className="max-w-[1200px] mx-auto px-4">
+        <div className="max-w-[1200px] mx-auto px-4 pb-32">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Main Content */}
             <div className="lg:w-3/4">
@@ -123,7 +124,7 @@ export default function SingleBlogClient({
               </article>
 
               {/* Share and Subscribe Section */}
-              <div className="mt-16 space-y-8">
+              <div className="mt-8 space-y-8">
                 {/* Share Section */}
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h4 className="font-semibold mb-3">Share This Article</h4>
@@ -173,7 +174,7 @@ export default function SingleBlogClient({
             </div>
 
             {/* Table of Contents Sidebar */}
-            <div className="lg:w-1/4">
+            <div className="hidden lg:block lg:w-1/4">
               <div className="sticky top-[120px]">
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h4 className="font-semibold mb-3">TABLE OF CONTENTS</h4>
