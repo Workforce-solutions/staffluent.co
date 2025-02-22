@@ -26,22 +26,29 @@ const BlogPage = () => {
   ];
 
   useEffect(() => {
-    if (integrations?.isSanityEnabled) {
-      setLoading(true);
-      getPosts()
-        .then((data) => {
-          setPosts(data);
-        })
-        .finally(() => {
+    const fetchPosts = async () => {
+      if (integrations?.isSanityEnabled) {
+        try {
+          setLoading(true);
+          const data = await getPosts();
+          // Add defensive check for data
+          setPosts(Array.isArray(data) ? data : []);
+        } catch (error) {
+          console.error('Error fetching posts:', error);
+          setPosts([]);
+        } finally {
           setLoading(false);
-        });
-    }
+        }
+      }
+    };
+
+    fetchPosts();
   }, []);
 
   // Filter posts by search query
-  const filteredPosts = posts.filter((post) =>
-    post.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredPosts = Array.isArray(posts) 
+    ? posts.filter((post) => post?.title?.toLowerCase().includes(searchQuery.toLowerCase()))
+    : [];
 
   // Pagination calculations
   const indexOfLastPost = currentPage * postsPerPage;
