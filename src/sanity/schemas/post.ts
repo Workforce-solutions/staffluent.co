@@ -1,5 +1,4 @@
-// src/sanity/schemas/post.ts
-import { Rule, SlugValue, SelectionValue } from '@/types/sanity'
+import { Rule, SlugValue, SelectionValue } from "@/types/sanity";
 
 const post = {
   name: "post",
@@ -38,7 +37,7 @@ const post = {
             fields?.current !== fields?.current?.toLowerCase() ||
             fields?.current.split(" ").includes("")
           ) {
-            return "Slug must be lowercase and not be included space";
+            return "Slug must be lowercase and not include spaces.";
           }
           return true;
         }),
@@ -57,12 +56,19 @@ const post = {
                 fields !== fields.toLowerCase() ||
                 fields.split(" ").includes("")
               ) {
-                return "Tags must be lowercase and not be included space";
+                return "Tags must be lowercase and not include spaces.";
               }
               return true;
             }),
         },
       ],
+    },
+    {
+      name: "category",
+      title: "Category",
+      type: "reference",
+      to: [{ type: "tagDetail" }], // reference your category doc
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: "author",

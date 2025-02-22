@@ -1,8 +1,7 @@
-// src/sanity/schemas/category.ts
-import { Rule } from '@/types/sanity'
+import { Rule } from "@/types/sanity";
 
 const category = {
-  name: "tagDetail",
+  name: "tagDetail", // Keep this as-is or rename to "category"
   title: "Category",
   type: "document",
   fields: [
@@ -21,12 +20,12 @@ const category = {
         },
       },
       validation: (rule: Rule) =>
-        rule.custom((fields: string) => {
+        rule.custom((fieldValue: string) => {
           if (
-            fields !== fields.toLowerCase() ||
-            fields.split(" ").includes("")
+            fieldValue !== fieldValue.toLowerCase() ||
+            fieldValue.split(" ").includes("")
           ) {
-            return "Tags must be lowercase and not be included space";
+            return "Tags must be lowercase and not include spaces.";
           }
           return true;
         }),
