@@ -1,4 +1,3 @@
-// components/verifyEmail/VerifyEmail.tsx
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -20,6 +19,7 @@ const VerifyEmail = () => {
     const params = useSearchParams();
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
     const [verificationStatus, setVerificationStatus] = useState<VerificationStatus>("loading");
+    const [verificationAttempted, setVerificationAttempted] = useState(false);
     const { verifyEmail } = useVerification();
     const token = params?.get("token");
 
@@ -29,46 +29,39 @@ const VerifyEmail = () => {
         { href: "/request-demo", label: "Request a Demo" },
         { href: "https://app.staffluent.co/login", label: "Access Platform" },
     ];
-
     useEffect(() => {
-        let mounted = true;
+        if (!token) {
+            setVerificationStatus("error");
+            return;
+        }
 
-        const handleVerification = async () => {
-            if (!token) {
-                setVerificationStatus("error");
-                return;
-            }
-
+        const handleVerification = async () => {    
             try {
                 const response = await verifyEmail(token);
-                if (!mounted) return;
-
-                if (response.status === 'already_verified') {
-                    setVerificationStatus("already_verified");
-                } else if (response.status === 'expired') {
-                    setVerificationStatus("expired");
-                } else if (response.status === 'success') {
-                    setVerificationStatus("success");
-                    setTimeout(() => {
-                        router.push("/pricing");
-                    }, 3000);
-                } else {
-                    setVerificationStatus("error");
+                
+                switch (response.status) {
+                    case 'success':
+                        setVerificationStatus("success");
+                        setTimeout(() => {
+                            router.push("/pricing");
+                        }, 3000);
+                        break;
+                    case 'already_verified':
+                        setVerificationStatus("already_verified");
+                        break;
+                    case 'expired':
+                        setVerificationStatus("expired");
+                        break;
+                    default:
+                        setVerificationStatus("error");
                 }
             } catch (error) {
-                if (mounted) {
-                    setVerificationStatus("error");
-                }
+                setVerificationStatus("error");
             }
         };
 
         handleVerification();
-
-        return () => {
-            mounted = false;
-        };
     }, [token, verifyEmail, router]);
-
     return (
         <>
             <Header
