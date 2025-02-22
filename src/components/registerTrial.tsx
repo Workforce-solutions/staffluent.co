@@ -120,7 +120,7 @@ const RegisterTrial = () => {
                 <input
                   type="text"
                   required
-                  placeholder="John Doe"
+                  placeholder="Your full name"
                   className={`${inputStyles} ${errors.fullName ? "border-red-500" : ""}`}
                   value={formData.fullName}
                   onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
