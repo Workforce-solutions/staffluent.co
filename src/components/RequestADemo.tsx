@@ -5,6 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSubmissions } from '@/hooks/useSubmissions';
 import { SubmissionType } from '@/app/api/external/omnigateway/types/submissions';
+import Link from 'next/link';
 
 interface FormData {
     companyName: string;
@@ -97,7 +98,6 @@ const RequestADemo = () => {
         }
 
         try {
-            // Split contact person into first and last name
             const nameParts = formData.contactPerson.trim().split(' ');
             const firstName = nameParts[0];
             const lastName = nameParts.slice(1).join(' ');
@@ -116,7 +116,7 @@ const RequestADemo = () => {
                     interestedFeatures: formData.interestedFeatures,
                     timestamp: new Date(),
                     userAgent: window.navigator.userAgent,
-                    ipHash: '' // This will be handled by the backend
+                    ipHash: ''
                 }
             });
 
@@ -142,60 +142,64 @@ const RequestADemo = () => {
         <div className="bg-gray-50 py-16">
             <ToastContainer position="top-right" autoClose={5000} />
             <div className="max-w-[1200px] mx-auto px-4">
-                {/* Header Section */}
                 <div className="text-center mb-16">
                     <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                        Start Optimizing Your Business Today
+                        Schedule a Demo with Our Team
                     </h1>
                     <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-                        Learn how Staffluent can help streamline your operations, boost team productivity,
-                        and improve project management efficiency.
+                        See how Staffluent can transform your business operations. Our product specialists 
+                        will walk you through the platform and answer all your questions.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    {/* Contact Information */}
                     <div className="lg:col-span-1">
                         <div className="bg-white p-8 rounded-lg shadow-sm">
-                            <h3 className="text-xl font-semibold mb-6 text-gray-900">Why Choose Staffluent</h3>
+                            <h3 className="text-xl font-semibold mb-6 text-gray-900">What You'll See in the Demo</h3>
 
                             <div className="space-y-6">
                                 <div className="space-y-4">
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
-                                        Comprehensive Management Suite
+                                        Platform Overview & Features
                                     </p>
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
-                                        Real-time Analytics
+                                        Custom Workflows Setup
                                     </p>
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
-                                        Team Collaboration Tools
+                                        Integration Capabilities
                                     </p>
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
-                                        Custom Integration Options
+                                        Reporting & Analytics Tools
                                     </p>
                                     <p className="font-medium flex items-center gap-2 text-gray-800">
                                         <CheckCircle className="text-green-500" size={20} />
-                                        24/7 Technical Support
+                                        Security & Compliance Features
                                     </p>
                                 </div>
 
                                 <div className="pt-6 border-t">
-                                    <p className="font-medium text-gray-900">Contact Support:</p>
-                                    <a href="mailto:support@staffluent.co"
-                                       className="text-[#0A0A0A] hover:text-[#171717] flex items-center gap-2 mt-2">
+                                    <p className="font-medium text-gray-900">Have Questions?</p>
+                                    <a href="mailto:sales@staffluent.co"
+                                        className="text-[#0A0A0A] hover:text-[#171717] flex items-center gap-2 mt-2">
                                         <Mail size={20} />
-                                        support@staffluent.co
+                                        sales@staffluent.co
                                     </a>
+                                    <p className="text-sm text-gray-600 mt-4">
+                                        Not ready for a demo? Start with our{" "}
+                                        <Link href="/register-trial" className="text-[#0A0A0A] underline hover:text-[#171717]">
+                                            free trial
+                                        </Link>{" "}
+                                        instead.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Request Demo Form */}
                     <div className="lg:col-span-2">
                         <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-sm grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -219,7 +223,7 @@ const RequestADemo = () => {
                                 <input
                                     type="text"
                                     required
-                                    placeholder="e.g., Technology, Construction, Retail"
+                                    placeholder="e.g., Restaurant, Bar, Club"
                                     className={`${inputStyles} ${errors.businessType ? 'border-red-500' : ''}`}
                                     value={formData.businessType}
                                     onChange={(e) => setFormData({...formData, businessType: e.target.value})}
@@ -252,6 +256,7 @@ const RequestADemo = () => {
                                 <input
                                     type="text"
                                     required
+                                    placeholder="Full Name"
                                     className={`${inputStyles} ${errors.contactPerson ? 'border-red-500' : ''}`}
                                     value={formData.contactPerson}
                                     onChange={(e) => setFormData({...formData, contactPerson: e.target.value})}
@@ -266,6 +271,7 @@ const RequestADemo = () => {
                                 <input
                                     type="email"
                                     required
+                                    placeholder="you@company.com"
                                     className={`${inputStyles} ${errors.email ? 'border-red-500' : ''}`}
                                     value={formData.email}
                                     onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -279,6 +285,7 @@ const RequestADemo = () => {
                                 </label>
                                 <input
                                     type="tel"
+                                    placeholder="+1 (123) 456-7890"
                                     className={inputStyles}
                                     value={formData.phone}
                                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -322,7 +329,7 @@ const RequestADemo = () => {
                                 </label>
                                 <textarea
                                     rows={4}
-                                    placeholder="Tell us about your specific needs or challenges"
+                                    placeholder="Tell us about your specific needs or what you'd like to see in the demo"
                                     className={inputStyles}
                                     value={formData.message}
                                     onChange={(e) => setFormData({...formData, message: e.target.value})}
@@ -344,7 +351,7 @@ const RequestADemo = () => {
                                             <Loader className="animate-spin" size={20} />
                                             Processing...
                                         </>
-                                    ) : 'Submit Request'}
+                                    ) : 'Request Demo'}
                                 </button>
                             </div>
                         </form>
