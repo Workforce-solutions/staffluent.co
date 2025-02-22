@@ -35,7 +35,7 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: Heade
                         className="absolute left-4 md:left-1/2 top-1/2 -translate-y-1/2 md:-translate-x-1/2"
                     >
                         <Image
-                            src="logo-footer.svg"
+                            src="/logo-footer.svg"
                             alt="Staffluent Logo"
                             style={{marginLeft: "-4px"}}
                             width={200}

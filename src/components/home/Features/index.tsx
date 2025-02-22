@@ -1,38 +1,38 @@
 import React from "react";
 import Image from "next/image";
-import {Star} from "lucide-react";
+import { Star } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
       title: "AI Task Management",
       description: "Automatically prioritize and organize your daily tasks.",
-      icon: "https://framerusercontent.com/images/dr6GD1t1ONXQwbFmH89FVAeK1fM.svg",
+      icon: "dr6GD1t1ONXQwbFmH89FVAeK1fM.svg",
     },
     {
       title: "Real-Time Collaboration",
       description: "Work together seamlessly with live updates.",
-      icon: "https://framerusercontent.com/images/p5McfwFP7uurSKgF6PViQA4Gtc4.svg",
+      icon: "p5McfwFP7uurSKgF6PViQA4Gtc4.svg",
     },
     {
       title: "Customizable Dashboards",
       description: "Tailor your workspace to fit your workflow.",
-      icon: "https://framerusercontent.com/images/qQeZEnuuvvo8KgCmqFiT3Ti7fw.svg",
+      icon: "qQeZEnuuvvo8KgCmqFiT3Ti7fw.svg",
     },
     {
       title: "Automated Reminders",
       description: "Stay on track with smart deadline alerts.",
-      icon: "https://framerusercontent.com/images/euaBpQVAMFZkJzzAmPHqkPmUQoY.svg",
+      icon: "euaBpQVAMFZkJzzAmPHqkPmUQoY.svg",
     },
     {
       title: "Time-Blocking Tools",
       description: "Plan and manage your time efficiently and effectively.",
-      icon: "https://framerusercontent.com/images/KAxSGCHUlTP7V9W9PSAIhI9DaTo.svg",
+      icon: "KAxSGCHUlTP7V9W9PSAIhI9DaTo.svg",
     },
     {
       title: "Integrated Calendars",
       description: "Sync with your existing calendar apps effortlessly.",
-      icon: "https://framerusercontent.com/images/W4FbcyGRxahhSiKZQSpElKkQpec.svg",
+      icon: "W4FbcyGRxahhSiKZQSpElKkQpec.svg",
     },
   ];
 

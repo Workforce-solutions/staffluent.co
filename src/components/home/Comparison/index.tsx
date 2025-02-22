@@ -41,7 +41,7 @@ const Comparison = () => {
               </h2>
             </div>
             <Image
-              src="https://framerusercontent.com/images/5QS6LygmogoJDxB113pzHwYAIy8.svg"
+              src="5QS6LygmogoJDxB113pzHwYAIy8.svg"
               alt="Staffluent - Centered Intelligence"
               width={50}
               height={50}
