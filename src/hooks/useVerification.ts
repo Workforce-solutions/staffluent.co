@@ -1,34 +1,46 @@
 // hooks/useVerification.ts
-import { useState } from 'react';
+// import { useState } from 'react';
 import { createVerificationApi } from '@/app/api/external/omnigateway/verification';
 import { toast } from 'react-toastify';
 
-export const useVerification = () => {
-    const [isLoading, setIsLoading] = useState(false);
+interface VerificationResponse {
+    status: 'success' | 'already_verified' | 'expired' | 'invalid';
+    message: string;
+    userId?: string;
+}
 
-    const verifyEmail = async (token: string) => {
+export const useVerification = () => {
+    const verifyEmail = async (token: string): Promise<VerificationResponse> => {
+        if (!token) {
+            return {
+                status: 'invalid',
+                message: 'No token provided'
+            };
+        }
+
         try {
-            setIsLoading(true);
             const api = createVerificationApi();
             const response = await api.verifyEmail(token);
             
-            if (response.success) {
-                toast.success('Email verified successfully');
-                return response;
+            if (response.status === 'success' || response.status === 'already_verified') {
+                toast.success(response.message);
+            } else if (response.status === 'expired') {
+                toast.warning(response.message);
             } else {
-                throw new Error(response.message || 'Verification failed');
+                toast.error(response.message);
             }
+            
+            return response;
         } catch (error: any) {
-            console.error('Error verifying email:', error);
             toast.error(error.message || 'Failed to verify email');
-            throw error;
-        } finally {
-            setIsLoading(false);
+            return {
+                status: 'invalid',
+                message: error.message || 'Failed to verify email'
+            };
         }
     };
 
     return {
-        isLoading,
         verifyEmail
     };
 };
