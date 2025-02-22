@@ -7,8 +7,6 @@ import {
 	postQueryByTag,
 	postQueryByAuthor,
 	postQueryByCategory,
-	relatedPostsQuery,
-	checkAllPosts,
 	postData,
 } from "./sanity-query";
 import { Blog } from "@/types/blog";
