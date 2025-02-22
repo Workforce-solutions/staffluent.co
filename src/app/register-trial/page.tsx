@@ -1,12 +1,13 @@
-import { METADATA } from "@/constants/metadata";
-import RegisterTrialPage from "@/pages/registerTrial";
-import { Metadata } from "next";
+// app/register-trial/page.tsx
+import { Metadata } from 'next';
 import styles from "../page.module.css";
+import RegisterTrialPage from "@/pages/registerTrial";
+import { METADATA } from '@/constants/metadata';
 
 export const metadata: Metadata = {
-  title: METADATA.requestDemo.title,
-  description: METADATA.requestDemo.description,
-};
+    title: METADATA.registerTrial.title,
+    description: METADATA.registerTrial.description
+}
 
 export default function RegisterTrial() {
   return (
