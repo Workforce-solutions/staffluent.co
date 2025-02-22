@@ -7,42 +7,42 @@ const Advantages = () => {
   const features = [
     {
       title: "Smart Tasking",
-      icon: "https://framerusercontent.com/images/sh29Ss025KGjtLmfxytiazc4EeI.svg",
+      icon: "sh29Ss025KGjtLmfxytiazc4EeI.svg",
     },
     {
       title: "Automated Scheduling",
-      icon: "https://framerusercontent.com/images/6Hl73G12BPhpBSE40pGQMArkw.svg",
+      icon: "6Hl73G12BPhpBSE40pGQMArkw.svg",
     },
     {
       title: "AI-Powered Reminders",
-      icon: "https://framerusercontent.com/images/l8Yny4qzAGaJpmBlbw4y3IqqZw.svg",
+      icon: "l8Yny4qzAGaJpmBlbw4y3IqqZw.svg",
     },
     {
       title: "Predictive Analytics",
-      icon: "https://framerusercontent.com/images/484M7kHBnbIGJMAnW6e3OEVKI.svg",
+      icon: "484M7kHBnbIGJMAnW6e3OEVKI.svg",
     },
   ];
 
   const aiFeatures = [
     {
       title: "Task Management",
-      icon: "https://framerusercontent.com/images/STx7MhL1G8tv8zPZeZrABlyiHKk.svg",
+      icon: "STx7MhL1G8tv8zPZeZrABlyiHKk.svg",
     },
     {
       title: "Collaboration Tools",
-      icon: "https://framerusercontent.com/images/2Fp6sHUU5gChe0qVJmJOhelkL9w.svg",
+      icon: "2Fp6sHUU5gChe0qVJmJOhelkL9w.svg",
     },
     {
       title: "Deadline Alerts",
-      icon: "https://framerusercontent.com/images/0Q35L936tMwlGlWJJjIfRZ5UQ.svg",
+      icon: "0Q35L936tMwlGlWJJjIfRZ5UQ.svg",
     },
     {
       title: "Real-Time Sync",
-      icon: "https://framerusercontent.com/images/Ol4qxoj2cnkGeNq0wLZxMJYI.svg",
+      icon: "Ol4qxoj2cnkGeNq0wLZxMJYI.svg",
     },
     {
       title: "Prioritization",
-      icon: "https://framerusercontent.com/images/wV6LymmM5xeoIkKwXvy92GrPtM.svg",
+      icon: "wV6LymmM5xeoIkKwXvy92GrPtM.svg",
     },
   ];
 
@@ -152,7 +152,7 @@ const Advantages = () => {
               />
             </div>
             <Image
-              src="https://framerusercontent.com/images/DJaenqiURD5xYuKBLs68FRtHMB4.svg"
+              src="DJaenqiURD5xYuKBLs68FRtHMB4.svg"
               alt="Staffluent - Centered Intelligence"
               width={120}
               height={80}

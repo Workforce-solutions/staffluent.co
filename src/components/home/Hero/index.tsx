@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="p-1 border border-[rgba(222,229,237,0.27)] rounded-full">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[rgba(222,229,237,50)] hover:bg-black/5 transition-colors">
             <Image
-              src="https://framerusercontent.com/images/IMr6LHJrnxrNlwu88UNWxCvghkA.svg"
+              src="fire.svg"
               alt="Staffluent - Centered Intelligence"
               width={24}
               height={24}
@@ -159,22 +159,22 @@ const Hero = () => {
                   {
                     title: "Smart Task Prioritization with AI Insights",
                     icon: "brain",
-                    url: "https://framerusercontent.com/images/sh29Ss025KGjtLmfxytiazc4EeI.svg",
+                    url: "sh29Ss025KGjtLmfxytiazc4EeI.svg",
                   },
                   {
                     title: "Unified Workspace for Teamwork",
                     icon: "users",
-                    url: "https://framerusercontent.com/images/TFPLWOVt43fxJQ2k2LQqnAd3Obs.svg",
+                    url: "TFPLWOVt43fxJQ2k2LQqnAd3Obs.svg",
                   },
                   {
                     title: "Advanced Project Tracking & Analytics",
                     icon: "chart",
-                    url: "https://framerusercontent.com/images/484M7kHBnbIGJMAnW6e3OEVKI.svg",
+                    url: "484M7kHBnbIGJMAnW6e3OEVKI.svg",
                   },
                   {
                     title: "Real-time Sync Across All Devices",
                     icon: "sync",
-                    url: "https://framerusercontent.com/images/wpnZoP3QjADuGfntbYdd3adrVpg.svg",
+                    url: "wpnZoP3QjADuGfntbYdd3adrVpg.svg",
                   },
                 ].map((feature, index) => (
                   <div key={feature.title} className="relative">

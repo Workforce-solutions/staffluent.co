@@ -68,7 +68,7 @@ const Pricing = () => {
   const includedFeatures = [
     {
       title: "14-Day Free Trial",
-      icon: "https://framerusercontent.com/images/uKcIDlgAZyRZYyVRxqM9O4CREf0.svg",
+      icon: "uKcIDlgAZyRZYyVRxqM9O4CREf0.svg",
     },
   ];
 
@@ -232,7 +232,7 @@ const Pricing = () => {
         <div className="max-w-[1200px] mx-auto relative mt-16">
           <div className="absolute inset-0">
             <Image
-              src="https://framerusercontent.com/images/OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
+              src="OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
               alt="Staffluent - Centered Intelligence"
               fill
               className="object-cover rounded-3xl"

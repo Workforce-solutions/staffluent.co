@@ -121,7 +121,7 @@ const ContactUsPage = () => {
                         className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
                       >
                         <Image
-                          src="https://framerusercontent.com/images/lE6exgFCC7D83cPTOY1ydeVc5Q.svg"
+                          src="lE6exgFCC7D83cPTOY1ydeVc5Q.svg"
                           alt="Staffluent - LinkedIn"
                           width={24}
                           height={24}
@@ -134,7 +134,7 @@ const ContactUsPage = () => {
                         className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
                       >
                         <Image
-                          src="https://framerusercontent.com/images/qpDZ05AACAyO52WOnvrc0Bz3i0Y.svg"
+                          src="qpDZ05AACAyO52WOnvrc0Bz3i0Y.svg"
                           alt="Staffluent - Instagram"
                           width={24}
                           height={24}
@@ -147,7 +147,7 @@ const ContactUsPage = () => {
                         className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
                       >
                         <Image
-                          src="https://framerusercontent.com/images/mHz04n9m5dvAnDw0bIe3uCF268.svg"
+                          src="mHz04n9m5dvAnDw0bIe3uCF268.svg"
                           alt="Staffluent - X"
                           width={24}
                           height={24}

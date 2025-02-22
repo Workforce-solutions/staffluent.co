@@ -74,8 +74,8 @@ const FAQSection = () => {
                       <Image
                         src={
                           openIndex === index
-                            ? "https://framerusercontent.com/images/ilTrUqtaRn3OV7UKGJjSNsQC1w.svg"
-                            : "https://framerusercontent.com/images/ROg7tkXh5h3JY9OVXT66zDJMFUw.svg"
+                            ? "ilTrUqtaRn3OV7UKGJjSNsQC1w.svg"
+                            : "ROg7tkXh5h3JY9OVXT66zDJMFUw.svg"
                         }
                         alt={openIndex === index ? "Minus" : "Plus"}
                         width={24}
@@ -123,8 +123,8 @@ const FAQSection = () => {
                       <Image
                         src={
                           openIndex === index + 3
-                            ? "https://framerusercontent.com/images/ilTrUqtaRn3OV7UKGJjSNsQC1w.svg"
-                            : "https://framerusercontent.com/images/ROg7tkXh5h3JY9OVXT66zDJMFUw.svg"
+                            ? "ilTrUqtaRn3OV7UKGJjSNsQC1w.svg"
+                            : "ROg7tkXh5h3JY9OVXT66zDJMFUw.svg"
                         }
                         alt={openIndex === index + 3 ? "Minus" : "Plus"}
                         width={24}

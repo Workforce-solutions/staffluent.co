@@ -6,15 +6,15 @@ const CTA = () => {
   const features = [
     {
       text: "Instant Access",
-      icon: "https://framerusercontent.com/images/y614ZOn5y3YhoWTwrEfyfwT6SOo.svg",
+      icon: "y614ZOn5y3YhoWTwrEfyfwT6SOo.svg",
     },
     {
       text: "Boost Productivity",
-      icon: "https://framerusercontent.com/images/y614ZOn5y3YhoWTwrEfyfwT6SOo.svg",
+      icon: "y614ZOn5y3YhoWTwrEfyfwT6SOo.svg",
     },
     {
       text: "Easy Setup",
-      icon: "https://framerusercontent.com/images/y614ZOn5y3YhoWTwrEfyfwT6SOo.svg",
+      icon: "y614ZOn5y3YhoWTwrEfyfwT6SOo.svg",
     },
   ];
 
@@ -24,7 +24,7 @@ const CTA = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="https://framerusercontent.com/images/OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
+            src="OLqV2585eiBQ9OxbcpOqkJzPuYQ.svg"
             alt="Staffluent - Centered Intelligence"
             fill
             className="object-cover rounded-3xl"
@@ -69,7 +69,7 @@ const CTA = () => {
           <div className="flex items-center justify-center my-auto gap-4">
             {/* Curved Arrow */}
             <Image
-              src="https://framerusercontent.com/images/Pht5ouuJ9vLestX5AiQRKct5PuM.svg"
+              src="Pht5ouuJ9vLestX5AiQRKct5PuM.svg"
               alt="Staffluent - Centered Intelligence"
               width={48}
               height={48}
@@ -77,7 +77,7 @@ const CTA = () => {
             />
             <Link
               href="/request-demo"
-              style={{width: "120%"}}
+              style={{ width: "120%" }}
               className="bg-white text-[#262626] px-8 py-4 rounded-xl hover:bg-white/90 transition-colors text-lg font-medium w-full"
             >
               Start Free Trial
