@@ -12,8 +12,7 @@ const getImageUrl = (image: SanityImageSource | undefined): string => {
 };
 
 const BlogItem = ({ blog }: { blog: Blog }) => {
-  // @ts-expect-error: not sure why is missing but it works
-  const category = post?.category?.title || "General";
+  const category = blog?.category?.title || "General";
   const dateString = new Date(blog?.publishedAt ?? "").toLocaleDateString(
     undefined,
     { month: "short", day: "numeric", year: "numeric" }
