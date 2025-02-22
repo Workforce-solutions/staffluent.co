@@ -10,6 +10,9 @@ const config = {
       ],
     },
     assetPrefix: '/',
+    compiler: {
+        styledComponents: true,
+    }
   }
   
   export default config
