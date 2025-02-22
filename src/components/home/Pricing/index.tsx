@@ -259,18 +259,18 @@ const Pricing = () => {
               </div>
             </div>
 
-            <div className="lg:flex-1 flex items-end justify-end relative">
+            <div className="lg:flex-1 flex items-end justify-end relative mt-12">
               <div className="relative">
                 <Image
-                  src="dashboard1.png"
+                  src="home-banner.png"
                   alt="Staffluent - Centered Intelligence"
-                  width={480}
+                  width={700}
                   height={260}
                   className="rounded-xl shadow-lg ml-auto"
                 />
                 <div className="absolute -bottom-[29%] -left-16 hidden md:block">
                   <Image
-                    src="dashboard2.png"
+                    src="home-banner.png"
                     alt="Staffluent - Centered Intelligence"
                     width={700}
                     height={20}
