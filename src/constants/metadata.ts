@@ -38,4 +38,8 @@ export const METADATA: Record<string, PageMetadata> = {
         title: "Register for Trial - Start Your Staffluent Experience",
         description: "Begin your journey with Staffluent's workforce management platform. Sign up for a free trial and discover how we can transform your operations."
     },
+    verifyEmail: {
+        title: 'Verify Email - Staffluent',
+        description: 'Verify your email address to complete your Staffluent registration.',
+      },
 };
