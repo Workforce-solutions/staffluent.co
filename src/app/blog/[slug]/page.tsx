@@ -1,7 +1,7 @@
 // src/app/blog/[slug]/page.tsx
 import { Metadata } from "next";
 import SingleBlogClient from "@/components/Blog/SingleBlogClient";
-import { getPostBySlug, imageBuilder } from "@/sanity/sanity-utils";
+import { getPostBySlug, getRelatedPosts, imageBuilder } from "@/sanity/sanity-utils";
 import { integrations } from "../../../../integrations.config";
 import { Blog } from "@/types/blog";
 
@@ -90,10 +90,9 @@ export default async function BlogDetails({ params }: PageProps) {
         }
       } as Blog;
 
-  // Get related posts using slug instead of ID
-  // const relatedPosts = integrations.isSanityEnabled 
-  //   ? await getRelatedPosts(slug)
-  //   : [];
+      const relatedPosts = integrations.isSanityEnabled 
+      ? await getRelatedPosts(slug)
+      : [];
   const postURL = `${process.env.SITE_URL}/blog/${slug}`;
 
   const navLinks = [
@@ -112,7 +111,8 @@ export default async function BlogDetails({ params }: PageProps) {
       post={post} 
       postURL={postURL} 
       navLinks={navLinks} 
-      relatedPosts={[]} 
+      relatedPosts={relatedPosts} 
+
     />
   );
 }

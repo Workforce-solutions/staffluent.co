@@ -98,6 +98,7 @@ export const getAuthorBySlug = async (slug: string) => {
 };
 
 
+// In sanity-utils.ts
 export const getRelatedPosts = async (slug: string) => {
 	const currentPost = await getPostBySlug(slug);
 	
@@ -105,15 +106,15 @@ export const getRelatedPosts = async (slug: string) => {
 	  return [];
 	}
   
-	const relatedPostsQuery = groq`
-	  *[_type == "post" && category->tagname == $tagname && _id != $currentId] ${postData}
-	`;
-  
 	const data: Blog[] = await sanityFetch({
-	  query: relatedPostsQuery,
+	  query: groq`*[
+		_type == "post" && 
+		slug.current != $currentSlug && 
+		references(*[_type=="tagDetail" && tagname == $tagname]._id)
+	  ] ${postData}`,
 	  qParams: { 
 		tagname: currentPost.category.tagname,
-		currentId: currentPost._id
+		currentSlug: slug
 	  },
 	  tags: ["post", "author", "category"]
 	});
