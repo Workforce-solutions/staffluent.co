@@ -1,6 +1,7 @@
+// src/app/blog/[slug]/page.tsx
 import { Metadata } from "next";
 import SingleBlogClient from "@/components/Blog/SingleBlogClient";
-import { getPostBySlug, imageBuilder } from "@/sanity/sanity-utils";
+import { getPostBySlug, getRelatedPosts, imageBuilder } from "@/sanity/sanity-utils";
 import { integrations } from "../../../../integrations.config";
 import { Blog } from "@/types/blog";
 
@@ -8,9 +9,8 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await (params as Promise<{ slug: string }>);
+  const { slug } = await params;
   const post: Blog = integrations.isSanityEnabled
     ? await getPostBySlug(slug)
     : ({} as Blog);
@@ -65,17 +65,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         images: [imageBuilder(post.mainImage as unknown as string).url() || ""],
       },
     };
-  } else {
-    return {
-      title: "Not Found",
-      description: "No blog article has been found",
-    };
   }
+  
+  return {
+    title: "Not Found",
+    description: "No blog article has been found",
+  };
 }
 
 export default async function BlogDetails({ params }: PageProps) {
-  const { slug } = await (params as Promise<{ slug: string }>);
+  const { slug } = await params;
   
+    
   const post: Blog = integrations.isSanityEnabled
     ? await getPostBySlug(slug)
     : {
@@ -83,12 +84,15 @@ export default async function BlogDetails({ params }: PageProps) {
         slug: { current: slug },
         author: {
           name: '',
-          slug: { current: '' },  // Add this
-          image: '',              // Add this
-          bio: ''                 // Add this
+          slug: { current: '' },
+          image: '',
+          bio: ''
         }
       } as Blog;
 
+      const relatedPosts = integrations.isSanityEnabled 
+      ? await getRelatedPosts(slug)
+      : [];
   const postURL = `${process.env.SITE_URL}/blog/${slug}`;
 
   const navLinks = [
@@ -102,5 +106,13 @@ export default async function BlogDetails({ params }: PageProps) {
     return <div>Post not found</div>;
   }
 
-  return <SingleBlogClient post={post} postURL={postURL} navLinks={navLinks} />;
+  return (
+    <SingleBlogClient 
+      post={post} 
+      postURL={postURL} 
+      navLinks={navLinks} 
+      relatedPosts={relatedPosts} 
+
+    />
+  );
 }

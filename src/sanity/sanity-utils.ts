@@ -1,5 +1,5 @@
 import ImageUrlBuilder from "@sanity/image-url";
-import { createClient, type QueryParams } from "next-sanity";
+import { createClient, groq, type QueryParams } from "next-sanity";
 import clientConfig from "./config/client-config";
 import {
 	postQuery,
@@ -7,6 +7,7 @@ import {
 	postQueryByTag,
 	postQueryByAuthor,
 	postQueryByCategory,
+	postData,
 } from "./sanity-query";
 import { Blog } from "@/types/blog";
 import { integrations } from "../../integrations.config";
@@ -93,3 +94,28 @@ export const getAuthorBySlug = async (slug: string) => {
 
 	return data;
 };
+
+
+// In sanity-utils.ts
+export const getRelatedPosts = async (slug: string) => {
+	const currentPost = await getPostBySlug(slug);
+	
+	if (!currentPost?.category?.tagname) {
+	  return [];
+	}
+  
+	const data: Blog[] = await sanityFetch({
+	  query: groq`*[
+		_type == "post" && 
+		slug.current != $currentSlug && 
+		references(*[_type=="tagDetail" && tagname == $tagname]._id)
+	  ] ${postData}`,
+	  qParams: { 
+		tagname: currentPost.category.tagname,
+		currentSlug: slug
+	  },
+	  tags: ["post", "author", "category"]
+	});
+  
+	return data.slice(0, 3);
+  };

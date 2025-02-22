@@ -21,4 +21,8 @@ export type Blog = {
   author: Author;
   tags: string[];
   publishedAt: string;
+  category?: { 
+    title: string;
+    tagname: string;
+  };
 };
