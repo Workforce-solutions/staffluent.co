@@ -42,4 +42,21 @@
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
+    <url>
+        <loc>https://staffluent.co/blog</loc>
+        <lastmod>2025-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+    <loc>https://staffluent.co/blog/boosting-operational-efficiency-how-staffluent-workforce-solution-transforms-workplaces</loc>
+        <lastmod>2025-02-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <loc>https://staffluent.co/blog/beyond-time-tracking-how-staffluents-app-powers-modern-workforce-management</loc>
+        <lastmod>2025-02-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
