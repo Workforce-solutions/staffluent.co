@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
-import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
+import RegisterTrial from "@/components/registerTrial";
 import Link from "next/link";
-import RequestADemo from "@/components/RequestADemo";
+import { useState } from "react";
 
-const RequestDemoPage = () => {
+const RegisterTrialPage = () => {
   const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
 
   const navLinks = [
@@ -24,7 +24,7 @@ const RequestDemoPage = () => {
       />
       {!isHamburgerMenuOpen ? (
         <div>
-          <RequestADemo />
+          <RegisterTrial />
           <Footer />
         </div>
       ) : (
@@ -40,4 +40,4 @@ const RequestDemoPage = () => {
   );
 };
 
-export default RequestDemoPage;
+export default RegisterTrialPage;
