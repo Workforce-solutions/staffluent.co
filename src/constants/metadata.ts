@@ -29,5 +29,9 @@ export const METADATA: Record<string, PageMetadata> = {
     privacy: {
         title: "Privacy Policy - Staffluent | Data Protection",
         description: "Learn about Staffluent's privacy policy and data protection practices. Understand how we handle and protect your information."
+    },
+    blog: {
+        title: "Blog - Latest Insights & Workforce Trends | Staffluent",
+        description: "Explore expert insights, industry trends, and workforce management tips from Staffluent. Stay updated on the latest developments in HR and employee management."
     }
 };
