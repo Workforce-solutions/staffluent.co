@@ -13,7 +13,7 @@ export function constructMetadata(pageMetadata: PageMetadata): Metadata {
       siteName: 'Staffluent',
       images: [
         {
-          url: '/og-image.png',
+          url: 'https://staffluent.co/og-image.png',
           width: 1200,
           height: 630,
         },
@@ -25,7 +25,7 @@ export function constructMetadata(pageMetadata: PageMetadata): Metadata {
       card: 'summary_large_image',
       title: pageMetadata.title,
       description: pageMetadata.description,
-      images: ['/og-image.png'],
+      images: ['https://staffluent.co/og-image.png'],
     },
   };
 }
