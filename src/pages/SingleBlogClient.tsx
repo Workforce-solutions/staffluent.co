@@ -34,17 +34,17 @@ export default function SingleBlogClient({ post, postURL, navLinks }: SingleBlog
         navLinks={navLinks}
       />
       {!isHamburgerMenuOpen ? (
-        <main className="mt-20">
+        <main>
           <section className="relative bg-white">
             {/* Background Shapes */}
-            {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
               <div className="absolute left-0 top-0 -z-10">
                 <Image src="/images/blog/blog-shape-01.svg" alt="Shape" width={340} height={680} />
               </div>
               <div className="absolute right-0 top-0 -z-10">
                 <Image src="/images/blog/blog-shape-02.svg" alt="Shape" width={425} height={672} />
               </div>
-            </div> */}
+            </div>
 
             <div className="relative z-10 pt-20 pb-16">
               <div className="max-w-[1200px] mx-auto px-4">
