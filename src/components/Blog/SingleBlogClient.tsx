@@ -44,8 +44,7 @@ export default function SingleBlogClient({
   }, [post]);
 
   const readingTime = Math.ceil((post?.body?.length || 0) / 1000);
-  // @ts-ignore
-  const category = post?.category?.title || "HR Strategy";
+  const category = post?.category?.title || "General";
   const publishDate = post?.publishedAt
     ? new Date(post.publishedAt).toLocaleDateString(undefined, {
         month: "long",
@@ -129,11 +128,11 @@ export default function SingleBlogClient({
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <h4 className="font-semibold mb-3">Share This Article</h4>
                   <div className="flex items-center gap-3">
-                    <SocialShare url={postURL} className="flex gap-2 [&>a]:rounded-full [&>a]:w-10 [&>a]:h-10 [&>a]:flex [&>a]:items-center [&>a]:justify-center [&>a]:bg-white [&>a]:hover:bg-gray-100" />
+                  
+                    <SocialShare url={postURL}/>
                     <CopyToClipboard 
                       text={postURL} 
                       label="Copy Link" 
-                      className="rounded-full w-10 h-10 flex items-center justify-center bg-white hover:bg-gray-100"
                     />
                   </div>
                 </div>
