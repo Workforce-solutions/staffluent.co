@@ -3,7 +3,14 @@ import { Blog } from "@/types/blog";
 import Image from "next/image";
 import { imageBuilder } from "@/sanity/sanity-utils";
 import Link from "next/link";
+import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
+
+const getImageUrl = (image: SanityImageSource | undefined): string => {
+    if (!image) return '';
+    return imageBuilder(image as unknown as string).url() || '';
+  }
+  
 const BlogItem = ({ blog }: { blog: Blog }) => {
 	return (
 		<article className='group overflow-hidden rounded-[15px] bg-white shadow-dropdown dark:bg-gray-dark'>
@@ -12,7 +19,7 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
 				className='block overflow-hidden'
 			>
 				<Image
-					src={imageBuilder(blog?.mainImage).url() as string}
+					 src={getImageUrl(blog?.mainImage)}
 					alt='blog'
 					className='w-full duration-300 ease-in group-hover:rotate-6 group-hover:scale-125'
 					width={500}
