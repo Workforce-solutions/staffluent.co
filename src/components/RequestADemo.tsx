@@ -155,7 +155,7 @@ const RequestADemo = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     <div className="lg:col-span-1">
                         <div className="bg-white p-8 rounded-lg shadow-sm">
-                            <h3 className="text-xl font-semibold mb-6 text-gray-900">What You'll See in the Demo</h3>
+                            <h3 className="text-xl font-semibold mb-6 text-gray-900">What You&apos;ll See in the Demo</h3>
 
                             <div className="space-y-6">
                                 <div className="space-y-4">
@@ -223,7 +223,7 @@ const RequestADemo = () => {
                                 <input
                                     type="text"
                                     required
-                                    placeholder="e.g., Restaurant, Bar, Club"
+                                    placeholder="e.g., Your business type"
                                     className={`${inputStyles} ${errors.businessType ? 'border-red-500' : ''}`}
                                     value={formData.businessType}
                                     onChange={(e) => setFormData({...formData, businessType: e.target.value})}
@@ -329,7 +329,7 @@ const RequestADemo = () => {
                                 </label>
                                 <textarea
                                     rows={4}
-                                    placeholder="Tell us about your specific needs or what you'd like to see in the demo"
+                                    placeholder="Tell us about your specific needs or what you&apos;d like to see in the demo"
                                     className={inputStyles}
                                     value={formData.message}
                                     onChange={(e) => setFormData({...formData, message: e.target.value})}
