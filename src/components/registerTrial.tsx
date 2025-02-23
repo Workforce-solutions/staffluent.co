@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Loader, CheckCircle, Star } from "lucide-react";
 import { toast, ToastContainer } from "react-toastify";
-import Image from "next/image";
 import "react-toastify/dist/ReactToastify.css";
 import { useTrialRegistration } from "@/hooks/useTrialRegistration";
 import type { TrialRegistrationFormData } from "@/app/api/external/omnigateway/types/trial-registration";
@@ -179,8 +178,8 @@ const RegisterTrial = () => {
 
           {/* Benefits Section */}
           <div className="bg-white p-8 rounded-2xl border border-[#DEE5ED] shadow-sm">
-            <h2 className="text-2xl font-bold mb-6">What's Included</h2>
-            <div className="space-y-4">
+          <h2 className="text-2xl font-bold mb-6">What&apos;s Included</h2>
+          <div className="space-y-4">
               {trialBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-[#0A0A0A] rounded-full flex items-center justify-center">

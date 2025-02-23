@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CheckCircle, Loader, XCircle, Star } from "lucide-react";
@@ -16,11 +17,11 @@ type VerificationStatus =
 
 const VerifyEmail = () => {
     const router = useRouter();
-    const params = useSearchParams();
+    const searchParams = useSearchParams();
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
     const [verificationStatus, setVerificationStatus] = useState<VerificationStatus>("loading");
     const { verifyEmail } = useVerification();
-    const token = params?.get("token");
+    const token = searchParams?.get("token");
 
     const navLinks = [
         { href: "/", label: "Home" },
@@ -30,20 +31,26 @@ const VerifyEmail = () => {
     ];
 
     useEffect(() => {
-        if (!token) {
-            setVerificationStatus("error");
-            return;
-        }
+        let mounted = true;
 
         const handleVerification = async () => {    
+            if (!token) {
+                setVerificationStatus("error");
+                return;
+            }
+
             try {
                 const response = await verifyEmail(token);
                 
+                if (!mounted) return;
+
                 switch (response.status) {
                     case 'success':
                         setVerificationStatus("success");
                         setTimeout(() => {
-                            router.push("/pricing");
+                            if (mounted) {
+                                router.push("/pricing");
+                            }
                         }, 3000);
                         break;
                     case 'already_verified':
@@ -55,22 +62,23 @@ const VerifyEmail = () => {
                     default:
                         setVerificationStatus("error");
                 }
-            } catch (error) {
-                setVerificationStatus("error");
+            } catch {
+                if (mounted) {
+                    setVerificationStatus("error");
+                }
             }
         };
 
         handleVerification();
+
+        return () => {
+            mounted = false;
+        };
     }, [token, verifyEmail, router]);
 
-    return (
-        <>
-            <Header
-                isHamburgerMenuOpen={isHamburgerMenuOpen}
-                setIsHamburgerMenuOpen={setIsHamburgerMenuOpen}
-                navLinks={navLinks}
-            />
-            {!isHamburgerMenuOpen ? (
+    const renderVerificationContent = () => {
+        if (!isHamburgerMenuOpen) {
+            return (
                 <div className="bg-[#F8FAFC] min-h-screen">
                     <div className="max-w-[1200px] mx-auto px-4 py-16">
                         <div className="text-center mb-8">
@@ -104,7 +112,7 @@ const VerifyEmail = () => {
                                         </div>
                                         <h1 className="text-2xl font-bold text-[#0A0A0A] mb-2">Email Verified Successfully!</h1>
                                         <p className="text-[#3D495B] mb-6">
-                                            Your email has been verified. You'll be redirected to choose your plan in a moment.
+                                            Your email has been verified. You&apos;ll be redirected to choose your plan in a moment.
                                         </p>
                                         <div className="animate-pulse">
                                             <Loader className="w-5 h-5 text-[#0A0A0A] animate-spin mx-auto" />
@@ -169,7 +177,7 @@ const VerifyEmail = () => {
                                         </div>
                                         <h1 className="text-2xl font-bold text-[#0A0A0A] mb-2">Verification Failed</h1>
                                         <p className="text-[#3D495B] mb-6">
-                                            We couldn't verify your email. The link might be invalid.
+                                            We couldn&apos;t verify your email. The link might be invalid.
                                         </p>
                                         <button
                                             onClick={() => router.push("/contact")}
@@ -184,15 +192,28 @@ const VerifyEmail = () => {
                     </div>
                     <Footer />
                 </div>
-            ) : (
-                <div className="absolute top-0 left-0 w-full h-[calc(100vh-100px)] bg-white flex flex-col items-center gap-4 pr-6 mt-28">
-                    {navLinks.map((link) => (
-                        <Link key={link.href} href={link.href} className={"text-black"}>
-                            {link.label}
-                        </Link>
-                    ))}
-                </div>
-            )}
+            );
+        }
+
+        return (
+            <div className="absolute top-0 left-0 w-full h-[calc(100vh-100px)] bg-white flex flex-col items-center gap-4 pr-6 mt-28">
+                {navLinks.map((link) => (
+                    <Link key={link.href} href={link.href} className="text-black">
+                        {link.label}
+                    </Link>
+                ))}
+            </div>
+        );
+    };
+
+    return (
+        <>
+            <Header
+                isHamburgerMenuOpen={isHamburgerMenuOpen}
+                setIsHamburgerMenuOpen={setIsHamburgerMenuOpen}
+                navLinks={navLinks}
+            />
+            {renderVerificationContent()}
         </>
     );
 };

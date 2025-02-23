@@ -9,6 +9,11 @@ interface VerificationResponse {
     userId?: string;
 }
 
+interface ApiError {
+    message: string;
+    status?: number;
+}
+
 export const useVerification = () => {
     const verifyEmail = async (token: string): Promise<VerificationResponse> => {
         if (!token) {
@@ -31,13 +36,13 @@ export const useVerification = () => {
             }
             
             return response;
-        } catch (error: any) {
-            toast.error(error.message || 'Failed to verify email');
-            return {
-                status: 'invalid',
-                message: error.message || 'Failed to verify email'
-            };
-        }
+        } catch (error: unknown) {
+            const errorMessage = error instanceof Error 
+                ? error.message 
+                : (error as ApiError)?.message || 'Failed to verify email. Please try again.';
+            
+            throw new Error(errorMessage);
+        } 
     };
 
     return {

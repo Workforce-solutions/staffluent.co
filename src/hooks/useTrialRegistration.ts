@@ -4,6 +4,11 @@ import { createTrialRegistrationApi } from '@/app/api/external/omnigateway/trial
 import { TrialRegistrationFormData } from '@/app/api/external/omnigateway/types/trial-registration';
 import { toast, ToastOptions } from 'react-toastify';
 
+interface ApiError {
+    message: string;
+    status?: number;
+}
+
 const toastConfig: ToastOptions = {
     position: "top-right",
     autoClose: 10000,
@@ -29,9 +34,12 @@ export const useTrialRegistration = () => {
             } else {
                 throw new Error(response.message);
             }
-        } catch (error: any) {
-            console.error('Error registering trial:', error);
-            toast.error(error.message || 'Failed to register. Please try again.', toastConfig);
+        } catch (error: unknown) {
+            const errorMessage = error instanceof Error 
+                ? error.message 
+                : (error as ApiError)?.message || 'Failed to register. Please try again.';
+            
+            toast.error(errorMessage, toastConfig);
             throw error;
         } finally {
             setIsLoading(false);
