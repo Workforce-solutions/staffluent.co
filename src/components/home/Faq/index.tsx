@@ -93,7 +93,7 @@ const FAQ = () => {
                   <span className="text-xl font-medium pr-8">
                     {faq.question}
                   </span>
-                  <div className="bg-[#333333] rounded-full p-2 flex-shrink-0">
+                  <div className="bg-[#0A0A0A] rounded-full p-2 flex-shrink-0">
                     <div className="w-6 h-6 relative">
                       <Image
                         src={
@@ -128,7 +128,7 @@ const FAQ = () => {
                   <span className="text-xl font-medium pr-8">
                     {faq.question}
                   </span>
-                  <div className="bg-[#333333] rounded-full p-2 flex-shrink-0">
+                  <div className="bg-[#0A0A0A] rounded-full p-2 flex-shrink-0">
                     <div className="w-6 h-6 relative">
                       <Image
                         src={

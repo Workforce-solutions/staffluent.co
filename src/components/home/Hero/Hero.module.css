@@ -23,7 +23,7 @@
   background: #f8fafc;
   border: 1px solid #dde5ed;
   border-radius: 100px;
-  color: #333333;
+  color: #0a0a0a;
 }
 
 .mainHeading {
@@ -48,7 +48,7 @@
 }
 
 .primaryButton {
-  background-color: #0A0A0A;
+  background-color: #0a0a0a;
   color: #ffffff;
   padding: 16px 24px;
   border-radius: 12px;
@@ -73,7 +73,7 @@
   justify-content: center;
   width: 24px;
   height: 24px;
-  background: #0A0A0A;
+  background: #0a0a0a;
   border-radius: 100%;
   color: #ffffff;
 }

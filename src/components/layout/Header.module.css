@@ -1,77 +1,77 @@
 /* src/components/layout/Header.module.css */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 30px 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #000000;
-    border-radius: 16px;
-    backdrop-filter: blur(6px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0a0a0a;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
 }
 
 .logoLink {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .logoIcon {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .nav {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
 }
 
 .navLink {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 14px 16px;
-    border-radius: 12px;
-    transition: background-color 0.3s;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  transition: background-color 0.3s;
 }
 
 .navLink:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .authButtons {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 
 .signupButton {
-    background-color: #ffffff;
-    color: #0A0A0A;
-    padding: 14px 16px;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: opacity 0.3s;
+  background-color: #ffffff;
+  color: #0a0a0a;
+  padding: 14px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: opacity 0.3s;
 }
 
 .signupButton:hover {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 
 @media (max-width: 809px) {
-    .nav {
-        display: none;
-    }
+  .nav {
+    display: none;
+  }
 }

@@ -11,7 +11,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-[url('https://framerusercontent.com/images/74LehQoe77vSoidpjaDEmwrLHho.png')] bg-cover bg-center rounded-t-[50px]">
+    <footer className="w-full bg-[#0A0A0A] bg-cover bg-center rounded-t-[50px]">
       <div className="max-w-[1200px] mx-auto px-4 py-16">
         {/* Top Section */}
         <div className="grid md:grid-cols-2 gap-12 mb-12">
@@ -89,7 +89,7 @@ const Footer = () => {
                   href={socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
+                  className="bg-[#0A0A0A] p-2 rounded-xl hover:bg-[#262626]"
                 >
                   <Image
                     src="/lE6exgFCC7D83cPTOY1ydeVc5Q.svg"
@@ -103,7 +103,7 @@ const Footer = () => {
                   href={socialLinks.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
+                  className="bg-[#0A0A0A] p-2 rounded-xl hover:bg-[#262626]"
                 >
                   <Image
                     src="/qpDZ05AACAyO52WOnvrc0Bz3i0Y.svg"
@@ -117,7 +117,7 @@ const Footer = () => {
                   href={socialLinks.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
+                  className="bg-[#0A0A0A] p-2 rounded-xl hover:bg-[#262626]"
                 >
                   <Image
                     src="/mHz04n9m5dvAnDw0bIe3uCF268.svg"
@@ -131,7 +131,7 @@ const Footer = () => {
                   href={socialLinks.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#333333] p-2 rounded-xl hover:bg-[#262626]"
+                  className="bg-[#0A0A0A] p-2 rounded-xl hover:bg-[#262626]"
                 >
                   <Image
                     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgY2xhc3M9Imx1Y2lkZSBsdWNpZGUtZmFjZWJvb2siPjxwYXRoIGQ9Ik0xOCA0aC0zYTUgNSAwIDAgMC01IDV2M0g3djRoM3Y4aDR2LThoM2wxLTRoLTR2LTNhMSAxIDAgMCAxIDEtMWgzeiIvPjwvc3ZnPg=="
