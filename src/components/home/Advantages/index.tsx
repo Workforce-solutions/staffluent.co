@@ -99,7 +99,7 @@ const Advantages = () => {
                       className="text-white"
                     />
                   </div>
-                  <span className="text-[#333333] text-sm md:text-base">
+                  <span className="text-[#0A0A0A] text-sm md:text-base">
                     {feature.title}
                   </span>
                 </motion.div>

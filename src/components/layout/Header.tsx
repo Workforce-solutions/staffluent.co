@@ -37,7 +37,7 @@ const Header = ({ isHamburgerMenuOpen, setIsHamburgerMenuOpen, navLinks }: Heade
                         <Image
                             src="/logo-footer.svg"
                             alt="Staffluent Logo"
-                            style={{marginLeft: "-4px"}}
+                            style={{marginLeft: "-6px"}}
                             width={200}
                             height={100}
                             className="object-contain"
