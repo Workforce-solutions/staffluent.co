@@ -8,6 +8,18 @@ import "react-toastify/dist/ReactToastify.css";
 import { useSubscription } from "@/hooks/useSubscription";
 import { BusinessFormData } from "@/app/api/external/omnigateway/types/business";
 
+const PLAN_IDS = {
+  basic: {
+    month: process.env.NEXT_PUBLIC_STRIPE_BASIC_PLAN_MONTHLY_ID,
+    year: process.env.NEXT_PUBLIC_STRIPE_BASIC_PLAN_YEARLY_ID
+  },
+  professional: {
+    month: process.env.NEXT_PUBLIC_STRIPE_PROFESSIONAL_PLAN_MONTHLY_ID,
+    year: process.env.NEXT_PUBLIC_STRIPE_PROFESSIONAL_PLAN_YEARLY_ID
+  }
+};
+
+
 const Subscription = () => {
   const router = useRouter();
   const params = useSearchParams();
@@ -149,8 +161,11 @@ const Subscription = () => {
         vatNumber: formData.vatNumber || undefined
       };
 
+      const stripePriceId = PLAN_IDS[selectedPlan as keyof typeof PLAN_IDS][billingCycle === 'monthly' ? 'month' : 'year'];
+
+
       const subscription = {
-        planId: selectedPlan,
+        planId: stripePriceId,
         interval: billingCycle === 'monthly' ? 'month' : 'year'
       };
 
