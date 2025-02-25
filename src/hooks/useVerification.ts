@@ -1,13 +1,8 @@
 // hooks/useVerification.ts
-// import { useState } from 'react';
-import { createVerificationApi } from '@/app/api/external/omnigateway/verification';
+import { useState } from 'react';
+import { createVerificationApi, VerificationResponse } from '@/app/api/external/omnigateway/verification';
 import { toast } from 'react-toastify';
 
-interface VerificationResponse {
-    status: 'success' | 'already_verified' | 'expired' | 'invalid';
-    message: string;
-    userId?: string;
-}
 
 interface ApiError {
     message: string;
@@ -15,6 +10,8 @@ interface ApiError {
 }
 
 export const useVerification = () => {
+    const [isLoading, setIsLoading] = useState(false);
+
     const verifyEmail = async (token: string): Promise<VerificationResponse> => {
         if (!token) {
             return {
@@ -24,6 +21,7 @@ export const useVerification = () => {
         }
 
         try {
+            setIsLoading(true);
             const api = createVerificationApi();
             const response = await api.verifyEmail(token);
             
@@ -42,10 +40,13 @@ export const useVerification = () => {
                 : (error as ApiError)?.message || 'Failed to verify email. Please try again.';
             
             throw new Error(errorMessage);
-        } 
+        } finally {
+            setIsLoading(false);
+          }
     };
 
     return {
+        isLoading,
         verifyEmail
     };
 };

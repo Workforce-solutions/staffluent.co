@@ -38,7 +38,10 @@ const Subscription = () => {
   useEffect(() => {
     if (!userId || !businessId) {
       // Redirect to homepage if missing parameters
-      router.push("/");
+      toast.error("Invalid access. Please complete registration first.");
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
     }
   }, [userId, businessId, router]);
 
@@ -122,8 +125,13 @@ const Subscription = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedPlan || !userId || !businessId) {
-      toast.error("Missing required information");
+    if (!selectedPlan) {
+      toast.error("Please select a plan first");
+      return;
+    }
+    
+    if (!userId || !businessId) {
+      toast.error("Missing user or business information");
       return;
     }
 
@@ -152,13 +160,32 @@ const Subscription = () => {
       const response = await updateBusinessAndSubscribe(businessDetails, subscriptionPlan);
       
       if (response.success) {
+        toast.success("Subscription completed successfully!");
         // Redirect to success page or dashboard
-        router.push("/subscription-success");
+        setTimeout(() => {
+          router.push("/subscription-success");
+        }, 1500);
       }
     } catch (error) {
       console.error("Error submitting subscription:", error);
+      toast.error("There was a problem updating your subscription. Please try again.");
     }
   };
+
+  // Don't render anything substantial if we don't have the required parameters
+  if (!userId || !businessId) {
+    return (
+      <section className="md:py-10 py-10">
+        <ToastContainer position="top-right" autoClose={5000} />
+        <div className="max-w-[1200px] mx-auto px-4 flex justify-center items-center min-h-[60vh]">
+          <div className="text-center">
+            <Loader className="w-12 h-12 text-[#0A0A0A] animate-spin mx-auto mb-4" />
+            <p className="text-[#3d495b]">Redirecting...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   const inputStyles = "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white shadow-sm text-gray-900 placeholder-gray-500";
 
