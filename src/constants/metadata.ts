@@ -45,5 +45,9 @@ export const METADATA: Record<string, PageMetadata> = {
     subscription: {
         title: 'Complete Your Subscription - Staffluent',
         description: 'Choose your subscription plan and complete your business setup.',
-    }
+    },
+    subscriptionSuccess: {
+        title: 'Subscription Complete - Staffluent',
+        description: 'Your subscription has been set up successfully',
+    },
 };

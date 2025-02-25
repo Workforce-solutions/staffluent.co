@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CheckCircle, Crown, XCircle, Loader, Building2 } from "lucide-react";
-import { SubscriptionPlan } from "@/app/api/external/omnigateway/types/subscription-plan";
+import { useSubscription } from "@/hooks/useSubscription";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { BusinessFormData } from "@/app/api/external/omnigateway/types/business";
 
 
@@ -14,8 +16,8 @@ const Subscription = () => {
   
   const [billingCycle, setBillingCycle] = useState("monthly");
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [step, setStep] = useState(1); // 1: Plan selection, 2: Business details
+  const { updateBusinessAndSubscribe, isLoading: isSubmitting } = useSubscription();
 
   // Form state
   const [formData, setFormData] = useState<BusinessFormData>({
@@ -36,7 +38,10 @@ const Subscription = () => {
   useEffect(() => {
     if (!userId || !businessId) {
       // Redirect to homepage if missing parameters
-      router.push("/");
+      toast.error("Invalid access. Please complete registration first.");
+      setTimeout(() => {
+        router.push("/");
+      }, 2000);
     }
   }, [userId, businessId, router]);
 
@@ -120,33 +125,73 @@ const Subscription = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedPlan) return;
-
-    setIsSubmitting(true);
+    if (!selectedPlan) {
+      toast.error("Please select a plan first");
+      return;
+    }
+    
+    if (!userId || !businessId) {
+      toast.error("Missing user or business information");
+      return;
+    }
 
     try {
-      // TODO: Implement the API call to update business details and subscription
-      const subscriptionData: SubscriptionPlan = {
+      const businessDetails = {
+        businessId,
+        userId,
+        businessType: formData.businessType,
+        phone: formData.phone || undefined,
+        address: {
+          street: formData.address.street || undefined,
+          city: formData.address.city || undefined,
+          state: formData.address.state || undefined,
+          zip: formData.address.zip || undefined,
+          country: formData.address.country || undefined
+        },
+        taxId: formData.taxId || undefined,
+        vatNumber: formData.vatNumber || undefined
+      };
+
+      const subscriptionPlan = {
         planId: selectedPlan,
         interval: billingCycle === 'monthly' ? 'month' : 'year'
       };
 
-      // Mock API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const response = await updateBusinessAndSubscribe(businessDetails, subscriptionPlan);
       
-      // Redirect to success page or dashboard
-      router.push("/subscription-success");
+      if (response.success) {
+        toast.success("Subscription completed successfully!");
+        // Redirect to success page or dashboard
+        setTimeout(() => {
+          router.push("/subscription-success");
+        }, 1500);
+      }
     } catch (error) {
       console.error("Error submitting subscription:", error);
-    } finally {
-      setIsSubmitting(false);
+      toast.error("There was a problem updating your subscription. Please try again.");
     }
   };
+
+  // Don't render anything substantial if we don't have the required parameters
+  if (!userId || !businessId) {
+    return (
+      <section className="md:py-10 py-10">
+        <ToastContainer position="top-right" autoClose={5000} />
+        <div className="max-w-[1200px] mx-auto px-4 flex justify-center items-center min-h-[60vh]">
+          <div className="text-center">
+            <Loader className="w-12 h-12 text-[#0A0A0A] animate-spin mx-auto mb-4" />
+            <p className="text-[#3d495b]">Redirecting...</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   const inputStyles = "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-white shadow-sm text-gray-900 placeholder-gray-500";
 
   return (
     <section className="md:py-10 py-10">
+      <ToastContainer position="top-right" autoClose={5000} />
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

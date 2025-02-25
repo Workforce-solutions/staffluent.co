@@ -31,51 +31,57 @@ const VerifyEmail = () => {
     ];
 
     useEffect(() => {
-        let mounted = true;
-
-        const handleVerification = async () => {    
-            if (!token) {
-                setVerificationStatus("error");
-                return;
+        // Prevent any API call if token is missing
+        if (!token) {
+          setVerificationStatus("error");
+          return;
+        }
+      
+        // Use a reference to track if we've already made an API call
+        const apiCallMade = { current: false };
+        let redirectTimer = null;
+      
+        const verifyOnce = async () => {
+          // Only make the API call once
+          if (apiCallMade.current) return;
+          apiCallMade.current = true;
+      
+          try {
+            const response = await verifyEmail(token);
+            
+            // For success or incomplete subscription
+            if (response.status === 'success' || 
+                (response.status === 'already_verified' && 
+                 (response.subscriptionStatus === 'incomplete' || response.subscriptionStatus === 'trialing'))) {
+              
+              setVerificationStatus("success");
+              redirectTimer = setTimeout(() => {
+                router.push(`/subscription?userId=${response.userId}&businessId=${response.businessId}`);
+              }, 3000);
+            } 
+            // Already verified with full subscription
+            else if (response.status === 'already_verified') {
+              setVerificationStatus("already_verified");
             }
-
-            try {
-                const response = await verifyEmail(token);
-                
-                if (!mounted) return;
-
-                switch (response.status) {
-                    case 'success':
-                        setVerificationStatus("success");
-                        setTimeout(() => {
-                            if (mounted) {
-                                router.push("/pricing");
-                            }
-                        }, 3000);
-                        break;
-                    case 'already_verified':
-                        setVerificationStatus("already_verified");
-                        break;
-                    case 'expired':
-                        setVerificationStatus("expired");
-                        break;
-                    default:
-                        setVerificationStatus("error");
-                }
-            } catch {
-                if (mounted) {
-                    setVerificationStatus("error");
-                }
+            // Other cases
+            else if (response.status === 'expired') {
+              setVerificationStatus("expired");
             }
+            else {
+              setVerificationStatus("error");
+            }
+          } catch (error) {
+            setVerificationStatus("error");
+          }
         };
-
-        handleVerification();
-
+      
+        verifyOnce();
+      
         return () => {
-            mounted = false;
+          if (redirectTimer) clearTimeout(redirectTimer);
         };
-    }, [token, verifyEmail, router]);
-
+      }, [token, verifyEmail, router]);
+      
     const renderVerificationContent = () => {
         if (!isHamburgerMenuOpen) {
             return (
