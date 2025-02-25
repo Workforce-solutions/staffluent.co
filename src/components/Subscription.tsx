@@ -38,7 +38,7 @@ const Subscription = () => {
   useEffect(() => {
     if (!userId || !businessId) {
       // Redirect to homepage if missing parameters
-      // router.push("/");
+      router.push("/");
     }
   }, [userId, businessId, router]);
 
