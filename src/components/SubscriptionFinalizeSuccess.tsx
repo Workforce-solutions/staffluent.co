@@ -93,13 +93,13 @@ const SubscriptionFinalizeSuccess = () => {
               href="https://app.staffluent.co/dashboard"
               className="block w-full bg-[#0A0A0A] text-white text-center py-3 px-6 rounded-xl hover:bg-black/90 transition-colors"
             >
-              Go to Dashboard Now
+              Access Dashboard
             </Link>
             <Link
               href="/"
               className="block w-full bg-white border border-[#DEE5ED] text-[#0A0A0A] text-center py-3 px-6 rounded-xl hover:bg-gray-50 transition-colors"
             >
-              Return to Homepage
+              Homepage
             </Link>
           </div>
           <div className="mt-8 text-sm text-[#3D495B]">
