@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CheckCircle, Crown, XCircle, Loader, Building2 } from "lucide-react";
-import { SubscriptionPlan } from "@/app/api/external/omnigateway/types/subscription-plan";
+import { useSubscription } from "@/hooks/useSubscription";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { BusinessFormData } from "@/app/api/external/omnigateway/types/business";
 
 
@@ -14,8 +16,8 @@ const Subscription = () => {
   
   const [billingCycle, setBillingCycle] = useState("monthly");
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [step, setStep] = useState(1); // 1: Plan selection, 2: Business details
+  const { updateBusinessAndSubscribe, isLoading: isSubmitting } = useSubscription();
 
   // Form state
   const [formData, setFormData] = useState<BusinessFormData>({
@@ -36,7 +38,7 @@ const Subscription = () => {
   useEffect(() => {
     if (!userId || !businessId) {
       // Redirect to homepage if missing parameters
-      router.push("/");
+      // router.push("/");
     }
   }, [userId, businessId, router]);
 
@@ -120,26 +122,41 @@ const Subscription = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedPlan) return;
-
-    setIsSubmitting(true);
+    if (!selectedPlan || !userId || !businessId) {
+      toast.error("Missing required information");
+      return;
+    }
 
     try {
-      // TODO: Implement the API call to update business details and subscription
-      const subscriptionData: SubscriptionPlan = {
+      const businessDetails = {
+        businessId,
+        userId,
+        businessType: formData.businessType,
+        phone: formData.phone || undefined,
+        address: {
+          street: formData.address.street || undefined,
+          city: formData.address.city || undefined,
+          state: formData.address.state || undefined,
+          zip: formData.address.zip || undefined,
+          country: formData.address.country || undefined
+        },
+        taxId: formData.taxId || undefined,
+        vatNumber: formData.vatNumber || undefined
+      };
+
+      const subscriptionPlan = {
         planId: selectedPlan,
         interval: billingCycle === 'monthly' ? 'month' : 'year'
       };
 
-      // Mock API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const response = await updateBusinessAndSubscribe(businessDetails, subscriptionPlan);
       
-      // Redirect to success page or dashboard
-      router.push("/subscription-success");
+      if (response.success) {
+        // Redirect to success page or dashboard
+        router.push("/subscription-success");
+      }
     } catch (error) {
       console.error("Error submitting subscription:", error);
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -147,6 +164,7 @@ const Subscription = () => {
 
   return (
     <section className="md:py-10 py-10">
+      <ToastContainer position="top-right" autoClose={5000} />
       <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
