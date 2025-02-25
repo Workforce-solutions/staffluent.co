@@ -25,6 +25,12 @@
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>https://staffluent.co/register-trial</loc>
+        <lastmod>2025-02-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://staffluent.co/legal</loc>
         <lastmod>2025-02-21</lastmod>
         <changefreq>yearly</changefreq>

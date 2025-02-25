@@ -108,7 +108,7 @@ const Advantages = () => {
 
             <motion.div variants={fadeInUp}>
               <Link
-                href="/request-demo"
+                href="/register-trial"
                 className="inline-block bg-[#0A0A0A] text-white px-4 py-3 rounded-xl hover:bg-black/90 transition-colors text-center w-full md:w-auto"
               >
                 Start Free Trial

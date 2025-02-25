@@ -62,7 +62,7 @@ const SubscriptionPageWrapper = () => {
                 </div>
                 <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <Link
-                    href="https://app.staffluent.co/dashboard"
+                    href="https://app.staffluent.co/login"
                     className="block w-full bg-[#0A0A0A] text-white text-center py-3 px-6 rounded-xl hover:bg-black/90 transition-colors"
                   >
                     Dashboard
