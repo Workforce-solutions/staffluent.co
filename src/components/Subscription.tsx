@@ -111,18 +111,17 @@ const Subscription = () => {
       setFormData(prev => ({
         ...prev,
         [parent]: {
-          ...prev[parent as keyof typeof prev],
+          ...((prev[parent as keyof BusinessFormData] as Record<string, string>) || {}),
           [child]: value
         }
       }));
     } else {
       setFormData(prev => ({
         ...prev,
-        [name]: value
+        [name as keyof BusinessFormData]: value
       }));
     }
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedPlan) {
@@ -158,7 +157,7 @@ const Subscription = () => {
       const response = await updateBusinessAndSubscribe(
         businessId,
         businessDetails,
-        subscription
+        subscription as { planId: string; interval: "month" | "year" }
       );
       
       if (response.checkoutUrl) {
