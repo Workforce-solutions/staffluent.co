@@ -26,7 +26,7 @@ const RegisterTrial = () => {
     "AI-Powered Task Management",
     "Customizable Dashboards",
     "Team Collaboration Tools",
-    "Premium Support"
+    "Premium Support",
   ];
 
   const validateForm = (): boolean => {
@@ -87,8 +87,8 @@ const RegisterTrial = () => {
             Start Optimizing Your Business Today
           </h1>
           <p className="text-[#3D495B] text-lg max-w-2xl mx-auto mb-8">
-            Experience the full power of Staffluent with our comprehensive trial. 
-            No credit card required.
+            Experience the full power of Staffluent with our comprehensive
+            trial. No credit card required.
           </p>
 
           {/* Stats Grid */}
@@ -97,10 +97,15 @@ const RegisterTrial = () => {
               { number: "14 Days", text: "Full Access" },
               { number: "24/7", text: "Premium Support" },
               { number: "100%", text: "Features Included" },
-              { number: "0", text: "Credit Card Required" }
+              { number: "0", text: "Credit Card Required" },
             ].map((stat, index) => (
-              <div key={index} className="bg-white border border-[#DEE5ED] rounded-2xl p-4 text-center">
-                <p className="text-2xl font-semibold text-[#0c0c0c] mb-2">{stat.number}</p>
+              <div
+                key={index}
+                className="bg-white border border-[#DEE5ED] rounded-2xl p-4 text-center"
+              >
+                <p className="text-2xl font-semibold text-[#0c0c0c] mb-2">
+                  {stat.number}
+                </p>
                 <p className="text-[#3d495b] text-sm">{stat.text}</p>
               </div>
             ))}
@@ -122,9 +127,13 @@ const RegisterTrial = () => {
                   placeholder="Your full name"
                   className={`${inputStyles} ${errors.fullName ? "border-red-500" : ""}`}
                   value={formData.fullName}
-                  onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, fullName: e.target.value })
+                  }
                 />
-                {errors.fullName && <p className={errorStyles}>{errors.fullName}</p>}
+                {errors.fullName && (
+                  <p className={errorStyles}>{errors.fullName}</p>
+                )}
               </div>
 
               <div>
@@ -137,9 +146,13 @@ const RegisterTrial = () => {
                   placeholder="Your Company Name"
                   className={`${inputStyles} ${errors.businessName ? "border-red-500" : ""}`}
                   value={formData.businessName}
-                  onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, businessName: e.target.value })
+                  }
                 />
-                {errors.businessName && <p className={errorStyles}>{errors.businessName}</p>}
+                {errors.businessName && (
+                  <p className={errorStyles}>{errors.businessName}</p>
+                )}
               </div>
 
               <div>
@@ -152,9 +165,13 @@ const RegisterTrial = () => {
                   placeholder="you@company.com"
                   className={`${inputStyles} ${errors.businessEmail ? "border-red-500" : ""}`}
                   value={formData.businessEmail}
-                  onChange={(e) => setFormData({ ...formData, businessEmail: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, businessEmail: e.target.value })
+                  }
                 />
-                {errors.businessEmail && <p className={errorStyles}>{errors.businessEmail}</p>}
+                {errors.businessEmail && (
+                  <p className={errorStyles}>{errors.businessEmail}</p>
+                )}
               </div>
 
               <button
@@ -178,8 +195,8 @@ const RegisterTrial = () => {
 
           {/* Benefits Section */}
           <div className="bg-white p-8 rounded-2xl border border-[#DEE5ED] shadow-sm">
-          <h2 className="text-2xl font-bold mb-6">What&apos;s Included</h2>
-          <div className="space-y-4">
+            <h2 className="text-2xl font-bold mb-6">What&apos;s Included</h2>
+            <div className="space-y-4">
               {trialBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-[#0A0A0A] rounded-full flex items-center justify-center">

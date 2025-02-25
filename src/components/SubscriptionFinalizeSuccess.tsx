@@ -11,7 +11,7 @@ import Link from "next/link";
 const SubscriptionFinalizeSuccess = () => {
   const router = useRouter();
   const params = useSearchParams();
-  const [countdown, setCountdown] = useState(10);
+  const [countdown, setCountdown] = useState(20);
   const { finalizeSubscription, isLoading } = useSubscription();
   const [isFinalized, setIsFinalized] = useState(false);
   const sessionId = params?.get("session_id");
@@ -25,7 +25,9 @@ const SubscriptionFinalizeSuccess = () => {
         })
         .catch((error) => {
           console.error("Error finalizing subscription:", error);
-          toast.error("There was an issue activating your subscription. Please contact support.");
+          toast.error(
+            "There was an issue activating your subscription. Please contact support."
+          );
         });
     } else if (!sessionId) {
       toast.error("Missing session information. Please contact support.");
@@ -59,8 +61,12 @@ const SubscriptionFinalizeSuccess = () => {
             <div className="mb-4">
               <Loader className="w-12 h-12 text-[#0A0A0A] animate-spin mx-auto" />
             </div>
-            <h1 className="text-2xl font-bold text-[#0A0A0A] mb-2">Activating Your Subscription</h1>
-            <p className="text-[#3D495B]">Please wait while we finalize your subscription...</p>
+            <h1 className="text-2xl font-bold text-[#0A0A0A] mb-2">
+              Activating Your Subscription
+            </h1>
+            <p className="text-[#3D495B]">
+              Please wait while we finalize your subscription...
+            </p>
           </div>
         </div>
       </div>
@@ -81,11 +87,13 @@ const SubscriptionFinalizeSuccess = () => {
             Subscription Complete!
           </h1>
           <p className="text-[#3D495B] mb-6">
-            Your account has been set up successfully. Your 14-day free trial starts now!
+            Your account has been set up successfully. Your 14-day free trial
+            starts now!
           </p>
           <div className="mb-6 p-4 bg-[#F8FAFC] rounded-lg">
             <p className="text-[#3D495B]">
-              You&apos;ll be redirected to your dashboard in <span className="font-bold">{countdown}</span> seconds...
+              You&apos;ll be redirected to your dashboard in{" "}
+              <span className="font-bold">{countdown}</span> seconds...
             </p>
           </div>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
@@ -104,7 +112,10 @@ const SubscriptionFinalizeSuccess = () => {
           </div>
           <div className="mt-8 text-sm text-[#3D495B]">
             <p>Need help getting started?</p>
-            <Link href="/contact" className="text-[#0A0A0A] underline hover:text-[#171717]">
+            <Link
+              href="/contact"
+              className="text-[#0A0A0A] underline hover:text-[#171717]"
+            >
               Contact our support team
             </Link>
           </div>
