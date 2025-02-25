@@ -41,5 +41,9 @@ export const METADATA: Record<string, PageMetadata> = {
     verifyEmail: {
         title: 'Verify Email - Staffluent',
         description: 'Verify your email address to complete your Staffluent registration.',
-      },
+    },
+    subscription: {
+        title: 'Complete Your Subscription - Staffluent',
+        description: 'Choose your subscription plan and complete your business setup.',
+    }
 };
