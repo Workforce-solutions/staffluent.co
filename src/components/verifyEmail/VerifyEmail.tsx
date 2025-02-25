@@ -39,7 +39,7 @@ const VerifyEmail = () => {
       
         // Use a reference to track if we've already made an API call
         const apiCallMade = { current: false };
-        let redirectTimer = null;
+        let redirectTimer: NodeJS.Timeout | null = null;
       
         const verifyOnce = async () => {
           // Only make the API call once
@@ -70,7 +70,7 @@ const VerifyEmail = () => {
             else {
               setVerificationStatus("error");
             }
-          } catch (error) {
+          } catch {
             setVerificationStatus("error");
           }
         };
