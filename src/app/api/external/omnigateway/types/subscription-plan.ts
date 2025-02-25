@@ -8,6 +8,14 @@ export interface SubscriptionPlan {
   export interface SubscriptionResponse {
     success: boolean;
     message: string;
-    subscriptionId?: string;
+    checkoutUrl?: string;
   }
+  
+  export interface SubscriptionFinalizationResponse {
+    success: boolean;
+    message: string;
+    businessId: string;
+    status: string;
+  }
+  
   

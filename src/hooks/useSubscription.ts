@@ -1,9 +1,7 @@
 // hooks/useSubscription.ts
 import { useState, useCallback } from 'react';
-import { createSubscriptionApi, } from '@/app/api/external/omnigateway/subscription';
+import { createBusinessApi } from '@/app/api/external/omnigateway/subscription';
 import { toast, ToastOptions } from 'react-toastify';
-import { SubscriptionPlan } from '@/app/api/external/omnigateway/types/subscription-plan';
-import { BusinessDetails } from '@/app/api/external/omnigateway/types/business';
 
 interface ApiError {
   message: string;
@@ -12,7 +10,7 @@ interface ApiError {
 
 const toastConfig: ToastOptions = {
   position: "top-right",
-  autoClose: 10000,
+  autoClose: 5000,
   hideProgressBar: false,
   closeOnClick: true,
   pauseOnHover: true,
@@ -24,24 +22,67 @@ export const useSubscription = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const updateBusinessAndSubscribe = useCallback(async (
-    businessDetails: BusinessDetails,
-    subscriptionPlan: SubscriptionPlan
+    businessId: string,
+    businessDetails: {
+      businessType?: string;
+      phone?: string;
+      address?: {
+        street?: string;
+        city?: string;
+        state?: string;
+        zip?: string;
+        country?: string;
+      };
+      taxId?: string;
+      vatNumber?: string;
+    },
+    subscription: {
+      planId: string;
+      interval: 'month' | 'year';
+    }
   ) => {
     try {
       setIsLoading(true);
-      const api = createSubscriptionApi();
-      const response = await api.updateBusinessAndSubscribe(businessDetails, subscriptionPlan);
+      const api = createBusinessApi();
+      const response = await api.updateBusinessAndSubscribe(
+        businessId,
+        businessDetails,
+        subscription
+      );
       
-      if (response.success) {
-        toast.success('Subscription updated successfully!', toastConfig);
+      if (response.success && response.checkoutUrl) {
         return response;
       } else {
-        throw new Error(response.message);
+        throw new Error(response.message || 'Failed to create subscription');
       }
     } catch (error: unknown) {
       const errorMessage = error instanceof Error 
         ? error.message 
-        : (error as ApiError)?.message || 'Failed to update subscription. Please try again.';
+        : (error as ApiError)?.message || 'Failed to create subscription. Please try again.';
+      
+      toast.error(errorMessage, toastConfig);
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
+
+  const finalizeSubscription = useCallback(async (sessionId: string) => {
+    try {
+      setIsLoading(true);
+      const api = createBusinessApi();
+      const response = await api.finalizeSubscription(sessionId);
+      
+      if (response.success) {
+        toast.success('Subscription activated successfully!', toastConfig);
+        return response;
+      } else {
+        throw new Error(response.message || 'Failed to finalize subscription');
+      }
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error 
+        ? error.message 
+        : (error as ApiError)?.message || 'Failed to finalize subscription. Please try again.';
       
       toast.error(errorMessage, toastConfig);
       throw error;
@@ -52,6 +93,7 @@ export const useSubscription = () => {
 
   return {
     isLoading,
-    updateBusinessAndSubscribe
+    updateBusinessAndSubscribe,
+    finalizeSubscription
   };
 };

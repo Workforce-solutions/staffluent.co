@@ -1,12 +1,12 @@
+// components/Subscription.tsx
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { CheckCircle, Crown, XCircle, Loader, Building2 } from "lucide-react";
-import { useSubscription } from "@/hooks/useSubscription";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useSubscription } from "@/hooks/useSubscription";
 import { BusinessFormData } from "@/app/api/external/omnigateway/types/business";
-
 
 const Subscription = () => {
   const router = useRouter();
@@ -111,7 +111,7 @@ const Subscription = () => {
       setFormData(prev => ({
         ...prev,
         [parent]: {
-          ...(prev[parent as keyof BusinessFormData] as Record<string, string>),
+          ...prev[parent as keyof typeof prev],
           [child]: value
         }
       }));
@@ -130,15 +130,13 @@ const Subscription = () => {
       return;
     }
     
-    if (!userId || !businessId) {
-      toast.error("Missing user or business information");
+    if (!businessId) {
+      toast.error("Missing business information");
       return;
     }
 
     try {
       const businessDetails = {
-        businessId,
-        userId,
         businessType: formData.businessType,
         phone: formData.phone || undefined,
         address: {
@@ -152,19 +150,20 @@ const Subscription = () => {
         vatNumber: formData.vatNumber || undefined
       };
 
-      const subscriptionPlan = {
+      const subscription = {
         planId: selectedPlan,
         interval: billingCycle === 'monthly' ? 'month' : 'year'
-      } as const;
+      };
 
-      const response = await updateBusinessAndSubscribe(businessDetails, subscriptionPlan);
+      const response = await updateBusinessAndSubscribe(
+        businessId,
+        businessDetails,
+        subscription
+      );
       
-      if (response.success) {
-        toast.success("Subscription completed successfully!");
-        // Redirect to success page or dashboard
-        setTimeout(() => {
-          router.push("/subscription-success");
-        }, 1500);
+      if (response.checkoutUrl) {
+        // Redirect to Stripe checkout
+        window.location.href = response.checkoutUrl;
       }
     } catch (error) {
       console.error("Error submitting subscription:", error);
@@ -385,126 +384,126 @@ const Subscription = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium mb-3">Address Information</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="md:col-span-2">
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Street Address
-                      </label>
-                      <input
-                        type="text"
-                        name="address.street"
-                        className={inputStyles}
-                        value={formData.address.street}
-                        onChange={handleFormChange}
-                      />
-                    </div>
+  <h4 className="text-lg font-medium mb-3">Address Information</h4>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="md:col-span-2">
+      <label className="block text-sm font-medium text-gray-700 mb-2">
+        Street Address
+      </label>
+      <input
+        type="text"
+        name="address.street"
+        className={inputStyles}
+        value={formData.address.street}
+        onChange={handleFormChange}
+      />
+    </div>
 
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        City
-                      </label>
-                      <input
-                        type="text"
-                        name="address.city"
-                        className={inputStyles}
-                        value={formData.address.city}
-                        onChange={handleFormChange}
-                      />
-                    </div>
+    <div>
+      <label className="block text-sm font-medium text-gray-700 mb-2">
+        City
+      </label>
+      <input
+        type="text"
+        name="address.city"
+        className={inputStyles}
+        value={formData.address.city}
+        onChange={handleFormChange}
+      />
+    </div>
 
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        State/Province
-                      </label>
-                      <input
-                        type="text"
-                        name="address.state"
-                        className={inputStyles}
-                        value={formData.address.state}
-                        onChange={handleFormChange}
-                      />
-                    </div>
+    <div>
+      <label className="block text-sm font-medium text-gray-700 mb-2">
+        State/Province
+      </label>
+      <input
+        type="text"
+        name="address.state"
+        className={inputStyles}
+        value={formData.address.state}
+        onChange={handleFormChange}
+      />
+    </div>
 
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Postal Code
-                      </label>
-                      <input
-                        type="text"
-                        name="address.zip"
-                        className={inputStyles}
-                        value={formData.address.zip}
-                        onChange={handleFormChange}
-                      />
-                    </div>
+    <div>
+      <label className="block text-sm font-medium text-gray-700 mb-2">
+        Postal Code
+      </label>
+      <input
+        type="text"
+        name="address.zip"
+        className={inputStyles}
+        value={formData.address.zip}
+        onChange={handleFormChange}
+      />
+    </div>
 
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Country
-                      </label>
-                      <input
-                        type="text"
-                        name="address.country"
-                        className={inputStyles}
-                        value={formData.address.country}
-                        onChange={handleFormChange}
-                      />
-                    </div>
-                  </div>
-                </div>
+    <div>
+      <label className="block text-sm font-medium text-gray-700 mb-2">
+        Country
+      </label>
+      <input
+        type="text"
+        name="address.country"
+        className={inputStyles}
+        value={formData.address.country}
+        onChange={handleFormChange}
+      />
+    </div>
+  </div>
+</div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Tax ID (Optional)
-                    </label>
-                    <input
-                      type="text"
-                      name="taxId"
-                      className={inputStyles}
-                      value={formData.taxId}
-                      onChange={handleFormChange}
-                    />
-                  </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div>
+    <label className="block text-sm font-medium text-gray-700 mb-2">
+      Tax ID (Optional)
+    </label>
+    <input
+      type="text"
+      name="taxId"
+      className={inputStyles}
+      value={formData.taxId}
+      onChange={handleFormChange}
+    />
+  </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      VAT Number (Optional)
-                    </label>
-                    <input
-                      type="text"
-                      name="vatNumber"
-                      className={inputStyles}
-                      value={formData.vatNumber}
-                      onChange={handleFormChange}
-                    />
-                  </div>
-                </div>
+  <div>
+    <label className="block text-sm font-medium text-gray-700 mb-2">
+      VAT Number (Optional)
+    </label>
+    <input
+      type="text"
+      name="vatNumber"
+      className={inputStyles}
+      value={formData.vatNumber}
+      onChange={handleFormChange}
+    />
+  </div>
+</div>
 
-                <div className="flex gap-4 pt-4">
-                  <button
-                    type="button"
-                    onClick={() => setStep(1)}
-                    className="px-6 py-3 border border-[#DEE5ED] rounded-xl hover:bg-gray-50"
-                  >
-                    Back
-                  </button>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="flex-1 bg-[#0A0A0A] text-white py-3 rounded-xl hover:bg-black/90 transition-colors flex items-center justify-center"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader className="animate-spin mr-2" size={20} />
-                        Processing...
-                      </>
-                    ) : (
-                      "Complete Setup"
-                    )}
-                  </button>
-                </div>
+<div className="flex gap-4 pt-4">
+  <button
+    type="button"
+    onClick={() => setStep(1)}
+    className="px-6 py-3 border border-[#DEE5ED] rounded-xl hover:bg-gray-50"
+  >
+    Back
+  </button>
+  <button
+    type="submit"
+    disabled={isSubmitting}
+    className="flex-1 bg-[#0A0A0A] text-white py-3 rounded-xl hover:bg-black/90 transition-colors flex items-center justify-center"
+  >
+    {isSubmitting ? (
+      <>
+        <Loader className="animate-spin mr-2" size={20} />
+        Processing...
+      </>
+    ) : (
+      "Continue to Payment"
+    )}
+  </button>
+</div>
               </form>
             </div>
           </div>
