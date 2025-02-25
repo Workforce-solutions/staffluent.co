@@ -175,7 +175,9 @@ const Pricing = () => {
                 </div>
                 <p className="text-[#3d495b] mb-6">{plan.description}</p>
                 <Link
-                  href="/request-demo"
+                  href= {plan.name === "Enterprise Plan"
+                    ? "/request-demo"
+                    : "/register-trial"}
                   className="block w-full bg-[#0A0A0A] text-white text-center py-3 rounded-xl hover:bg-black/90 transition-colors"
                 >
                   {plan.name === "Enterprise Plan"
@@ -251,7 +253,7 @@ const Pricing = () => {
               </p>
               <div>
                 <Link
-                  href="/request-demo"
+                  href="/register-trial"
                   className="inline-block bg-white text-gray-900 px-6 py-3 rounded-xl hover:bg-gray-50 transition-colors text-lg font-medium"
                 >
                   Start Free Trial

@@ -111,7 +111,7 @@ const Subscription = () => {
       setFormData(prev => ({
         ...prev,
         [parent]: {
-          ...prev[parent as keyof typeof prev],
+          ...(prev[parent as keyof BusinessFormData] as Record<string, string>),
           [child]: value
         }
       }));
@@ -155,7 +155,7 @@ const Subscription = () => {
       const subscriptionPlan = {
         planId: selectedPlan,
         interval: billingCycle === 'monthly' ? 'month' : 'year'
-      };
+      } as const;
 
       const response = await updateBusinessAndSubscribe(businessDetails, subscriptionPlan);
       

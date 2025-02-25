@@ -76,7 +76,7 @@ const CTA = () => {
               className="w-full h-full mb-28"
             />
             <Link
-              href="/request-demo"
+              href="/register-trial"
               style={{ width: "120%" }}
               className="bg-white text-[#262626] px-8 py-4 rounded-xl hover:bg-white/90 transition-colors text-lg font-medium w-full"
             >
