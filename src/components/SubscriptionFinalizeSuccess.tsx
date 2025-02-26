@@ -1,28 +1,46 @@
-// components/SubscriptionFinalizeSuccess.tsx
-"use client";
-import React, { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useSubscription } from "@/hooks/useSubscription";
+import { AccountType } from "@/types/auth";
 import { CheckCircle, Loader } from "lucide-react";
+import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useSubscription } from "@/hooks/useSubscription";
-import Link from "next/link";
 
 const SubscriptionFinalizeSuccess = () => {
   const router = useRouter();
   const params = useSearchParams();
   const [countdown, setCountdown] = useState(20);
-  const { finalizeSubscription, isLoading } = useSubscription();
+  const { finalizeSubscription, isLoading, authData } = useSubscription();
   const [isFinalized, setIsFinalized] = useState(false);
   const sessionId = params?.get("session_id");
 
+  const baseUrl = "https://app.staffluent.co";
+
+  const newExpiresAt = Math.floor(Date.now() / 1000) + 60 * 60;
+  const accountType =
+    authData?.data?.account_type ??
+    authData?.account_type ??
+    AccountType.business;
+  const token = authData?.data?.token ?? authData?.token ?? "";
+  const refreshToken =
+    authData?.data?.refresh_token ?? authData?.refresh_token ?? "";
+
+  const loginUrl = new URL(baseUrl + "/login");
+  loginUrl.searchParams.append("token", token);
+  loginUrl.searchParams.append("refreshToken", refreshToken);
+  loginUrl.searchParams.append("accountType", accountType);
+  loginUrl.searchParams.append("expires_at", String(newExpiresAt));
+
+  const setCookies = () => {
+    router.push(loginUrl.toString());
+  };
+
   useEffect(() => {
-    // Finalize the subscription with Stripe session ID
     if (sessionId && !isFinalized) {
       finalizeSubscription(sessionId)
-        .then(() => {
-          setIsFinalized(true);
-        })
+        .then(() => setIsFinalized(true))
         .catch((error) => {
           console.error("Error finalizing subscription:", error);
           toast.error(
@@ -42,8 +60,7 @@ const SubscriptionFinalizeSuccess = () => {
     if (!isFinalized) return;
 
     if (countdown <= 0) {
-      router.push("https://app.staffluent.co/login");
-      return;
+      setCookies();
     }
 
     const timer = setTimeout(() => {
@@ -98,7 +115,7 @@ const SubscriptionFinalizeSuccess = () => {
           </div>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
-              href="https://app.staffluent.co/dashboard"
+              href={loginUrl.toString()}
               className="block w-full bg-[#0A0A0A] text-white text-center py-3 px-6 rounded-xl hover:bg-black/90 transition-colors"
             >
               Access Dashboard
