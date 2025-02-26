@@ -1,31 +1,51 @@
-// components/SubscriptionFinalizeSuccess.tsx
-"use client";
-import React, { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useSubscription } from "@/hooks/useSubscription";
+import { AccountType } from "@/types/auth";
 import { CheckCircle, Loader } from "lucide-react";
+import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useSubscription } from "@/hooks/useSubscription";
-import Link from "next/link";
 
 const SubscriptionFinalizeSuccess = () => {
   const router = useRouter();
   const params = useSearchParams();
-  const [countdown, setCountdown] = useState(10);
-  const { finalizeSubscription, isLoading } = useSubscription();
+  const [countdown, setCountdown] = useState(20);
+  const { finalizeSubscription, isLoading, authData } = useSubscription();
   const [isFinalized, setIsFinalized] = useState(false);
   const sessionId = params?.get("session_id");
 
+  const baseUrl = "https://app.staffluent.co";
+
+  const newExpiresAt = Math.floor(Date.now() / 1000) + 60 * 60;
+  const accountType =
+    authData?.data?.account_type ??
+    authData?.account_type ??
+    AccountType.business;
+  const token = authData?.data?.token ?? authData?.token ?? "";
+  const refreshToken =
+    authData?.data?.refresh_token ?? authData?.refresh_token ?? "";
+
+  const loginUrl = new URL(baseUrl + "/login");
+  loginUrl.searchParams.append("token", token);
+  loginUrl.searchParams.append("refreshToken", refreshToken);
+  loginUrl.searchParams.append("accountType", accountType);
+  loginUrl.searchParams.append("expires_at", String(newExpiresAt));
+
+  const setCookies = () => {
+    router.push(loginUrl.toString());
+  };
+
   useEffect(() => {
-    // Finalize the subscription with Stripe session ID
     if (sessionId && !isFinalized) {
       finalizeSubscription(sessionId)
-        .then(() => {
-          setIsFinalized(true);
-        })
+        .then(() => setIsFinalized(true))
         .catch((error) => {
           console.error("Error finalizing subscription:", error);
-          toast.error("There was an issue activating your subscription. Please contact support.");
+          toast.error(
+            "There was an issue activating your subscription. Please contact support."
+          );
         });
     } else if (!sessionId) {
       toast.error("Missing session information. Please contact support.");
@@ -40,8 +60,7 @@ const SubscriptionFinalizeSuccess = () => {
     if (!isFinalized) return;
 
     if (countdown <= 0) {
-      router.push("https://app.staffluent.co/login");
-      return;
+      setCookies();
     }
 
     const timer = setTimeout(() => {
@@ -59,8 +78,12 @@ const SubscriptionFinalizeSuccess = () => {
             <div className="mb-4">
               <Loader className="w-12 h-12 text-[#0A0A0A] animate-spin mx-auto" />
             </div>
-            <h1 className="text-2xl font-bold text-[#0A0A0A] mb-2">Activating Your Subscription</h1>
-            <p className="text-[#3D495B]">Please wait while we finalize your subscription...</p>
+            <h1 className="text-2xl font-bold text-[#0A0A0A] mb-2">
+              Activating Your Subscription
+            </h1>
+            <p className="text-[#3D495B]">
+              Please wait while we finalize your subscription...
+            </p>
           </div>
         </div>
       </div>
@@ -81,16 +104,18 @@ const SubscriptionFinalizeSuccess = () => {
             Subscription Complete!
           </h1>
           <p className="text-[#3D495B] mb-6">
-            Your account has been set up successfully. Your 14-day free trial starts now!
+            Your account has been set up successfully. Your 14-day free trial
+            starts now!
           </p>
           <div className="mb-6 p-4 bg-[#F8FAFC] rounded-lg">
             <p className="text-[#3D495B]">
-              You&apos;ll be redirected to your dashboard in <span className="font-bold">{countdown}</span> seconds...
+              You&apos;ll be redirected to your dashboard in{" "}
+              <span className="font-bold">{countdown}</span> seconds...
             </p>
           </div>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
-              href="https://app.staffluent.co/dashboard"
+              href={loginUrl.toString()}
               className="block w-full bg-[#0A0A0A] text-white text-center py-3 px-6 rounded-xl hover:bg-black/90 transition-colors"
             >
               Access Dashboard
@@ -104,7 +129,10 @@ const SubscriptionFinalizeSuccess = () => {
           </div>
           <div className="mt-8 text-sm text-[#3D495B]">
             <p>Need help getting started?</p>
-            <Link href="/contact" className="text-[#0A0A0A] underline hover:text-[#171717]">
+            <Link
+              href="/contact"
+              className="text-[#0A0A0A] underline hover:text-[#171717]"
+            >
               Contact our support team
             </Link>
           </div>
