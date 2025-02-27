@@ -16,22 +16,19 @@ const SubscriptionFinalizeSuccess = () => {
   const [isFinalized, setIsFinalized] = useState(false);
   const sessionId = params?.get("session_id");
 
-  const baseUrl = "https://app.staffluent.co";
+  const baseUrl = "https://www.staffluent.co";
 
   const newExpiresAt = Math.floor(Date.now() / 1000) + 60 * 60;
-  const accountType =
-    authData?.data?.account_type ??
-    authData?.account_type ??
-    AccountType.business;
-  const token = authData?.data?.token ?? authData?.token ?? "";
-  const refreshToken =
-    authData?.data?.refresh_token ?? authData?.refresh_token ?? "";
+  const accountType = authData?.account_type ?? AccountType.business;
+  const token = authData?.token ?? "";
+  const refreshToken = authData?.refresh_token ?? "";
 
   const loginUrl = new URL(baseUrl + "/login");
   loginUrl.searchParams.append("token", token);
   loginUrl.searchParams.append("refreshToken", refreshToken);
   loginUrl.searchParams.append("accountType", accountType);
   loginUrl.searchParams.append("expires_at", String(newExpiresAt));
+  loginUrl.searchParams.append("vbAuth", JSON.stringify(authData));
 
   const setCookies = () => {
     router.push(loginUrl.toString());
