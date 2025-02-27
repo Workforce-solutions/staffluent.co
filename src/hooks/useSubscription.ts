@@ -82,7 +82,7 @@ export const useSubscription = () => {
 
       if (response.success) {
         toast.success("Subscription activated successfully!", toastConfig);
-        setAuthData(response.auth_response);
+        setAuthData(response?.auth_response);
         return response;
       } else {
         throw new Error(response.message || "Failed to finalize subscription");
