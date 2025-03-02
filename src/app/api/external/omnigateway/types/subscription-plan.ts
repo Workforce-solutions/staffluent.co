@@ -1,4 +1,4 @@
-import { AuthProps } from "@/types/auth";
+import { AuthProps, SideLink } from "@/types/auth";
 
 // Type for subscription plan
 export interface SubscriptionPlan {
@@ -18,4 +18,5 @@ export interface SubscriptionFinalizationResponse {
   businessId: string;
   status: string;
   auth_response: AuthProps;
+  sidebarLinks: SideLink[];
 }
