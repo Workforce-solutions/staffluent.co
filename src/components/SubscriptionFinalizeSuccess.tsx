@@ -30,7 +30,6 @@ const SubscriptionFinalizeSuccess = () => {
   loginUrl.searchParams.append("accountType", accountType);
   loginUrl.searchParams.append("expires_at", String(newExpiresAt));
   loginUrl.searchParams.append("vbAuth", JSON.stringify(authData));
-  loginUrl.searchParams.append("vbAuth", JSON.stringify(authData));
   localStorage.setItem("sidebarLinks", JSON.stringify(sidebarLinks));
 
   const setCookies = () => {
