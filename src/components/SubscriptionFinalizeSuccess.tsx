@@ -11,17 +11,18 @@ import "react-toastify/dist/ReactToastify.css";
 const SubscriptionFinalizeSuccess = () => {
   const router = useRouter();
   const params = useSearchParams();
-  const [countdown, setCountdown] = useState(20);
+  const [countdown, setCountdown] = useState(12000);
   const { finalizeSubscription, isLoading, authData } = useSubscription();
   const [isFinalized, setIsFinalized] = useState(false);
   const sessionId = params?.get("session_id");
 
-  const baseUrl = "https://www.staffluent.co";
+  const baseUrl = "http://localhost:5173";
 
   const newExpiresAt = Math.floor(Date.now() / 1000) + 60 * 60;
   const accountType = authData?.account_type ?? AccountType.business;
   const token = authData?.token ?? "";
   const refreshToken = authData?.refresh_token ?? "";
+  const sidebarLinks = authData?.sidebarLinks ?? [];
 
   const loginUrl = new URL(baseUrl + "/login");
   loginUrl.searchParams.append("token", token);
@@ -29,6 +30,8 @@ const SubscriptionFinalizeSuccess = () => {
   loginUrl.searchParams.append("accountType", accountType);
   loginUrl.searchParams.append("expires_at", String(newExpiresAt));
   loginUrl.searchParams.append("vbAuth", JSON.stringify(authData));
+  loginUrl.searchParams.append("vbAuth", JSON.stringify(authData));
+  localStorage.setItem("sidebarLinks", JSON.stringify(sidebarLinks));
 
   const setCookies = () => {
     router.push(loginUrl.toString());
