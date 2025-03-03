@@ -107,10 +107,10 @@ const Subscription = () => {
         phone: formData.phone || undefined,
         address: {
           street: formData.address.street || undefined,
-          city: formData.address.city || undefined,
-          state: formData.address.state || undefined,
+          cityId: formData.address.city || undefined,
+          stateId: formData.address.state || undefined,
           zip: formData.address.zip || undefined,
-          country: formData.address.country || undefined,
+          countryId: formData.address.country || undefined,
         },
         taxId: formData.taxId || undefined,
         vatNumber: formData.vatNumber || undefined,
