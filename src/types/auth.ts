@@ -2,6 +2,17 @@ export interface AuthProps extends AuthResponse {
   data: AuthResponse;
 }
 
+export interface NavLink {
+  title: string;
+  label?: string;
+  href: string;
+  icon: JSX.Element;
+}
+
+export interface SideLink extends NavLink {
+  sub?: NavLink[];
+}
+
 export interface AuthResponse {
   account_type: AccountType;
   supabase_id: string;
@@ -10,6 +21,7 @@ export interface AuthResponse {
   refresh_token: string;
   expires_at: number;
   expires_in: number;
+  sidebarLinks: SideLink[];
 }
 
 export enum AccountType {
