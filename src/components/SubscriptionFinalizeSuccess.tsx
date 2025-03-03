@@ -17,7 +17,7 @@ const SubscriptionFinalizeSuccess = () => {
   const [isFinalized, setIsFinalized] = useState(false);
   const sessionId = params?.get("session_id");
 
-  const baseUrl = "https://www.staffluent.co";
+  const baseUrl = "https://app.staffluent.co";
 
   const newExpiresAt = Math.floor(Date.now() / 1000) + 60 * 60;
   const accountType = authData?.account_type ?? AccountType.business;
