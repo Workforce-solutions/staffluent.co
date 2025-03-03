@@ -11,12 +11,15 @@
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.9.4",
     "@portabletext/react": "^3.2.1",
+    "@radix-ui/react-select": "^2.1.6",
     "@sanity/cli": "^3.76.3",
     "@sanity/desk-tool": "^2.36.2",
     "@sanity/image-url": "^1.1.0",
     "@sanity/types": "^3.76.3",
     "@sanity/vision": "^3.76.3",
     "axios": "^1.7.9",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.18.2",
     "hamburger-react": "^2.5.1",
     "lucide-react": "^0.456.0",
@@ -27,7 +30,9 @@
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-toastify": "^10.0.6",
     "sanity": "^3.76.3",
-    "styled-components": "^6.1.15"
+    "styled-components": "^6.1.15",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",

@@ -12,11 +12,12 @@ const SubscriptionFinalizeSuccess = () => {
   const router = useRouter();
   const params = useSearchParams();
   const [countdown, setCountdown] = useState(20);
-  const { finalizeSubscription, isLoading, authData } = useSubscription();
+  const { finalizeSubscription, isLoading, authData, sidebarLinks } =
+    useSubscription();
   const [isFinalized, setIsFinalized] = useState(false);
   const sessionId = params?.get("session_id");
 
-  const baseUrl = "https://www.staffluent.co";
+  const baseUrl = "https://app.staffluent.co";
 
   const newExpiresAt = Math.floor(Date.now() / 1000) + 60 * 60;
   const accountType = authData?.account_type ?? AccountType.business;
@@ -29,6 +30,7 @@ const SubscriptionFinalizeSuccess = () => {
   loginUrl.searchParams.append("accountType", accountType);
   loginUrl.searchParams.append("expires_at", String(newExpiresAt));
   loginUrl.searchParams.append("vbAuth", JSON.stringify(authData));
+  loginUrl.searchParams.append("sidebarLinks", JSON.stringify(sidebarLinks));
 
   const setCookies = () => {
     router.push(loginUrl.toString());
