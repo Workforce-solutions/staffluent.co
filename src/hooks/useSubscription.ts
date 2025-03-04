@@ -1,8 +1,9 @@
 // hooks/useSubscription.ts
-import { useState, useCallback } from "react";
 import { createBusinessApi } from "@/app/api/external/omnigateway/subscription";
+import { SubscriptionFinalizationResponse } from "@/app/api/external/omnigateway/types/subscription-plan";
+import { AuthProps } from "@/types/auth";
+import { useCallback, useState } from "react";
 import { toast, ToastOptions } from "react-toastify";
-import { AuthProps, SideLink } from "@/types/auth";
 
 interface ApiError {
   message: string;
@@ -22,7 +23,7 @@ const toastConfig: ToastOptions = {
 export const useSubscription = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [authData, setAuthData] = useState<AuthProps>();
-  const [sidebarLinks, setSidebarLinks] = useState<SideLink[]>([]);
+  const [userData, setUserData] = useState<SubscriptionFinalizationResponse>();
 
   const updateBusinessAndSubscribe = useCallback(
     async (
@@ -84,7 +85,7 @@ export const useSubscription = () => {
       if (response.success) {
         toast.success("Subscription activated successfully!", toastConfig);
         setAuthData(response?.auth_response);
-        setSidebarLinks(response?.sidebarLinks ?? []);
+        setUserData(response);
         return response;
       } else {
         throw new Error(response.message || "Failed to finalize subscription");
@@ -108,6 +109,6 @@ export const useSubscription = () => {
     updateBusinessAndSubscribe,
     finalizeSubscription,
     authData,
-    sidebarLinks,
+    userData,
   };
 };
