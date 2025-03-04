@@ -19,4 +19,5 @@ export interface SubscriptionFinalizationResponse {
   status: string;
   auth_response: AuthProps;
   sidebarLinks: SideLink[];
+  userId: string;
 }

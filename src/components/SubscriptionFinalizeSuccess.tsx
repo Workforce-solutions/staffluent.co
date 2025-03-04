@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useSubscription } from "@/hooks/useSubscription";
-import { AccountType } from "@/types/auth";
 import { CheckCircle, Loader } from "lucide-react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -12,25 +11,18 @@ const SubscriptionFinalizeSuccess = () => {
   const router = useRouter();
   const params = useSearchParams();
   const [countdown, setCountdown] = useState(20);
-  const { finalizeSubscription, isLoading, authData, sidebarLinks } =
+  const { finalizeSubscription, isLoading, authData, userData } =
     useSubscription();
   const [isFinalized, setIsFinalized] = useState(false);
   const sessionId = params?.get("session_id");
 
   const baseUrl = "https://app.staffluent.co";
 
-  const newExpiresAt = Math.floor(Date.now() / 1000) + 60 * 60;
-  const accountType = authData?.account_type ?? AccountType.business;
-  const token = authData?.token ?? "";
-  const refreshToken = authData?.refresh_token ?? "";
+  const token = authData?.token ?? authData?.access_token ?? "";
 
   const loginUrl = new URL(baseUrl + "/login");
   loginUrl.searchParams.append("token", token);
-  loginUrl.searchParams.append("refreshToken", refreshToken);
-  loginUrl.searchParams.append("accountType", accountType);
-  loginUrl.searchParams.append("expires_at", String(newExpiresAt));
-  loginUrl.searchParams.append("vbAuth", JSON.stringify(authData));
-  loginUrl.searchParams.append("sidebarLinks", JSON.stringify(sidebarLinks));
+  loginUrl.searchParams.append("userId", userData?.userId ?? "");
 
   const setCookies = () => {
     router.push(loginUrl.toString());
@@ -40,8 +32,7 @@ const SubscriptionFinalizeSuccess = () => {
     if (sessionId && !isFinalized) {
       finalizeSubscription(sessionId)
         .then(() => setIsFinalized(true))
-        .catch((error) => {
-          console.error("Error finalizing subscription:", error);
+        .catch(() => {
           toast.error(
             "There was an issue activating your subscription. Please contact support."
           );
