@@ -14,6 +14,7 @@ export interface SideLink extends NavLink {
 }
 
 export interface AuthResponse {
+  id: string;
   account_type: AccountType;
   supabase_id: string;
   token: string;
@@ -22,6 +23,11 @@ export interface AuthResponse {
   expires_at: number;
   expires_in: number;
   sidebarLinks: SideLink[];
+  user: {
+    id: string;
+    name: string;
+    email: string;
+  };
 }
 
 export enum AccountType {
